@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-agregar-profesor',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./agregar-profesor.component.css']
 })
 export class AgregarProfesorComponent implements OnInit {
+
 
   constructor() { }
 

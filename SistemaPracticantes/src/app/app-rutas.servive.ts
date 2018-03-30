@@ -13,14 +13,19 @@ import {AprobarEstudiantesComponent} from './coordinadores/estudiantes/aprobar-e
 import {ProfesoresComponent} from './coordinadores/profesores/profesores.component';
 import {EventosComponent} from './coordinadores/eventos/eventos.component';
 import {LoginComponent} from './login/login.component';
+import {AgregarProfesorComponent} from './coordinadores/profesores/agregar-profesor/agregar-profesor.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
   { path: 'coordinadores', component: CoordinadoresComponent, children:[
     { path: '', redirectTo: 'estadisticas', pathMatch: 'full'},
-    { path: 'documentos', component: DocumentosComponent },
-    { path: 'agregarDocumento', component: AgregarDocumentoComponent },
+
+    { path: 'documentos', children:[
+      { path: '', component: DocumentosComponent},
+      { path: 'agregarDocumento', component: AgregarDocumentoComponent }
+    ] },
+
 
     { path: 'empresas', component: EmpresasComponent },
     { path: 'aprobarEmpresa', component: AprobarEmpresasComponent },
@@ -28,10 +33,17 @@ const rutas: Routes = [
 
     { path: 'estadisticas', component: EstadisticasComponent },
 
-    { path: 'estudiantes', component: EstudiantesComponent },
-    { path: 'aprobarEstudiantes', component: AprobarEstudiantesComponent },
+    { path: 'estudiantes', children:[
+      { path: '', component: EstudiantesComponent},
+      { path: 'aprobarEstudiantes', component: AprobarEstudiantesComponent },
+    ] },
 
-    { path: 'profesores', component: ProfesoresComponent },
+
+    { path: 'profesores', children:[
+      { path: '', component: ProfesoresComponent},
+      { path: 'agregarProfesor', component: AgregarProfesorComponent}
+    ] },
+
 
     { path: 'eventos', component: EventosComponent}
 

@@ -12,4 +12,12 @@ export class AprobarEstudiantesComponent implements OnInit {
   ngOnInit() {
   }
 
+  aprobarEstudiante() {
+
+  }
+
+  desaprobarEstudiante() {
+
+  }
+
 }

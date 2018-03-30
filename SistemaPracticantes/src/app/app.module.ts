@@ -17,6 +17,7 @@ import { AgregarDocumentoComponent } from './coordinadores/documentos/agregar-do
 import { AprobarEstudiantesComponent } from './coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component';
 import { AppRutasModulo } from './app-rutas.servive';
 import { LoginComponent } from './login/login.component';
+import { InformacionPersonalComponent } from './general/informacion-personal/informacion-personal.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     DesaprobarEmpresaComponent,
     AgregarDocumentoComponent,
     AprobarEstudiantesComponent,
-    LoginComponent
+    LoginComponent,
+    InformacionPersonalComponent
   ],
   imports: [
     BrowserModule,
