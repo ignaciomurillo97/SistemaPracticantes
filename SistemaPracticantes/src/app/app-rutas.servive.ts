@@ -27,9 +27,11 @@ const rutas: Routes = [
     ] },
 
 
-    { path: 'empresas', component: EmpresasComponent },
-    { path: 'aprobarEmpresa', component: AprobarEmpresasComponent },
-    { path: 'desaprobarEmpresa', component: DesaprobarEmpresaComponent },
+    { path: 'empresas', children:[
+      { path: '', component: EmpresasComponent},
+      { path: 'aprobarEmpresa', component: AprobarEmpresasComponent }
+    ] },
+
 
     { path: 'estadisticas', component: EstadisticasComponent },
 

@@ -12,4 +12,7 @@ export class AgregarDocumentoComponent implements OnInit {
   ngOnInit() {
   }
 
+  agregarDocumento() {
+
+  }
 }

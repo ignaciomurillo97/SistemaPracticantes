@@ -14,4 +14,8 @@ export class AgregarProfesorComponent implements OnInit {
   ngOnInit() {
   }
 
+  agregarProfesor() {
+
+  }
+
 }
