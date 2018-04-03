@@ -1,0 +1,43 @@
+<div class="col-md-12">
+  <a class="btn btn-primary" routerLink="/coordinadores/estudiantes" >Atras</a>
+  <div class="card">
+    <div class="card-header card-header-primary">
+      <h4 class="card-title ">Estudiantes a realizar practica</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive table-hover">
+        <table class="table">
+          <thead class=" text-primary text-left">
+          <th>
+            Nombre de la empresa
+          </th>
+          <th>
+            Nombre del contacto
+          </th>
+          <th>
+            Correo contacto empresa
+          </th>
+          <th>
+            Estado
+          </th>
+
+          </thead>
+          <tbody>
+          <tr>
+            <td>Alvaro Castro Venegas</td>
+            <td>alvarocastro74@gmail.com</td>
+            <td>
+              <div class="btn-group">
+                <button class="btn btn-primary" (click)="aprobarEstudiante()">Aprobar</button>
+                <button class="btn btn-primary" (click)="desaprobarEstudiante()">Desaprobar</button>
+              </div>
+            </td>
+            <td><i class="material-icons text-center">account_box</i></td>
+
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

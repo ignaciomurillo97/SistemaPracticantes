@@ -1,0 +1,42 @@
+<div class="col-md-10 offset-1">
+  <div class="card">
+    <div class="card-header card-header-primary">
+      <h4 class="card-title">Crear documento</h4>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="bmd-label-floating">Nombre</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="exampleInputFile">File input</label>
+              <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+              <small id="fileHelp" class="form-text text-muted"></small>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="bmd-label-floating"> Descripcion</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="btn btn-primary pull-right" (click)="agregarDocumento()">Crear documento</button>
+        <button class="btn btn-danger pull-right" routerLink="/coordinadores/documentos">Cancelar</button>
+        <div class="clearfix"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
