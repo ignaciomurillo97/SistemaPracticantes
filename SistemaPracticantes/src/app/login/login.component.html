@@ -3,48 +3,50 @@
 <br>
 <br>
 
-<div class="page-header header-filter" filter-color="purple">
-  <div class="container">
+<div class="main-content" >
+  <div class="container-fluid">
     <div class="row">
 
-      <div class="col-md-8 ml-auto mr-auto">
-        <div class="card card-signup">
-          <h2 class="card-title text-center">Inicio de sesion</h2>
-          <div class="card-body">
-            <div class="row offset-1">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="card">
+          <div class=" card-header" data-background-color="purple">
+            <h2 class="card-title text-center">Inicio de sesion</h2>
+          </div>
+          <div class="card-content">
 
-              <div class="col-md-10 mr-auto">
-                <form class="form" >
-                  <div class="form-group">
+              <div >
+                <form >
+                  <div class="col-md-8 col-md-offset-2">
                     <div class="input-group">
-                      <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">face</i>
-                                                    </span>
-                      </div>
-                      <input type="text" class="form-control" placeholder="Nombre de usuario">
+										<span class="input-group-addon">
+											<i class="material-icons">face</i>
+										</span>
+                      <div class="form-group is-empty"><input type="text" class="form-control" placeholder="First Name..."><span class="material-input"></span></div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="input-group">
+										<span class="input-group-addon">
+											<i class="material-icons">lock_outline</i>
+										</span>
+                      <div class="form-group is-empty"><input type="password" placeholder="Password..." class="form-control"><span class="material-input"></span></div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">lock_outline</i>
-                                                    </span>
-                      </div>
-                      <input type="password" class="form-control" placeholder="Contraseña">
+
+                  <div class="col-md-8 col-md-offset-2">
+                    <div class="text-center">
+                      <button  (click)="change()" class="btn btn-primary btn-round">Iniciar sesion</button>
                     </div>
                   </div>
 
-
-                  <div class="text-center">
-                    <a  (click)="change()" class="btn btn-primary btn-round">Iniciar sesion</a>
-                  </div>
                 </form>
               </div>
             </div>
-          </div>
         </div>
+
       </div>
     </div>
   </div>
+</div>

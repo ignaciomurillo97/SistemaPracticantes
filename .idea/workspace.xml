@@ -2,16 +2,284 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1fb313-1cad-4eb8-8643-f2b366720ebe" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/angular2-logo-red.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/angular2-logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/gears.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/tim_80x80.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/css/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/material-dashboard.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_cards.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_checkboxes.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_dialogs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_dropdown.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_footers.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_inputs-size.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_inputs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_misc.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_navbars.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_popups.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_radios.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_responsive.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_ripples.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_shadows.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_sidebar-and-main-panel.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_tables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_tabs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/plugins/_plugin-nouislider.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/demo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/docs.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/docs.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/features-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/docs.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/jquery.sharrre.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/src/application.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/vendor/anchor.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/vendor/clipboard.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/vendor/holder.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/vendor/split.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/vertical-nav.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-dashboard.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-dashboard.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/faces/avatar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/faces/card-profile1-square.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/faces/card-profile2-square.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/bootstrap-material-design.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/bootstrap-material-design.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/bootstrap-material-design.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/core/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/core/popper.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/material-dashboard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/plugins/arrive.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/plugins/bootstrap-notify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/plugins/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/plugins/chartist.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/plugins/demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/plugins/material.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/plugins/perfect-scrollbar.jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_alert.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_badge.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_breadcrumb.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_button-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_card.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_carousel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_close.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_code.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_custom-forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_dropdown.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_functions.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_images.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_input-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_jumbotron.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_media.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_modal.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_nav.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_navbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_popover.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_print.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_progress.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_reboot.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_root.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_tooltip.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_transitions.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_type.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_utilities.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap-grid.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap-grid.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap-grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap-reboot.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap-reboot.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap-reboot.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/bootstrap.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_alert.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_background-variant.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_badge.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_border-radius.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_box-shadow.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_breakpoints.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_caret.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_clearfix.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_float.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_gradients.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_grid-framework.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_hover.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_image.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_lists.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_nav-divider.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_navbar-align.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_reset-text.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_resize.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_screen-reader.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_size.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_table-row.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_text-emphasis.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_text-hide.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_text-truncate.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_transition.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/mixins/_visibility.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_align.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_background.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_borders.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_clearfix.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_display.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_embed.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_flex.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_float.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_position.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_screenreaders.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_sizing.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_spacing.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_text.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/bootstrap/scss/utilities/_visibility.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_alerts.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_badges.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_cards.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_carousel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_checkboxes.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_core-bootstrap.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_custom-forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_drawer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_dropdown.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_example-pages.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_fixed-plugin.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_footers.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_headers.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_images.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_info-areas.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_input-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_layout.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_misc.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_modal.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_nav.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_navbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_nucleo-outline.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_pages.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_popover.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_popups.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_progress.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_radios.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_reboot.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_responsive.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_ripples.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_sidebar-and-main-panel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_social-buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_switches.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_tabs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_tooltip.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-background.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-blog.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-collapse.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-contact.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-form-horizontal.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-pricing.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-product.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-profile.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-rotate.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-signup.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/cards/_card-testimonials.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_alert.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_animations.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_breakpoints.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_colored-shadows.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_drawer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_hover.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_layout.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_navbar-colors.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_navs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_sidebar-color.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_type.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_utilities.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_datatables.net.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_fullcalendar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_jquery.jvectormap.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_perfect-scrollbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_plugin-bootstrap-select.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_plugin-datetime-picker.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_plugin-flexisel.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_plugin-nouislider.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_plugin-tagsinput.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_select-bootstrap.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_sweetalert2.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_wizard-card.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_body.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_bootstrap-material-design-base.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_bootstrap-material-design.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_brand.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_buttons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_card.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_code.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_colors-map.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_custom-forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_drawer.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_dropdown.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_forms.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_layout.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_list-group.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_menu.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_modals.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_nav.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_pagination.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_shadow.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_snackbar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_spacing.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_state.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_tables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_tooltip.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_type.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/material-dashboard.scss" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/cover.jpg" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/cover.jpeg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_pills.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_pills.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_togglebutton.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_togglebutton.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/_type.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_typography.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_chartist.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/mixins/_chartist.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_transparency.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/mixins/_transparency.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/mixins/_vendor-prefixes.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/mixins/_vendor-prefixes.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_animate.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/plugins/_animate.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/plugins/_chartist.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_chartist.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/scss/core/variables/_colors.scss" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/sass/md/_colors.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/new_logo.png" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/assets/img/new_logo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/.angular-cli.json" afterPath="$PROJECT_DIR$/SistemaPracticantes/.angular-cli.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/package-lock.json" afterPath="$PROJECT_DIR$/SistemaPracticantes/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/package.json" afterPath="$PROJECT_DIR$/SistemaPracticantes/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.ts" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.ts" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.ts" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/empresas.component.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/empresas.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.ts" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SistemaPracticantes/src/index.html" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,54 +293,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/index.html">
+      <file leaf-file-name="documentos.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-297">
-              <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+            <state relative-caret-position="594">
+              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app-rutas.servive.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
+      <file leaf-file-name="coordinadores.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="31" column="69" lean-forward="false" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
+            <state relative-caret-position="54">
+              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="26" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="empresas.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/empresas.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aprobar-estudiantes.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="12" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aprobar-empresas.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="34" column="74" lean-forward="false" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -110,6 +349,7 @@
       <find>mark</find>
       <find>12</find>
       <find>search</find>
+      <find>class=&quot;nav-item&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>./assets</replace>
@@ -123,7 +363,6 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/index.js" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/package.json" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/admin.js" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/material-kit.js" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-kit.css" />
@@ -131,9 +370,7 @@
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.css" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/index.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estadisticas/estadisticas.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.html" />
@@ -142,13 +379,19 @@
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/empresas.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/package.json" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/.angular-cli.json" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/index.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" />
       </list>
     </option>
   </component>
@@ -181,6 +424,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,49 +468,10 @@
               <item name="coordinadores" type="462c0819:PsiDirectoryNode" />
               <item name="documentos" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="coordinadores" type="462c0819:PsiDirectoryNode" />
-              <item name="empresas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="coordinadores" type="462c0819:PsiDirectoryNode" />
-              <item name="empresas" type="462c0819:PsiDirectoryNode" />
-              <item name="aprobar-empresas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="coordinadores" type="462c0819:PsiDirectoryNode" />
-              <item name="estudiantes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="coordinadores" type="462c0819:PsiDirectoryNode" />
-              <item name="estudiantes" type="462c0819:PsiDirectoryNode" />
-              <item name="aprobar-estudiantes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,25 +514,24 @@
       <workItem from="1522183256025" duration="590000" />
       <workItem from="1522184756307" duration="2210000" />
       <workItem from="1522194255024" duration="43967000" />
+      <workItem from="1523880879941" duration="9659000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48044000" />
+    <option name="totallyTimeSpent" value="57703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19895834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2328125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33182332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -336,6 +540,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -350,67 +555,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/js/bootstrap-material-design.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="5351" column="36" lean-forward="false" selection-start-line="5351" selection-start-column="35" selection-end-line="5351" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/block.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="237" column="16" lean-forward="false" selection-start-line="237" selection-start-column="16" selection-end-line="237" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/favicon.ico">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/examples/card-product3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/examples/studio-4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/apple-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/city.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/favicon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/landing.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/profile.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/examples/card-product3.jpg" />
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/examples/studio-4.jpg" />
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/apple-icon.png" />
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/city.jpg" />
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/favicon.png" />
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/landing.jpg" />
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/img/kit/free/profile.jpg" />
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/demo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -423,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
           <caret line="588" column="15" lean-forward="false" selection-start-line="588" selection-start-column="15" selection-end-line="588" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -431,7 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-859">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -439,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -447,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -455,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-49">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -463,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -471,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -479,23 +627,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3883">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/material-kit-demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="21" column="765" lean-forward="false" selection-start-line="21" selection-start-column="765" selection-end-line="21" selection-end-column="765" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/material-kit-demo.js" />
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/assets-for-demo/js/jquery.sharrre.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-49">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,74 +642,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="427" column="45" lean-forward="false" selection-start-line="427" selection-start-column="45" selection-end-line="427" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-kit.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="11" column="91524" lean-forward="false" selection-start-line="11" selection-start-column="91524" selection-end-line="11" selection-end-column="91524" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-kit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="6247" column="22" lean-forward="true" selection-start-line="6247" selection-start-column="22" selection-end-line="6247" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-kit.min.css" />
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-kit.css" />
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-dashboard.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-46737">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-423">
           <caret line="13032" column="32" lean-forward="false" selection-start-line="13032" selection-start-column="11" selection-end-line="13032" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-297">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -578,15 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -594,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,9 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -630,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,9 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -648,15 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="18" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2187">
-          <caret line="81" column="10" lean-forward="false" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="84" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,27 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="15" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="31" column="69" lean-forward="false" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,18 +774,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html">
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="465">
+          <caret line="34" column="74" lean-forward="false" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html">
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="34" column="74" lean-forward="false" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+        <state relative-caret-position="27">
+          <caret line="31" column="69" lean-forward="false" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="12" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/.angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding />
         </state>
       </provider>
