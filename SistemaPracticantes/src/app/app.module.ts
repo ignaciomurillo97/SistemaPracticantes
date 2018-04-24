@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CoordinadoresComponent } from './coordinadores/coordinadores.component';
@@ -18,6 +18,9 @@ import { AprobarEstudiantesComponent } from './coordinadores/estudiantes/aprobar
 import { AppRutasModulo } from './app-rutas.servive';
 import { LoginComponent } from './login/login.component';
 import { InformacionPersonalComponent } from './general/informacion-personal/informacion-personal.component';
+import { CrearPersonaComponent } from './general/crear-persona/crear-persona.component';
+import { CrearUsuarioComponent } from './general/crear-usuario/crear-usuario.component';
+import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estudiante.component';
 
 
 @NgModule({
@@ -36,11 +39,16 @@ import { InformacionPersonalComponent } from './general/informacion-personal/inf
     AgregarDocumentoComponent,
     AprobarEstudiantesComponent,
     LoginComponent,
-    InformacionPersonalComponent
+    InformacionPersonalComponent,
+    CrearPersonaComponent,
+    CrearUsuarioComponent,
+    CrearEstudianteComponent
   ],
   imports: [
     BrowserModule,
-    AppRutasModulo
+    AppRutasModulo,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

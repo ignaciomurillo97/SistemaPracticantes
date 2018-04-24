@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header card-header-primary" data-background-color="purple">
+        <h4 class="card-title">Información de usuario</h4>
+      </div>
+      <div class="card-content">
+        <form [formGroup] = "formularioUsuario">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group label-floating is-empty">
+                <label class="bmd-label-floating">Nombre de usuario</label>
+                <input type="text"
+                       class="form-control"
+                       id="nombreDeUsuario"
+                       formControlName="nombreDeUsuario"
+                >
+                <span *ngIf="!formularioUsuario.get('nombreDeUsuario').valid && formularioUsuario.get('nombreDeUsuario').touched">
+
+                  <div *ngIf="formularioUsuario.get('nombreDeUsuario').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Contraseña</label>
+                <input type="password"
+                       class="form-control"
+                       id="contraseña"
+                       formControlName="contraseña"
+                >
+                <span *ngIf="!formularioUsuario.get('contraseña').valid && formularioUsuario.get('contraseña').touched">
+
+                  <div *ngIf="formularioUsuario.get('contraseña').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Confirmar contraseña</label>
+                <input type="password"
+                       class="form-control"
+                       id="confirmarContraseña"
+                       formControlName="confirmarContraseña"
+                >
+                <span *ngIf="!formularioUsuario.get('confirmarContraseña').valid && formularioUsuario.get('confirmarContraseña').touched">
+
+                  <div *ngIf="formularioUsuario.get('confirmarContraseña').errors['required']" class="text-danger"> Este campo es necesario</div>
+                  <div *ngIf="formularioUsuario.get('confirmarContraseña').errors['contraseñaNoIgual']" class="text-danger"> Las contraseñas no coinciden</div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

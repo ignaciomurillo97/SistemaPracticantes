@@ -1,0 +1,145 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header card-header-primary" data-background-color="purple">
+        <h4 class="card-title">Información personal</h4>
+      </div>
+      <div class="card-content">
+        <form [formGroup] = "formularioPersona" >
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group is-empty">
+                <label class="bmd-label-floating">Nombre</label>
+                <input type="text"
+                       class="form-control"
+                       id="nombre"
+                       formControlName="nombre"
+                >
+                <span *ngIf="!formularioPersona.get('nombre').valid && formularioPersona.get('nombre').touched">
+
+                  <div *ngIf="formularioPersona.get('nombre').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group is-empty">
+                <label class="bmd-label-floating">Primer Apellido</label>
+                <input type="text"
+                       class="form-control"
+                       id="primerApellido"
+                       formControlName="primerApellido"
+                >
+                <span *ngIf="!formularioPersona.get('primerApellido').valid && formularioPersona.get('primerApellido').touched">
+
+                  <div *ngIf="formularioPersona.get('primerApellido').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group is-empty" >
+                <label class="bmd-label-floating">Segundo Apellido</label>
+                <input type="text"
+                       class="form-control"
+                       id="segundoApellido"
+                       formControlName="segundoApellido"
+                >
+                <span *ngIf="!formularioPersona.get('segundoApellido').valid && formularioPersona.get('segundoApellido').touched">
+
+                  <div *ngIf="formularioPersona.get('segundoApellido').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group is-empty">
+                <label class="bmd-label-floating">Cedula</label>
+                <input type="number"
+                       class="form-control"
+                       id="cedula"
+                       formControlName="cedula"
+                >
+                <span *ngIf="!formularioPersona.get('cedula').valid && formularioPersona.get('cedula').touched">
+
+                  <div *ngIf="formularioPersona.get('cedula').errors['required']" class="text-danger"> Este campo es necesario</div>
+                  <div *ngIf="formularioPersona.get('cedula').errors['min']
+                   || formularioPersona.get('cedula').errors['max']"
+                       class="text-danger"> La cédula tiene que ser de minimo nueve dígitos</div>
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label >Genero</label>
+                <select class="form-control"
+                        id="genero"
+                        formControlName="genero"
+                >
+                  <option *ngFor="let genero of generos" [value]="genero">{{genero}}</option>
+                </select>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group" formArrayName="numerosContacto">
+                <label >Numero de contacto</label>
+
+                <button class="btn btn-primary btn-round" (click)="agregarEntrada('numerosContacto')">Agregar</button>
+
+                <div *ngFor="let numero of formularioPersona.get('numerosContacto').controls; let i = index"              >
+                  <input type="number" class="form-control" [formControlName]="i"  >
+                  <div *ngIf="!numero.valid && numero.touched">
+                    <div *ngIf="numero.errors['required']" class="text-danger">
+                      Este campo es requerido
+                    </div>
+                    <div *ngIf="numero.errors['min'] || numero.errors['max']" class="text-danger">
+                      El número de telefono tiene que ser de 8 dígitos
+                    </div>
+                    <div *ngIf="numero.errors['numeroRepetido']" class="text-danger">
+                      Este número esta repetido
+                    </div>
+                  </div>
+                  <button class="btn btn-danger btn-round" (click)="eliminarEntrada(i,'numerosContacto')">Eliminar</button>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group" formArrayName="correosContacto">
+                <label class="bmd-label-floating">Correo</label>
+                <button class="btn btn-primary btn-round" (click)="agregarEntrada('correosContacto')">Agregar</button>
+
+                <div *ngFor="let correo of formularioPersona.get('correosContacto').controls; let i = index">
+                  <input type="text" class="form-control" [formControlName]="i" >
+                  <div *ngIf="!correo.valid && correo.touched">
+                    <div *ngIf="correo.errors['required']" class="text-danger">
+                      Este campo es requerido
+                    </div>
+                    <div *ngIf="correo.errors['email'] " class="text-danger">
+                      Tiene que ingresar una dirección de correo electronico valida
+                    </div>
+                    <div *ngIf="correo.errors['correoRepetido'] " class="text-danger">
+                      Esta dirección de correo electronico ya ha sido ingresada
+                    </div>
+                  </div>
+                  <button class="btn btn-danger btn-round" (click)="eliminarEntrada(i,'correosContacto')">Eliminar</button>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
