@@ -4,19 +4,16 @@ const session = require('express-session');
 const app = express();
 const port = 3000;
 
-
-// Definir documentos publicos
-app.use(express.static('public'))
-
 // session
 app.set('trust proxy', 1);
 app.use(session({
-  secret: 'culpa de torres',
-  cookie: { secure: true, maxAge: 60000 }
+   secret: 'culpa de torres',
+   resave: false,
+   saveUninitialized: true,
+   cookie: { maxAge: 60000 }
 }))
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
 // Archivos de rutas
 var index         = require('./routes/index.js');
@@ -32,3 +29,10 @@ app.use('/coordinador'  , coordinador);
 app.use('/estudiante'   , estudiante);
 
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));
+
+var db_connection = require('./model/db_conection.js');
+db_connection.selectTest().then(function(res){
+   console.log(res);
+}).catch(function(err){
+   console.log(err);
+});
