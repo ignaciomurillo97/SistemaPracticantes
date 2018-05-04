@@ -21,6 +21,10 @@ import { InformacionPersonalComponent } from './general/informacion-personal/inf
 import { CrearPersonaComponent } from './general/crear-persona/crear-persona.component';
 import { CrearUsuarioComponent } from './general/crear-usuario/crear-usuario.component';
 import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estudiante.component';
+import { AdministradoresComponent } from './administradores/administradores.component';
+import { UniversidadesComponent } from './administradores/universidades/universidades.component';
+import { SedesComponent } from './administradores/sedes/sedes.component';
+import { CarrerasComponent } from './administradores/carreras/carreras.component';
 
 
 @NgModule({
@@ -42,7 +46,11 @@ import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estud
     InformacionPersonalComponent,
     CrearPersonaComponent,
     CrearUsuarioComponent,
-    CrearEstudianteComponent
+    CrearEstudianteComponent,
+    AdministradoresComponent,
+    UniversidadesComponent,
+    CarrerasComponent,
+    SedesComponent
   ],
   imports: [
     BrowserModule,
