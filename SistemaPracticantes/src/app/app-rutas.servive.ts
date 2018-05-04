@@ -15,11 +15,11 @@ import {EventosComponent} from './coordinadores/eventos/eventos.component';
 import {LoginComponent} from './login/login.component';
 import {AgregarProfesorComponent} from './coordinadores/profesores/agregar-profesor/agregar-profesor.component';
 
-// Administradores
-import {AdministradoresComponent} from './administradores/administradores.component';
-import {UniversidadesComponent} from './administradores/universidades/universidades.component';
-import {SedesComponent} from './administradores/sedes/sedes.component';
-import {CarrerasComponent} from './administradores/carreras/carreras.component';
+// Administrador
+import {AdministradorComponent} from './administrador/administrador.component';
+import {UniversidadesComponent} from './administrador/universidades/universidades.component';
+import {SedesComponent} from './administrador/sedes/sedes.component';
+import {CarrerasComponent} from './administrador/carreras/carreras.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -56,7 +56,7 @@ const rutas: Routes = [
     { path: 'eventos', component: EventosComponent}
   ]},
 
-   {path: 'administradores', component: AdministradoresComponent, children: [
+   {path: 'administrador', component: AdministradorComponent, children: [
      { path: 'universidades', component: UniversidadesComponent },
      { path: 'sedes', component: SedesComponent },
      { path: 'carreras', component: CarrerasComponent }

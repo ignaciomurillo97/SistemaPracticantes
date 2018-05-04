@@ -2,11 +2,11 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 
 declare const $: any;
 @Component({
-  selector: 'app-administradores',
-  templateUrl: './administradores.component.html',
-  styleUrls: ['./administradores.component.css']
+  selector: 'app-administrador',
+  templateUrl: './administrador.component.html',
+  styleUrls: ['./administrador.component.css']
 })
-export class AdministradoresComponent implements OnInit {
+export class AdministradorComponent implements OnInit {
 
   private sidebarVisible: boolean;
   private toggleButton: any;

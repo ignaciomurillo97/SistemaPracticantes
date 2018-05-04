@@ -21,10 +21,10 @@ import { InformacionPersonalComponent } from './general/informacion-personal/inf
 import { CrearPersonaComponent } from './general/crear-persona/crear-persona.component';
 import { CrearUsuarioComponent } from './general/crear-usuario/crear-usuario.component';
 import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estudiante.component';
-import { AdministradoresComponent } from './administradores/administradores.component';
-import { UniversidadesComponent } from './administradores/universidades/universidades.component';
-import { SedesComponent } from './administradores/sedes/sedes.component';
-import { CarrerasComponent } from './administradores/carreras/carreras.component';
+import { UniversidadesComponent } from './administrador/universidades/universidades.component';
+import { SedesComponent } from './administrador/sedes/sedes.component';
+import { CarrerasComponent } from './administrador/carreras/carreras.component';
+import { AdministradorComponent } from './administrador/administrador.component';
 
 
 @NgModule({
@@ -47,10 +47,11 @@ import { CarrerasComponent } from './administradores/carreras/carreras.component
     CrearPersonaComponent,
     CrearUsuarioComponent,
     CrearEstudianteComponent,
-    AdministradoresComponent,
+    AdministradorComponent,
     UniversidadesComponent,
     CarrerasComponent,
-    SedesComponent
+    SedesComponent,
+    AdministradorComponent
   ],
   imports: [
     BrowserModule,
