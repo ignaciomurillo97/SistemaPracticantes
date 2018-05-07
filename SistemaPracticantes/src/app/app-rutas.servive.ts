@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CoordinadoresComponent} from './coordinadores/coordinadores.component';
+import {CoordinadoresComponent} from './coordinadores/coordinadores.component';
 import {EmpresasComponent} from './coordinadores/empresas/empresas.component';
 import {DocumentosComponent} from './coordinadores/documentos/documentos.component';
 import {AgregarDocumentoComponent} from './coordinadores/documentos/agregar-documento/agregar-documento.component';
@@ -16,6 +16,12 @@ import {AgregarProfesorComponent} from './coordinadores/profesores/agregar-profe
 import {RegistroEmpresaComponent} from './login/registro-empresa/registro-empresa.component';
 import {RegistroEstudianteComponent} from './login/registro-estudiante/registro-estudiante.component';
 import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
+
+// Administrador
+import {AdministradorComponent} from './administrador/administrador.component';
+import {UniversidadesComponent} from './administrador/universidades/universidades.component';
+import {SedesComponent} from './administrador/sedes/sedes.component';
+import {CarrerasComponent} from './administrador/carreras/carreras.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -53,12 +59,25 @@ const rutas: Routes = [
     ] },
 
 
+<<<<<<< HEAD
     { path: 'eventos', children:[
         { path: '', component: EventosComponent },
         { path: 'agregarEvento', component: AgregarEventoComponent}
     ]}
 
   ]}
+=======
+    { path: 'eventos', component: EventosComponent}
+  ]},
+
+   {path: 'administrador', component: AdministradorComponent, children: [
+     { path: 'universidades', component: UniversidadesComponent },
+     { path: 'sedes', component: SedesComponent },
+     { path: 'carreras', component: CarrerasComponent }
+   ]
+  }
+   
+>>>>>>> 86c69fde7f42994d9fc2ec6a5c562b25420f1378
 ];
 
 @NgModule({
