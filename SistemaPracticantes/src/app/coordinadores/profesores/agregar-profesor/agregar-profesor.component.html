@@ -1,8 +1,27 @@
-<app-crear-usuario></app-crear-usuario>
 
 <div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <button class="btn btn-primary " (click)="agregarProfesor()">Crear profesor</button>
-    <button class="btn btn-danger " routerLink="/coordinadores/profesores">Cancelar</button>
+  <div class="col-md-10 col-md-offset-1   ">
+    <div class="card">
+      <div class=" card-header" data-background-color="purple">
+        <h2 class="card-title text-center">Registro profesores de práctica</h2>
+      </div>
+      <div class="card-content">
+
+        <app-crear-persona></app-crear-persona>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <button class="btn btn-primary btn-round">Registrarse</button>
+            <button routerLink="/coordinadores/profesores" class="btn btn-danger btn-round">Cancelar</button>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
   </div>
 </div>
+

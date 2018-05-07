@@ -12,7 +12,6 @@ import { EmpresasComponent } from './coordinadores/empresas/empresas.component';
 import { DocumentosComponent } from './coordinadores/documentos/documentos.component';
 import { AgregarProfesorComponent } from './coordinadores/profesores/agregar-profesor/agregar-profesor.component';
 import { AprobarEmpresasComponent } from './coordinadores/empresas/aprobar-empresas/aprobar-empresas.component';
-import { DesaprobarEmpresaComponent } from './coordinadores/empresas/desaprobar-empresa/desaprobar-empresa.component';
 import { AgregarDocumentoComponent } from './coordinadores/documentos/agregar-documento/agregar-documento.component';
 import { AprobarEstudiantesComponent } from './coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component';
 import { AppRutasModulo } from './app-rutas.servive';
@@ -21,6 +20,10 @@ import { InformacionPersonalComponent } from './general/informacion-personal/inf
 import { CrearPersonaComponent } from './general/crear-persona/crear-persona.component';
 import { CrearUsuarioComponent } from './general/crear-usuario/crear-usuario.component';
 import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estudiante.component';
+import { RegistroEmpresaComponent } from './login/registro-empresa/registro-empresa.component';
+import { RegistroEstudianteComponent } from './login/registro-estudiante/registro-estudiante.component';
+import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
+import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
 
 
 @NgModule({
@@ -35,14 +38,17 @@ import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estud
     DocumentosComponent,
     AgregarProfesorComponent,
     AprobarEmpresasComponent,
-    DesaprobarEmpresaComponent,
     AgregarDocumentoComponent,
     AprobarEstudiantesComponent,
     LoginComponent,
     InformacionPersonalComponent,
     CrearPersonaComponent,
     CrearUsuarioComponent,
-    CrearEstudianteComponent
+    CrearEstudianteComponent,
+    RegistroEmpresaComponent,
+    RegistroEstudianteComponent,
+    CrearEmpresaComponent,
+    AgregarEventoComponent
   ],
   imports: [
     BrowserModule,
