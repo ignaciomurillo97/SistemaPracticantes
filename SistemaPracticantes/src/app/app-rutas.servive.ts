@@ -6,7 +6,6 @@ import {EmpresasComponent} from './coordinadores/empresas/empresas.component';
 import {DocumentosComponent} from './coordinadores/documentos/documentos.component';
 import {AgregarDocumentoComponent} from './coordinadores/documentos/agregar-documento/agregar-documento.component';
 import {AprobarEmpresasComponent} from './coordinadores/empresas/aprobar-empresas/aprobar-empresas.component';
-import {DesaprobarEmpresaComponent} from './coordinadores/empresas/desaprobar-empresa/desaprobar-empresa.component';
 import {EstadisticasComponent} from './coordinadores/estadisticas/estadisticas.component';
 import {EstudiantesComponent} from './coordinadores/estudiantes/estudiantes.component';
 import {AprobarEstudiantesComponent} from './coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component';
@@ -14,6 +13,9 @@ import {ProfesoresComponent} from './coordinadores/profesores/profesores.compone
 import {EventosComponent} from './coordinadores/eventos/eventos.component';
 import {LoginComponent} from './login/login.component';
 import {AgregarProfesorComponent} from './coordinadores/profesores/agregar-profesor/agregar-profesor.component';
+import {RegistroEmpresaComponent} from './login/registro-empresa/registro-empresa.component';
+import {RegistroEstudianteComponent} from './login/registro-estudiante/registro-estudiante.component';
+import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
 
 // Administrador
 import {AdministradorComponent} from './administrador/administrador.component';
@@ -29,7 +31,11 @@ import {AdministrarCoordinadoresComponent} from './administrador/administrar-coo
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent},
+  { path: 'login', children: [
+      { path: '', component: LoginComponent, pathMatch: 'full'},
+      { path: 'registroEmpresa', component: RegistroEmpresaComponent},
+      { path: 'registroEstudiante', component: RegistroEstudianteComponent}
+    ]},
   { path: 'coordinadores', component: CoordinadoresComponent, children:[
     { path: '', redirectTo: 'estadisticas', pathMatch: 'full'},
 
@@ -58,8 +64,11 @@ const rutas: Routes = [
       { path: 'agregarProfesor', component: AgregarProfesorComponent}
     ] },
 
+    { path: 'eventos', children:[
+        { path: '', component: EventosComponent },
+        { path: 'agregarEvento', component: AgregarEventoComponent}
+    ]}
 
-    { path: 'eventos', component: EventosComponent}
   ]},
 
    {path: 'administrador', component: AdministradorComponent, children: [
@@ -74,7 +83,7 @@ const rutas: Routes = [
      { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent }
    ]
   }
-   
+
 ];
 SedeComponent
 @NgModule({

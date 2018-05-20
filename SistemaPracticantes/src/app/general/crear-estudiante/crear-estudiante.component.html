@@ -5,22 +5,43 @@
         <h4 class="card-title">Información del estudiante</h4>
       </div>
       <div class="card-content">
-        <form>
+        <form [formGroup] = "formularioEstudiante">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label class="bmd-label-floating">Número de carne</label>
-                <input type="number" class="form-control">
+                <input type="number"
+                       class="form-control"
+                       formControlName="numeroCarne"
+                >
+                <span *ngIf="!formularioEstudiante.get('numeroCarne').valid && formularioEstudiante.get('numeroCarne').touched">
+
+                  <div *ngIf="formularioEstudiante.get('numeroCarne').errors['required']" class="text-danger"> Este campo es necesario</div>
+                  <div *ngIf="formularioEstudiante.get('numeroCarne').errors['min']" class="text-danger"> El numero de carne tiene que ser de por lo menos 8 dígitos</div>
+                  <div *ngIf="formularioEstudiante.get('numeroCarne').errors['max']" class="text-danger"> El numero de carne tiene que ser de maximo 10 dígitos</div>
+                </span>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="form-group">
                 <label class="bmd-label-floating">Foto</label>
-                <input type="email" class="form-control">
+                <input type="file"
+                       class="form-control"
+                       style="display: none"
+                       (change)="cambioEnArchivo($event)"
+                       #archivo
+                       formControlName="foto"
+                >
+                <button class="btn btn-primary btn-round" (click)="archivo.click()">Seleccione su archivo</button>
+
+                <br>
+                <label>Nombre del archivo: {{nombreArchivo}}</label>
+                <br>
+                <span *ngIf="!formatoArchivoCorrecto" class="text-danger">
+                  Los formatos permitidos son SVG, PNG, JPG, JPEG
+                </span>
               </div>
             </div>
 
-          </div>
           <div class="clearfix"></div>
         </form>
       </div>

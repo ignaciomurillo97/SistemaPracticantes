@@ -1,3 +1,53 @@
-<p>
-  agregar-evento works!
-</p>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header card-header-primary" data-background-color="purple">
+        <h4 class="title">Crear Evento</h4>
+      </div>
+      <div class="card-content">
+        <form [formGroup] = "formularioEvento">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Día del evento</label>
+                <input type="date"
+                       class="form-control"
+                       formControlName="diaEvento"
+                >
+                <span *ngIf="!formularioEvento.get('nombreDocumento').valid && formularioEvento.get('nombreDocumento').touched">
+                  <div *ngIf="formularioEvento.get('nombreDocumento').errors['required']" class="text-danger">Este campo es requerido</div>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-4" >
+              <div class="form-group">
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating"> Descripcion</label>
+                <textarea class="form-control"
+                          rows="3"
+                          formControlName="descripcion"
+                ></textarea>
+                <span *ngIf="!formularioEvento.get('descripcion').valid && formularioEvento.get('descripcion').touched">
+                  <div *ngIf="formularioEvento.get('descripcion').errors['required']" class="text-danger">Este campo es requerido</div>
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="btn btn-primary btn-round pull-left" (click)="agregarDocumento()">Crear documento</button>
+          <button class="btn btn-danger btn-round pull-left" routerLink="/coordinadores/documentos">Cancelar</button>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
