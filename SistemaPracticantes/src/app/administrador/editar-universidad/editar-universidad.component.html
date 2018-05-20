@@ -1,0 +1,28 @@
+<div class="row">
+   <form [formGroup] = "formularioUniversidad" >
+      <div class="col-md-10 col-md-offset-1">
+         <div class="card">
+            <div class="card-header card-header-primary" data-background-color="purple">
+               <h4 class="card-title">Editar Universidad</h4>
+            </div>
+            <div class="card-content">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="form-group is-empty">
+                        <label class="bmd-label-floating">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" formControlName="nombre" >
+                        <span *ngIf="!formularioUniversidad.get('nombre').valid && formularioUniversidad.get('nombre').touched">
+
+                           <div *ngIf="formularioUniversidad.get('nombre').errors['required']" class="text-danger"> Este campo es necesario</div>
+                        </span>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="clearfix"></div>
+            </div>
+         </div>
+      </div>
+   </form>
+
+</div>

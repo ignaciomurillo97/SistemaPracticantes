@@ -25,6 +25,12 @@ import { UniversidadesComponent } from './administrador/universidades/universida
 import { SedesComponent } from './administrador/sedes/sedes.component';
 import { CarrerasComponent } from './administrador/carreras/carreras.component';
 import { AdministradorComponent } from './administrador/administrador.component';
+import { AdministradoresComponent } from './administrador/administradores/administradores.component';
+import { EditarAdministradoresComponent } from './administrador/administradores/editar-administradores/editar-administradores.component';
+import { EditarUniversidadComponent } from './administrador/editar-universidad/editar-universidad.component';
+import { UniversidadComponent } from './administrador/universidades/universidad/universidad.component';
+import { SedeComponent } from './administrador/sedes/sede/sede.component';
+import { AdministrarCoordinadoresComponent } from './administrador/administrar-coordinadores/administrar-coordinadores.component';
 
 
 @NgModule({
@@ -51,7 +57,13 @@ import { AdministradorComponent } from './administrador/administrador.component'
     UniversidadesComponent,
     CarrerasComponent,
     SedesComponent,
-    AdministradorComponent
+    AdministradorComponent,
+    AdministradoresComponent,
+    EditarAdministradoresComponent,
+    EditarUniversidadComponent,
+    UniversidadComponent,
+    SedeComponent,
+    AdministrarCoordinadoresComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <div>
 <!-- Card -->
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+<div (click)='view()' class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
    <div class="card card-stats">
       <div class="card-header card-header-warning card-header-icon" data-background-color="purple">
          <div class="card-icon">
@@ -10,7 +10,7 @@
       <p>Instituto Tecnologico de Costa Rica</p>
       <div class="card-footer">
          <div class="btn-group pull-right" role="group">
-            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+            <button (click)="edit()" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
                <i class="material-icons">edit</i>
             </button>
             <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
@@ -21,7 +21,7 @@
    </div>
 </div>
 <!-- Card -->
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+<div (click)='view()' class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
    <div class="card card-stats">
       <div class="card-header card-header-warning card-header-icon" data-background-color="purple">
          <div class="card-icon">
@@ -42,7 +42,7 @@
    </div>
 </div>
 <!-- Card -->
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+<div (click)='view()'class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
    <div class="card card-stats">
       <div class="card-header card-header-warning card-header-icon" data-background-color="purple">
          <div class="card-icon">

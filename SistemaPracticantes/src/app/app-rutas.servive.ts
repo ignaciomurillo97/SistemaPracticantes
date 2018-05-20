@@ -19,7 +19,13 @@ import {AgregarProfesorComponent} from './coordinadores/profesores/agregar-profe
 import {AdministradorComponent} from './administrador/administrador.component';
 import {UniversidadesComponent} from './administrador/universidades/universidades.component';
 import {SedesComponent} from './administrador/sedes/sedes.component';
+import {SedeComponent} from './administrador/sedes/sede/sede.component';
 import {CarrerasComponent} from './administrador/carreras/carreras.component';
+import {AdministradoresComponent} from './administrador/administradores/administradores.component';
+import {EditarAdministradoresComponent} from './administrador/administradores/editar-administradores/editar-administradores.component';
+import {EditarUniversidadComponent} from './administrador/editar-universidad/editar-universidad.component';
+import {UniversidadComponent} from './administrador/universidades/universidad/universidad.component';
+import {AdministrarCoordinadoresComponent} from './administrador/administrar-coordinadores/administrar-coordinadores.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -57,14 +63,20 @@ const rutas: Routes = [
   ]},
 
    {path: 'administrador', component: AdministradorComponent, children: [
-     { path: 'universidades', component: UniversidadesComponent },
+     { path: 'universidades', component: UniversidadesComponent},
+     { path: 'universidad', component: UniversidadComponent },
      { path: 'sedes', component: SedesComponent },
-     { path: 'carreras', component: CarrerasComponent }
+     { path: 'sede', component: SedeComponent },
+     { path: 'carreras', component: CarrerasComponent },
+     { path: 'administradores', component: AdministradoresComponent },
+     { path: 'editar-administradores', component: EditarAdministradoresComponent},
+     { path: 'editar-universidad', component: EditarUniversidadComponent},
+     { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent }
    ]
   }
    
 ];
-
+SedeComponent
 @NgModule({
   imports: [
     // RouterModule.forRoot(appRoutes, {useHash: true})
