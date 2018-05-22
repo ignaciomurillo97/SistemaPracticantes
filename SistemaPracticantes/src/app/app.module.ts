@@ -34,6 +34,7 @@ import { EditarUniversidadComponent } from './administrador/editar-universidad/e
 import { UniversidadComponent } from './administrador/universidades/universidad/universidad.component';
 import { SedeComponent } from './administrador/sedes/sede/sede.component';
 import { AdministrarCoordinadoresComponent } from './administrador/administrar-coordinadores/administrar-coordinadores.component';
+import { EditarCoordinadoresComponent } from './administrador/editar-coordinadores/editar-coordinadores.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { AdministrarCoordinadoresComponent } from './administrador/administrar-c
     EditarUniversidadComponent,
     UniversidadComponent,
     SedeComponent,
-    AdministrarCoordinadoresComponent
+    AdministrarCoordinadoresComponent,
+    EditarCoordinadoresComponent,
   ],
   imports: [
     BrowserModule,
