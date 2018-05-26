@@ -1,26 +1,19 @@
 const mysql = require('mysql');
 
-var con = mysql.createConnection ({
+var db_config = {
    host: "localhost",
    user: "root",
    database: "SistemaPracticantes",
    password: "hola"
-});
+}
 
-con.connect(function(err){
-   if (err) {
+var pool = mysql.createPool(db_config);
+
+pool.getConnection(function(err, connection) {
+   if (err){
       throw err;
    }
-   console.log("conectado a la BD");
-});
+   console.log("Conectado a la DB");
+})
 
-exports.selectTest = function (callback) {
-   var query = "SELECT * FROM test";
-   return new Promise(function (resolve, reject) {
-      con.query(query, function (err, result, fields) {
-         if (err) reject(err);
-         resolve(result);
-      });
-   })
-};
-
+module.exports = pool;

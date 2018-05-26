@@ -24,11 +24,13 @@ export class EditarCoordinadoresComponent implements OnInit {
    }
 
    universidadSeleccionada() {
-      document.getElementById("opcionSede").disabled = false;
+      var element = <HTMLInputElement> document.getElementById("opcionSede");
+      element.disabled = true;
    }
 
    sedeSeleccionada() {
-      document.getElementById("opcionCarrera").disabled = false;
+      var element = <HTMLInputElement> document.getElementById("opcionCarrera");
+      element.disabled = true;
    }
 
 }

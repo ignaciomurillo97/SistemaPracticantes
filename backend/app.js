@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const session = require('express-session');
+const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
@@ -12,6 +13,12 @@ app.use(session({
    saveUninitialized: true,
    cookie: { maxAge: 60000 }
 }))
+
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 app.set('views', path.join(__dirname, 'views'));
 
@@ -30,9 +37,12 @@ app.use('/estudiante'   , estudiante);
 
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));
 
-var db_connection = require('./model/db_conection.js');
-db_connection.selectTest().then(function(res){
-   console.log(res);
-}).catch(function(err){
-   console.log(err);
-});
+var usuario = require('./model/usuario.js');
+
+//var db_connection = require('./model/db_conection.js');
+//
+//db_connection.selectTest().then(function(res){
+//   console.log(res);
+//}).catch(function(err){
+//   console.log(err);
+//});
