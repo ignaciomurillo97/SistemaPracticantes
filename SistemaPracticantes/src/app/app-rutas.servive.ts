@@ -72,6 +72,7 @@ const rutas: Routes = [
 
   ]},
 
+
    {path: 'administrador', component: AdministradorComponent, children: [
      { path: 'universidades', component: UniversidadesComponent},
      { path: 'universidad', component: UniversidadComponent },

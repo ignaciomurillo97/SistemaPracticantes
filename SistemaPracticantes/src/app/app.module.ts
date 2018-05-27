@@ -20,14 +20,17 @@ import { InformacionPersonalComponent } from './general/informacion-personal/inf
 import { CrearPersonaComponent } from './general/crear-persona/crear-persona.component';
 import { CrearUsuarioComponent } from './general/crear-usuario/crear-usuario.component';
 import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estudiante.component';
+
 import { RegistroEmpresaComponent } from './login/registro-empresa/registro-empresa.component';
 import { RegistroEstudianteComponent } from './login/registro-estudiante/registro-estudiante.component';
 import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
 import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
+
 import { UniversidadesComponent } from './administrador/universidades/universidades.component';
 import { SedesComponent } from './administrador/sedes/sedes.component';
 import { CarrerasComponent } from './administrador/carreras/carreras.component';
 import { AdministradorComponent } from './administrador/administrador.component';
+
 import { AdministradoresComponent } from './administrador/administradores/administradores.component';
 import { EditarAdministradoresComponent } from './administrador/administradores/editar-administradores/editar-administradores.component';
 import { EditarUniversidadComponent } from './administrador/editar-universidad/editar-universidad.component';
@@ -64,6 +67,8 @@ import { EditarCoordinadoresComponent } from './administrador/editar-coordinador
     UniversidadesComponent,
     CarrerasComponent,
     SedesComponent,
+    AdministradorComponent,
+
     AdministradoresComponent,
     EditarAdministradoresComponent,
     EditarUniversidadComponent,
