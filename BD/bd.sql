@@ -120,8 +120,6 @@ DROP TABLE IF EXISTS `SistemaPracticantes`.`Universidad` ;
 CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Universidad` (
   `IdUniversidad` INT NOT NULL AUTO_INCREMENT,
   `NombreUniversidad` VARCHAR(60) NULL,
-  `Universidadcol` VARCHAR(45) NULL,
-  `Universidadcol1` VARCHAR(45) NULL,
   PRIMARY KEY (`IdUniversidad`),
   UNIQUE INDEX `IdUniversidad_UNIQUE` (`IdUniversidad` ASC))
 ENGINE = InnoDB;
@@ -411,6 +409,48 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Evento` (
     REFERENCES `SistemaPracticantes`.`CoordinadorPractica` (`Cedula`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SistemaPracticantes`.`ActividadesPorEvento`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SistemaPracticantes`.`ActividadesPorEvento` ;
+
+CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`ActividadesPorEvento` (
+  `idActividadesPorEvento` INT NOT NULL AUTO_INCREMENT,
+  `HoraInicio` TIME NULL,
+  `HoraFin` TIME NULL,
+  `Descripcion` TEXT NULL,
+  `Empresa` DECIMAL(10,0) NULL,
+  `Evento` INT NULL,
+  PRIMARY KEY (`idActividadesPorEvento`),
+  UNIQUE INDEX `idActividadesPorEvento_UNIQUE` (`idActividadesPorEvento` ASC),
+  INDEX `fk_Actividades_Evento_idEvento_idx` (`Evento` ASC),
+  INDEX `fk_Actividades_Empresa_CedulaJuridica_idx` (`Empresa` ASC),
+  CONSTRAINT `fk_Actividades_Evento_idEvento`
+    FOREIGN KEY (`Evento`)
+    REFERENCES `SistemaPracticantes`.`Evento` (`IdEvento`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Actividades_Empresa_CedulaJuridica`
+    FOREIGN KEY (`Empresa`)
+    REFERENCES `SistemaPracticantes`.`Empresa` (`CedulaJuridica`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SistemaPracticantes`.`Bitacora`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SistemaPracticantes`.`Bitacora` ;
+
+CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Bitacora` (
+  `idBitacora` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` TEXT NULL,
+  PRIMARY KEY (`idBitacora`),
+  UNIQUE INDEX `idBitacora_UNIQUE` (`idBitacora` ASC))
 ENGINE = InnoDB;
 
 
