@@ -20,17 +20,10 @@ import { InformacionPersonalComponent } from './general/informacion-personal/inf
 import { CrearPersonaComponent } from './general/crear-persona/crear-persona.component';
 import { CrearUsuarioComponent } from './general/crear-usuario/crear-usuario.component';
 import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estudiante.component';
-<<<<<<< HEAD
-import { RegistroEmpresaComponent } from './login/registro-empresa/registro-empresa.component';
-import { RegistroEstudianteComponent } from './login/registro-estudiante/registro-estudiante.component';
-import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
-import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
-=======
 import { UniversidadesComponent } from './administrador/universidades/universidades.component';
 import { SedesComponent } from './administrador/sedes/sedes.component';
 import { CarrerasComponent } from './administrador/carreras/carreras.component';
 import { AdministradorComponent } from './administrador/administrador.component';
->>>>>>> 86c69fde7f42994d9fc2ec6a5c562b25420f1378
 
 
 @NgModule({
@@ -52,18 +45,11 @@ import { AdministradorComponent } from './administrador/administrador.component'
     CrearPersonaComponent,
     CrearUsuarioComponent,
     CrearEstudianteComponent,
-<<<<<<< HEAD
-    RegistroEmpresaComponent,
-    RegistroEstudianteComponent,
-    CrearEmpresaComponent,
-    AgregarEventoComponent
-=======
     AdministradorComponent,
     UniversidadesComponent,
     CarrerasComponent,
     SedesComponent,
     AdministradorComponent
->>>>>>> 86c69fde7f42994d9fc2ec6a5c562b25420f1378
   ],
   imports: [
     BrowserModule,

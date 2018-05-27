@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1fb313-1cad-4eb8-8643-f2b366720ebe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/desaprobar-empresa/desaprobar-empresa.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/desaprobar-empresa/desaprobar-empresa.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/desaprobar-empresa/desaprobar-empresa.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/desaprobar-empresa/desaprobar-empresa.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/empresas.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/empresas.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/estudiantes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/estudiantes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/eventos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/eventos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,11 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="coordinadores.component.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="coordinadores.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="394">
               <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app-rutas.servive.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-112">
+              <caret line="70" column="16" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -175,12 +161,12 @@
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.css" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.css" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/eventos.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" />
       </list>
     </option>
   </component>
@@ -215,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,6 +246,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,15 +298,17 @@
       <workItem from="1524676603225" duration="11525000" />
       <workItem from="1525271670897" duration="6204000" />
       <workItem from="1525703758024" duration="14000" />
+      <workItem from="1525722837395" duration="865000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120122000" />
+    <option name="totallyTimeSpent" value="120987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
+      <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23242188" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
@@ -336,30 +324,29 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295583" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3295583" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23242188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3295583" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3351724" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3295583" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -641,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/eventos.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -690,6 +670,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="70" column="16" lean-forward="true" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
         </state>
       </provider>
     </entry>

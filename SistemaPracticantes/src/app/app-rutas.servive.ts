@@ -59,16 +59,13 @@ const rutas: Routes = [
     ] },
 
 
-<<<<<<< HEAD
     { path: 'eventos', children:[
         { path: '', component: EventosComponent },
         { path: 'agregarEvento', component: AgregarEventoComponent}
     ]}
 
-  ]}
-=======
-    { path: 'eventos', component: EventosComponent}
   ]},
+
 
    {path: 'administrador', component: AdministradorComponent, children: [
      { path: 'universidades', component: UniversidadesComponent },
@@ -76,8 +73,7 @@ const rutas: Routes = [
      { path: 'carreras', component: CarrerasComponent }
    ]
   }
-   
->>>>>>> 86c69fde7f42994d9fc2ec6a5c562b25420f1378
+
 ];
 
 @NgModule({
