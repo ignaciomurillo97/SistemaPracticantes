@@ -4,7 +4,7 @@ var db_config = {
    host: "localhost",
    user: "root",
    database: "SistemaPracticantes",
-   password: "hola"
+   password: "root"
 }
 
 var pool = mysql.createPool(db_config);

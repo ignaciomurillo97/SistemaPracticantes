@@ -18,4 +18,8 @@ exports.autenticar = function (nombreUsuario, contrasena) {
          resolve(result);
       });
    })
-}
+};
+
+exports.agregarUsuario = function (nombreUsuario, contrasena) {
+    // let query =
+};
