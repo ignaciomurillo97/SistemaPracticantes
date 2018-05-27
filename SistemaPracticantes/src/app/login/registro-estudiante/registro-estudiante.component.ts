@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CrearPersonaComponent } from '../../general/crear-persona/crear-persona.component';
+import {CrearEstudianteComponent} from '../../general/crear-estudiante/crear-estudiante.component';
+import {CrearUsuarioComponent} from '../../general/crear-usuario/crear-usuario.component';
 
 @Component({
   selector: 'app-registro-estudiante',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroEstudianteComponent implements OnInit {
 
+  @ViewChild(CrearPersonaComponent) crearPersona : CrearPersonaComponent;
+  @ViewChild(CrearEstudianteComponent) crearEstudiante : CrearEstudianteComponent;
+  @ViewChild(CrearUsuarioComponent) crearUsuario : CrearUsuarioComponent;
+
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
