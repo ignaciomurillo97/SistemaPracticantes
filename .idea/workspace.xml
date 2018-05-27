@@ -2,74 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1fb313-1cad-4eb8-8643-f2b366720ebe" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BD/bd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BD/bd.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BD/diagramaBD.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/BD/diagramaBD.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/db_conection.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/db_conection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/usuario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/Changes.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/Changes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/License" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/License" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/Connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/Connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/ConnectionConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/ConnectionConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/Pool.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/Pool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolCluster.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolCluster.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolConnection.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolConnection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolNamespace.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolNamespace.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/PoolSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/BufferList.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/BufferList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/PacketHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/PacketHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/PacketWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/PacketWriter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/Parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/Parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/Protocol.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/Protocol.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/ResultSet.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/ResultSet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/SqlString.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/SqlString.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/charsets.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/charsets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/errors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/field_flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/field_flags.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/server_status.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/server_status.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/ssl_profiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/ssl_profiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/constants/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/AuthSwitchRequestPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/AuthSwitchRequestPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/AuthSwitchResponsePacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/AuthSwitchResponsePacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/EofPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/EofPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/Field.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/Field.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/FieldPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/FieldPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/OkPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/OkPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/SSLRequestPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/SSLRequestPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/packets/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Handshake.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Handshake.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Ping.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Ping.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Query.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Quit.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Quit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Sequence.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Sequence.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Statistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/Statistics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/lib/protocol/sequences/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mysql/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mysql/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -104,20 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usuario.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/model/usuario.js">
+      <file leaf-file-name="bd.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BD/bd.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="444">
+              <caret line="459" lean-forward="true" selection-start-line="459" selection-end-line="459" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bd.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BD/bd.sql">
+      <file leaf-file-name="usuario.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/model/usuario.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="419" lean-forward="true" selection-start-line="419" selection-end-line="419" />
+            <state relative-caret-position="55">
+              <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -408,12 +341,12 @@
       <workItem from="1525271670897" duration="6204000" />
       <workItem from="1525703758024" duration="14000" />
       <workItem from="1525722837395" duration="865000" />
-      <workItem from="1527387286335" duration="7501000" />
+      <workItem from="1527387286335" duration="8809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128488000" />
+    <option name="totallyTimeSpent" value="129796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -756,6 +689,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -763,13 +703,6 @@
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -783,6 +716,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/model/usuario.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-264">
@@ -790,17 +730,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/model/usuario.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BD/bd.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="419" lean-forward="true" selection-start-line="419" selection-end-line="419" />
+        <state relative-caret-position="444">
+          <caret line="459" lean-forward="true" selection-start-line="459" selection-end-line="459" />
         </state>
       </provider>
     </entry>
