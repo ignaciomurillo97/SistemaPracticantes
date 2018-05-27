@@ -9,11 +9,17 @@ router.get ('/', function(req, res, next) {
    res.send('Hello World!');
 })
 
+router.get('/test', function(req, res, next) {
+   console.log('test');
+   res.send({'test':'test'});
+})
+
 router.post ('/login', function(req, res, next){
    res.setHeader('Content-Type', 'application/json');
+   console.log(req.body);
 
    var loginObject;
-   var nombreUsuario = req.body.usuario;
+   var nombreUsuario = req.body.nombreUsuario;
    var contrasena = req.body.contrasena;
 
    usuario.autenticar(nombreUsuario, contrasena).then(function(dbResponse){

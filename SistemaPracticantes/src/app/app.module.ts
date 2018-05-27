@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { CoordinadoresComponent } from './coordinadores/coordinadores.component';
@@ -24,7 +25,7 @@ import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estud
 import { RegistroEmpresaComponent } from './login/registro-empresa/registro-empresa.component';
 import { RegistroEstudianteComponent } from './login/registro-estudiante/registro-estudiante.component';
 import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
-import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
+import { AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
 
 import { UniversidadesComponent } from './administrador/universidades/universidades.component';
 import { SedesComponent } from './administrador/sedes/sedes.component';
@@ -81,7 +82,8 @@ import { EditarCoordinadoresComponent } from './administrador/editar-coordinador
     BrowserModule,
     AppRutasModulo,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
