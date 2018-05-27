@@ -17,23 +17,22 @@ router.post ('/login', function(req, res, next){
    var contrasena = req.body.contrasena;
 
    usuario.autenticar(nombreUsuario, contrasena).then(function(dbResponse){
-      console.log(dbResponse[0].NombreUsuario);
       if (dbResponse.length > 0) {
-         loginObject = {'autenticar':true};
+         req.session.usuario = dbResponse[0];
+         redireccion = redireccionUsuario(dbResponse[0].Tipo)
+         loginObject = {'autenticar':true, 'redirect':redireccion};
       } else {
-         loginObject = {'autenticar':false};
+         loginObject = {'autenticar':false, 'redirect': null};
       }
       res.send(loginObject);
    }).catch(function(err){
       console.log(err);
    })
-
-   if (!req.session.autenticado) {
-      console.log('Nuevo Usuario!');
-      req.session.autenticado = true;
-   } else {
-      console.log('Cookie enviado!');
-   }
 })
+
+function redireccionUsuario(tipoPersona) {
+   if (tipoPersona == 'Administrador') return 'administrador';
+   if (tipoPersona == 'Coordinadores') return 'coordinadores';
+}
 
 module.exports = router;

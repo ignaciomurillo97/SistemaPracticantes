@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
 
   access(loginResponse) {
     if (loginResponse.autenticar) {
-      this.router.navigate(['administrador/universidad'])
+      this.router.navigate([loginResponse.redirect])
     }
   }
 }

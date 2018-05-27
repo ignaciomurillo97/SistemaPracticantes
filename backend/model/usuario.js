@@ -13,9 +13,11 @@ exports.selectTest = function () {
 exports.autenticar = function (nombreUsuario, contrasena) {
    var query = `SELECT `+
    `u.NombreUsuario, `+
-   `u.Contraseña `+
+   `u.Contraseña, `+
+   `tp.Tipo ` +
    `FROM Usuario u inner join `+
-   `Persona p on p.Cedula = u.Cedula ` +
+   `Persona p on p.Cedula = u.Cedula inner join ` +
+   `TipoPersona tp on tp.IdTipoPersona = p.TipoPersona ` +
    `where NombreUsuario = '${nombreUsuario}' AND `+
    `Contraseña = '${contrasena}'`
 
@@ -25,8 +27,4 @@ exports.autenticar = function (nombreUsuario, contrasena) {
          resolve(result);
       });
    })
-};
-
-exports.agregarUsuario = function (nombreUsuario, contrasena) {
-    // let query =
-};
+}
