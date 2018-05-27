@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-sedes',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SedesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
+  }
+
+  view() {
+     this.router.navigate(['administrador/sede']);
   }
 
 }

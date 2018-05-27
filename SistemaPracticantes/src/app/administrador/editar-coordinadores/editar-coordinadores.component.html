@@ -1,0 +1,56 @@
+<app-crear-persona></app-crear-persona>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header card-header-primary" data-background-color="purple">
+        <h4 class="card-title">Información de Universidad</h4>
+      </div>
+      <div class="card-content">
+        <form [formGroup] = "formularioCoodrinador" >
+
+           <div class="col-md-4">
+              <label for="opcionUniversidad">Universidad</label>
+              <select 
+                 (change)="universidadSeleccionada($event.target.value)" 
+                 class="form-control" 
+                 id="opcionUniversidad" 
+                 required
+                 formControlName="opcionUniversidad"
+                 #opcionUniversidad>
+                 <option *ngFor="let x of universidades" [value]="x">{{x}}</option>
+              </select>
+           </div>
+
+           <div class="col-md-4">
+              <label for="opcionSede">Sede</label>
+              <select 
+                 (change)="sedeSeleccionada($event.target.value)" 
+                 class="form-control" 
+                 id="opcionSede" 
+                 disabled
+                 required
+                 formControlName="opcionSede">
+                 <option *ngFor="let x of sedes" [value]="x">{{x}}</option>
+              </select>
+           </div>
+
+           <div class="col-md-4">
+              <label for="opcionCarrera">Carrera</label>
+              <select 
+                 class="form-group" 
+                 class="form-control" 
+                 id="opcionCarrera" 
+                 disabled
+                 required
+                 formControlName="opcionCarrera">
+                 <option *ngFor="let x of carreras" [value]="x">{{x}}</option>
+              </select>
+           </div>
+
+           <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
