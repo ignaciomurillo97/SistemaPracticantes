@@ -20,19 +20,17 @@ import { InformacionPersonalComponent } from './general/informacion-personal/inf
 import { CrearPersonaComponent } from './general/crear-persona/crear-persona.component';
 import { CrearUsuarioComponent } from './general/crear-usuario/crear-usuario.component';
 import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estudiante.component';
-<<<<<<< HEAD
-=======
+
 import { RegistroEmpresaComponent } from './login/registro-empresa/registro-empresa.component';
 import { RegistroEstudianteComponent } from './login/registro-estudiante/registro-estudiante.component';
 import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
 import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
->>>>>>> 9082eebbcb9bc91f30695bf9e43dc438027539f3
+
 import { UniversidadesComponent } from './administrador/universidades/universidades.component';
 import { SedesComponent } from './administrador/sedes/sedes.component';
 import { CarrerasComponent } from './administrador/carreras/carreras.component';
 import { AdministradorComponent } from './administrador/administrador.component';
-<<<<<<< HEAD
-=======
+
 import { AdministradoresComponent } from './administrador/administradores/administradores.component';
 import { EditarAdministradoresComponent } from './administrador/administradores/editar-administradores/editar-administradores.component';
 import { EditarUniversidadComponent } from './administrador/editar-universidad/editar-universidad.component';
@@ -40,7 +38,6 @@ import { UniversidadComponent } from './administrador/universidades/universidad/
 import { SedeComponent } from './administrador/sedes/sede/sede.component';
 import { AdministrarCoordinadoresComponent } from './administrador/administrar-coordinadores/administrar-coordinadores.component';
 import { EditarCoordinadoresComponent } from './administrador/editar-coordinadores/editar-coordinadores.component';
->>>>>>> 9082eebbcb9bc91f30695bf9e43dc438027539f3
 
 
 @NgModule({
@@ -62,20 +59,16 @@ import { EditarCoordinadoresComponent } from './administrador/editar-coordinador
     CrearPersonaComponent,
     CrearUsuarioComponent,
     CrearEstudianteComponent,
-<<<<<<< HEAD
-=======
     RegistroEmpresaComponent,
     RegistroEstudianteComponent,
     CrearEmpresaComponent,
     AgregarEventoComponent,
->>>>>>> 9082eebbcb9bc91f30695bf9e43dc438027539f3
     AdministradorComponent,
     UniversidadesComponent,
     CarrerasComponent,
     SedesComponent,
-<<<<<<< HEAD
-    AdministradorComponent
-=======
+    AdministradorComponent,
+
     AdministradoresComponent,
     EditarAdministradoresComponent,
     EditarUniversidadComponent,
@@ -83,7 +76,6 @@ import { EditarCoordinadoresComponent } from './administrador/editar-coordinador
     SedeComponent,
     AdministrarCoordinadoresComponent,
     EditarCoordinadoresComponent,
->>>>>>> 9082eebbcb9bc91f30695bf9e43dc438027539f3
   ],
   imports: [
     BrowserModule,

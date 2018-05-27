@@ -65,10 +65,6 @@ const rutas: Routes = [
       { path: 'agregarProfesor', component: AgregarProfesorComponent}
     ] },
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9082eebbcb9bc91f30695bf9e43dc438027539f3
     { path: 'eventos', children:[
         { path: '', component: EventosComponent },
         { path: 'agregarEvento', component: AgregarEventoComponent}
@@ -90,11 +86,6 @@ const rutas: Routes = [
      { path: 'editar-coordinadores', component: EditarCoordinadoresComponent }
    ]
   }
-<<<<<<< HEAD
-
-];
-=======
->>>>>>> 9082eebbcb9bc91f30695bf9e43dc438027539f3
 
 ];
 SedeComponent
