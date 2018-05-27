@@ -9,20 +9,15 @@ router.get ('/', function(req, res, next) {
    res.send('Hello World!');
 })
 
-router.get('/test', function(req, res, next) {
-   console.log('test');
-   res.send({'test':'test'});
-})
-
 router.post ('/login', function(req, res, next){
    res.setHeader('Content-Type', 'application/json');
-   console.log(req.body);
 
    var loginObject;
    var nombreUsuario = req.body.nombreUsuario;
    var contrasena = req.body.contrasena;
 
    usuario.autenticar(nombreUsuario, contrasena).then(function(dbResponse){
+      console.log(dbResponse[0].NombreUsuario);
       if (dbResponse.length > 0) {
          loginObject = {'autenticar':true};
       } else {
@@ -32,6 +27,13 @@ router.post ('/login', function(req, res, next){
    }).catch(function(err){
       console.log(err);
    })
+
+   if (!req.session.autenticado) {
+      console.log('Nuevo Usuario!');
+      req.session.autenticado = true;
+   } else {
+      console.log('Cookie enviado!');
+   }
 })
 
 module.exports = router;

@@ -11,7 +11,14 @@ exports.selectTest = function () {
 };
 
 exports.autenticar = function (nombreUsuario, contrasena) {
-   var query = "SELECT * FROM Usuario WHERE NombreUsuario = '" + nombreUsuario + "' AND Contraseña = '" + contrasena + "'"; 
+   var query = `SELECT `+
+   `u.NombreUsuario, `+
+   `u.Contraseña `+
+   `FROM Usuario u inner join `+
+   `Persona p on p.Cedula = u.Cedula ` +
+   `where NombreUsuario = '${nombreUsuario}' AND `+
+   `Contraseña = '${contrasena}'`
+
    return new Promise (function (resolve, reject) {
       db_connection.query(query, function (err, result, fields) {
          if (err) reject(err);
