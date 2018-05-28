@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       'contrasena':contrasena
     };
 
-    this.http.post('http://localhost:3000/login', body)
+    this.http.post('http://localhost:3000/login', body, {withCredentials: true})
       .subscribe(data => {
         console.log(data);
         this.access(data);
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
 
   access(loginResponse) {
     if (loginResponse.autenticar) {
-      this.router.navigate(['administrador/universidad'])
+      this.router.navigate([loginResponse.redirect])
     }
   }
 }
