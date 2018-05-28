@@ -18,8 +18,7 @@ exports.autenticar = function (nombreUsuario, contrasena) {
    `FROM Usuario u inner join `+
    `Persona p on p.Cedula = u.Cedula inner join ` +
    `TipoPersona tp on tp.IdTipoPersona = p.TipoPersona ` +
-   `where NombreUsuario = '${nombreUsuario}' AND `+
-   `Contraseña = '${contrasena}'`
+   `where NombreUsuario = '${nombreUsuario}' `;
 
    return new Promise (function (resolve, reject) {
       db_connection.query(query, function (err, result, fields) {

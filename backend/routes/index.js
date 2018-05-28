@@ -1,5 +1,6 @@
 var express = require('express');
-var usuario = require('../model/usuario.js')
+var passwordHash  = require('password-hash');
+var usuario = require('../model/usuario.js');
 var router = express.Router();
 
 // Rutas de la API
@@ -19,7 +20,8 @@ router.post ('/login', function(req, res, next){
    var contrasena = req.body.contrasena;
 
    usuario.autenticar(nombreUsuario, contrasena).then(function(dbResponse){
-      if (dbResponse.length > 0) {
+      console.log(dbResponse[0].Contraseña);
+      if (dbResponse.length > 0 && passwordHash.verify(contrasena, dbResponse[0].Contraseña)) {
          req.session.usuario = dbResponse[0];
          redireccion = redireccionUsuario(dbResponse[0].Tipo)
          loginObject = {'autenticar':true, 'redirect':redireccion};
