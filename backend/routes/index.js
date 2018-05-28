@@ -1,5 +1,7 @@
 var express = require('express');
-var usuario = require('../model/usuario.js')
+var usuario = require('../model/usuario.js');
+let estudiante = require('../model/estudiante.js');
+const bcrypt = require('bcrypt'); //libreria de node para encriptar strings
 var router = express.Router();
 
 // Rutas de la API
@@ -32,6 +34,7 @@ router.post ('/login', function(req, res, next){
    }).catch(function(err){
       console.log(err);
    })
-})
+});
+
 
 module.exports = router;

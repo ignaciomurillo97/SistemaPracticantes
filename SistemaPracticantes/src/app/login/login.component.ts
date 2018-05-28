@@ -14,7 +14,7 @@ import 'rxjs/add/operator/catch';
 export class LoginComponent implements OnInit {
 
   formularioLogin: FormGroup;
-  private Url = 'localhost:3000/login'  
+  private Url = 'localhost:3000/login';
 
   constructor(private router: Router,private http: HttpClient) { }
 
