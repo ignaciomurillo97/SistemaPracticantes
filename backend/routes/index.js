@@ -9,6 +9,8 @@ router.get ('/', function(req, res, next) {
    res.send('Hello World!');
 })
 
+//Log in 
+
 router.post ('/login', function(req, res, next){
    res.setHeader('Content-Type', 'application/json');
 
@@ -31,8 +33,17 @@ router.post ('/login', function(req, res, next){
 })
 
 function redireccionUsuario(tipoPersona) {
-   if (tipoPersona == 'Administrador') return 'administrador';
-   if (tipoPersona == 'Coordinadores') return 'coordinadores';
+   if (tipoPersona == "coordinador") return "coordinadores"
+   if (tipoPersona == "estudiante") return "estudiante"
+   if (tipoPersona == "administrador") return "administrador"
+   if (tipoPersona == "empresa") return "empresa"
+}
+
+function revisarUsuario(req, res, next) {
+   if (req.session.usuario){
+      next();
+   }
+   res.status(500).send({ error: "Usuario no registrado" });
 }
 
 module.exports = router;
