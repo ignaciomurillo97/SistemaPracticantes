@@ -20,7 +20,6 @@ router.post ('/login', function(req, res, next){
    var contrasena = req.body.contrasena;
 
    usuario.autenticar(nombreUsuario, contrasena).then(function(dbResponse){
-      console.log(dbResponse[0].Contraseña);
       if (dbResponse.length > 0 && passwordHash.verify(contrasena, dbResponse[0].Contraseña)) {
          req.session.usuario = dbResponse[0];
          redireccion = redireccionUsuario(dbResponse[0].Tipo)

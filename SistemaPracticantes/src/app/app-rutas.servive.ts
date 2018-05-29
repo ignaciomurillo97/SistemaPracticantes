@@ -20,6 +20,7 @@ import {AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agr
 // Administrador
 import {AdministradorComponent} from './administrador/administrador.component';
 import {UniversidadesComponent} from './administrador/universidades/universidades.component';
+import {UniversidadCardComponent} from './administrador/universidades/universidad-card/universidad-card.component';
 import {SedesComponent} from './administrador/sedes/sedes.component';
 import {SedeComponent} from './administrador/sedes/sede/sede.component';
 import {CarrerasComponent} from './administrador/carreras/carreras.component';
@@ -74,7 +75,9 @@ const rutas: Routes = [
 
 
    {path: 'administrador', component: AdministradorComponent, children: [
-     { path: 'universidades', component: UniversidadesComponent},
+     { path: 'universidades', component: UniversidadesComponent, children: [
+       { path: '', component: UniversidadCardComponent }
+     ]},
      { path: 'universidad', component: UniversidadComponent },
      { path: 'sedes', component: SedesComponent },
      { path: 'sede', component: SedeComponent },

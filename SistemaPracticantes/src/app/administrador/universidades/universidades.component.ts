@@ -1,5 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { 
+  ViewChild,
+  Component,
+  OnInit
+} from '@angular/core';
+
+import { Observable } from 'rxjs';
 import { Router} from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { UniversidadCardComponent } from './universidad-card/universidad-card.component';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-universidades',
@@ -8,17 +17,23 @@ import { Router} from '@angular/router';
 })
 export class UniversidadesComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  universidades: Observable<Object>;
+  constructor(private router: Router, private http:HttpClient) { }
 
   ngOnInit() {
+    this.obtenerUniversidades();
   }
 
   edit() {
-     this.router.navigate(['administrador/editar-universidad']);
+    this.router.navigate(['administrador/editar-universidad']);
   }
 
-   view() {
-     this.router.navigate(['administrador/universidad'])
-   }
+  view() {
+    this.router.navigate(['administrador/universidad'])
+  }
+
+  obtenerUniversidades() {
+    this.universidades = this.http.get('http://localhost:3000/administrador/universidad', {withCredentials: true})
+  }
 
 }
