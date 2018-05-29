@@ -1,6 +1,6 @@
 let express = require('express');
 let router = express.Router();
-const bcrypt = require('bcrypt'); //libreria de node para encriptar strings
+var passwordHash = require('password-hash');
 let usuario = require('../model/usuario.js');
 let estudiante = require('../model/estudiante.js');
 // Rutas de la API
@@ -49,7 +49,7 @@ router.post('/agregarEstudiante',function (req, res, next) {
     let sexo = req.body.sexo;
     let tipoPersona = 2;
     let nombreUsuario = req.body.nombreUsuario;
-    let contrasena = bcrypt.hashSync(req.body.contrasena, 10);
+    let contrasena = passwordHash.generate(req.body.contrasena);
     let numeroCarne = req.body.numeroCarne;
     let universidad = req.body.universidad;
     let escuela = req.body.escuela;

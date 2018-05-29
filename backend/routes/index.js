@@ -2,7 +2,6 @@ var express = require('express');
 
 var usuario = require('../model/usuario.js');
 let estudiante = require('../model/estudiante.js');
-const bcrypt = require('bcrypt'); //libreria de node para encriptar strings
 var passwordHash  = require('password-hash');
 var usuario = require('../model/usuario.js');
 var router = express.Router();

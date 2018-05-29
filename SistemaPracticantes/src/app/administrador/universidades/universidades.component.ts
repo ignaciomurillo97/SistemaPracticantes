@@ -7,7 +7,6 @@ import {
 import { Observable } from 'rxjs';
 import { Router} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { UniversidadCardComponent } from './universidad-card/universidad-card.component';
 import { map } from 'rxjs/operators';
 
 @Component({
