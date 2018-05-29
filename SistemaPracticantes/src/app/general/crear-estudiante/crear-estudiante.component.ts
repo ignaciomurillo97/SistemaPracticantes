@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Form, FormControl, FormGroup, Validators} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-crear-estudiante',
@@ -15,14 +17,25 @@ export class CrearEstudianteComponent implements OnInit {
   formularioEstudiante: FormGroup;
   ingresoArchivo: boolean = false;
 
-  constructor() { }
+  universidades;
+
+  private url: string = 'http://localhost:3000/estudiante/universidades';
+
+  constructor(private http: HttpClient) {
+
+
+  }
 
   ngOnInit() {
+    this.obtener();
+
+
     this.formularioEstudiante = new FormGroup({
       'numeroCarne': new FormControl(null, [Validators.min(10000000),
                                             Validators.max(9999999999),
                                             Validators.required]),
-      'foto': new FormControl(null)
+      'foto': new FormControl(null),
+      'universidad': new FormControl(null)
     });
   }
 
@@ -39,6 +52,17 @@ export class CrearEstudianteComponent implements OnInit {
     else {
       this.formatoArchivoCorrecto = true;
     }
+  }
+
+  obtener() {
+    this.http.get('http://localhost:3000/estudiante/universidades').subscribe(
+      (response) => {
+        // this.obtenerUniversidades(response);
+        this.universidades = response ;
+        console.log(response);
+        console.log(this.universidades);
+      }
+    );
   }
 
 }

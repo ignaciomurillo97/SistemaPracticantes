@@ -61,7 +61,6 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`CorreoElectronico` (
   `CorreoElectronico` VARCHAR(60) NULL,
   `Cedula` DECIMAL(9,0) NULL,
   PRIMARY KEY (`IdCorreoElectronico`),
-  UNIQUE INDEX `CorreoElectronico_UNIQUE` (`CorreoElectronico` ASC),
   UNIQUE INDEX `IdCorreoElectronico_UNIQUE` (`IdCorreoElectronico` ASC),
   CONSTRAINT `fk_CorreoElectronico_Persona_Cedula`
     FOREIGN KEY (`Cedula`)
@@ -83,7 +82,6 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`NumeroTelefono` (
   PRIMARY KEY (`IdNumeroTelefono`),
   INDEX `fk_NumeroTelefono_Persona_Cedula_idx` (`Cedula` ASC),
   UNIQUE INDEX `IdNumeroTelefono_UNIQUE` (`IdNumeroTelefono` ASC),
-  UNIQUE INDEX `NumeroTelefono_UNIQUE` (`NumeroTelefono` ASC),
   CONSTRAINT `fk_NumeroTelefono_Persona_Cedula`
     FOREIGN KEY (`Cedula`)
     REFERENCES `SistemaPracticantes`.`Persona` (`Cedula`)

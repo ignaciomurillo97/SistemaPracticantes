@@ -40,8 +40,24 @@
                   Los formatos permitidos son SVG, PNG, JPG, JPEG
                 </span>
               </div>
+
             </div>
 
+          <div class="row">
+            <div class="col-md-4">
+              <label class="bmd-label-floating"> Universidades</label>
+              <div class="form-group">
+                <select class="form-control"
+                        id="universidades"
+                        formControlName="universidad">
+                  <option *ngFor="let universidad of universidades" [value]="universidad.IdUniversidad" ]>
+                    {{ universidad.NombreUniversidad }}
+                  </option>
+                </select>
+              </div>
+
+            </div>
+          </div>
           <div class="clearfix"></div>
         </form>
       </div>
