@@ -1,6 +1,6 @@
 use SistemaPracticantes;
 
-insert into TipoPersona(tipo) values('coordinador'),('estudiante'),('administrador'),('empresa');
+insert into TipoPersona(tipo) values('coordinador'),('estudiante'),('administrador'),('empresa'),('profesor');
 
 select * from TipoPersona;
 

@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1fb313-1cad-4eb8-8643-f2b366720ebe" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/BD/insert.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/.bin/nodepw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/bin/nodepw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/lib/password-hash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/node_modules/password-hash/test/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/model/empresa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD/bd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BD/bd.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD/diagramaBD.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/BD/diagramaBD.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD/diagramaBD.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/BD/diagramaBD.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD/insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BD/insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/coordinador.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/coordinador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/db_conection.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/db_conection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/estudiante.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/estudiante.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/model/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/usuario.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/coordinador.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/coordinador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/empresa.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/empresa.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,38 +27,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="estudiante.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/model/estudiante.js">
+      <file leaf-file-name="coordinador.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/routes/coordinador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="64" column="121" selection-start-line="64" selection-start-column="121" selection-end-line="64" selection-end-column="121" />
+            <state relative-caret-position="223">
+              <caret line="105" column="6" lean-forward="true" selection-start-line="105" selection-start-column="6" selection-end-line="105" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="estudiante.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/routes/estudiante.js">
+      <file leaf-file-name="coordinador.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/model/coordinador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="93" column="109" selection-start-line="93" selection-start-column="109" selection-end-line="93" selection-end-column="109" />
+            <state relative-caret-position="253">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usuario.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backend/model/usuario.js">
+      <file leaf-file-name="empresa.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/model/empresa.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2112">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backend/routes/index.js">
+      <file leaf-file-name="empresa.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backend/routes/empresa.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="113">
+              <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -108,8 +103,8 @@
       <find>input</find>
       <find>face</find>
       <find>url</find>
-      <find>var</find>
       <find>estado</find>
+      <find>var</find>
     </findStrings>
     <replaceStrings>
       <replace>./assets</replace>
@@ -124,10 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/admin.js" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/assets/js/material-kit.js" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-kit.css" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/assets/css/material-kit.min.css" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estadisticas/estadisticas.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.ts" />
@@ -163,18 +154,22 @@
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" />
-        <option value="$PROJECT_DIR$/backend/model/db_conection.js" />
         <option value="$PROJECT_DIR$/backend/app.js" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.ts" />
-        <option value="$PROJECT_DIR$/backend/model/coordinador.js" />
-        <option value="$PROJECT_DIR$/BD/bd.sql" />
-        <option value="$PROJECT_DIR$/backend/model/estudiante.js" />
         <option value="$PROJECT_DIR$/backend/routes/estudiante.js" />
-        <option value="$PROJECT_DIR$/backend/model/usuario.js" />
         <option value="$PROJECT_DIR$/backend/routes/index.js" />
+        <option value="$PROJECT_DIR$/backend/model/db_conection.js" />
+        <option value="$PROJECT_DIR$/backend/model/estudiante.js" />
+        <option value="$PROJECT_DIR$/backend/model/usuario.js" />
+        <option value="$PROJECT_DIR$/BD/insert.sql" />
+        <option value="$PROJECT_DIR$/backend/routes/empresa.js" />
+        <option value="$PROJECT_DIR$/backend/model/empresa.js" />
+        <option value="$PROJECT_DIR$/BD/bd.sql" />
+        <option value="$PROJECT_DIR$/backend/routes/coordinador.js" />
+        <option value="$PROJECT_DIR$/backend/model/coordinador.js" />
       </list>
     </option>
   </component>
@@ -366,12 +361,12 @@
       <workItem from="1525271670897" duration="6204000" />
       <workItem from="1525703758024" duration="14000" />
       <workItem from="1525722837395" duration="865000" />
-      <workItem from="1527387286335" duration="30698000" />
+      <workItem from="1527387286335" duration="46487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151685000" />
+    <option name="totallyTimeSpent" value="167474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -429,34 +424,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/.angular-cli.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="649">
@@ -648,9 +615,6 @@
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/estudiantes/estudiantes.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/db_backup.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/administrador.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -677,13 +641,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-264">
           <caret line="51" column="108" selection-start-line="51" selection-start-column="108" selection-end-line="51" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/model/db_conection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -735,52 +692,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/routes/coordinador.js">
+    <entry file="file://$PROJECT_DIR$/BD/insert.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/model/coordinador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BD/bd.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="457" lean-forward="true" selection-start-line="457" selection-end-line="457" />
+        <state relative-caret-position="-582">
+          <caret line="2" column="109" selection-start-line="2" selection-start-column="109" selection-end-line="2" selection-end-column="109" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/model/estudiante.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="64" column="121" selection-start-line="64" selection-start-column="121" selection-end-line="64" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/routes/estudiante.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="93" column="109" selection-start-line="93" selection-start-column="109" selection-end-line="93" selection-end-column="109" />
+        <state relative-caret-position="1408">
+          <caret line="64" column="117" lean-forward="true" selection-start-line="64" selection-start-column="117" selection-end-line="64" selection-end-column="117" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/model/usuario.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2112">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="594">
+          <caret line="57" column="146" selection-start-line="57" selection-start-column="146" selection-end-line="57" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/routes/estudiante.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/routes/backup.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/model/db_conection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/db_backup.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD/bd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="492" lean-forward="true" selection-start-line="492" selection-end-line="492" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/routes/empresa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/model/empresa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/routes/coordinador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="105" column="6" lean-forward="true" selection-start-line="105" selection-start-column="6" selection-end-line="105" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/model/coordinador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>

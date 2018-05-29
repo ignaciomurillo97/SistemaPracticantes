@@ -56,7 +56,6 @@ exports.verificarCedula = function(cedula) {
 
 exports.agregarUsuario = function (nombreUsuario, contrasena, cedula) {
     let query = 'insert into Usuario(nombreusuario,contraseña,cedula) values('+ '\'' + nombreUsuario + '\',\'' + contrasena + '\',' + cedula +')';
-    console.log(query);
     return new Promise (function (resolve, reject) {
         db_connection.query(query, function (err, result, fields) {
             if (err) reject(err);

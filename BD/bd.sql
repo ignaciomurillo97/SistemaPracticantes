@@ -212,6 +212,8 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Estudiante` (
   `Cedula` DECIMAL(9,0) NULL,
   `Carne` DECIMAL(10,0) NULL,
   `Estado` VARCHAR(20) NULL,
+  `profesorPractica` DECIMAL(9,0) NULL,
+  `rutaFoto` TEXT NULL,
   PRIMARY KEY (`IdEstudiante`),
   UNIQUE INDEX `IdEstudiante_UNIQUE` (`IdEstudiante` ASC),
   INDEX `fk_Estudiante_Persona_Cedula_idx` (`Cedula` ASC),
@@ -219,6 +221,7 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Estudiante` (
   INDEX `fk_Estudiante_Escuela_IdEscuela_idx` (`Escuela` ASC),
   INDEX `fk_Estudiante_Sede_IdSede_idx` (`Sede` ASC),
   INDEX `fk_Estudiante_Carrera_IdCarrera_idx` (`Carrera` ASC),
+  INDEX `fk_Estudiante_Persona_CedulaProfesor_idx` (`profesorPractica` ASC),
   CONSTRAINT `fk_Estudiante_Persona_Cedula`
     FOREIGN KEY (`Cedula`)
     REFERENCES `SistemaPracticantes`.`Persona` (`Cedula`)
@@ -242,6 +245,11 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Estudiante` (
   CONSTRAINT `fk_Estudiante_Carrera_IdCarrera`
     FOREIGN KEY (`Carrera`)
     REFERENCES `SistemaPracticantes`.`Carrera` (`IdCarrera`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Estudiante_Persona_CedulaProfesor`
+    FOREIGN KEY (`profesorPractica`)
+    REFERENCES `SistemaPracticantes`.`Persona` (`Cedula`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -317,6 +325,7 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Documento` (
   `NombreDocumento` VARCHAR(60) NOT NULL,
   `Dueno` DECIMAL(9,0) NOT NULL,
   `FechaModificacion` TIME NULL,
+  `ruta` TEXT NULL,
   PRIMARY KEY (`NombreDocumento`, `Dueno`),
   INDEX `fk_Documento_Persona_Cedula_idx` (`Dueno` ASC),
   CONSTRAINT `fk_Documento_Persona_Cedula`
@@ -449,6 +458,32 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Bitacora` (
   `descripcion` TEXT NULL,
   PRIMARY KEY (`idBitacora`),
   UNIQUE INDEX `idBitacora_UNIQUE` (`idBitacora` ASC))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SistemaPracticantes`.`EmpresasPorCarrera`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SistemaPracticantes`.`EmpresasPorCarrera` ;
+
+CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`EmpresasPorCarrera` (
+  `idEmpresasPorCarrera` INT NOT NULL AUTO_INCREMENT,
+  `idCarrera` INT NULL,
+  `cedulaJuridicaEmpresa` DECIMAL(10,0) NULL,
+  `estado` VARCHAR(20) NULL,
+  PRIMARY KEY (`idEmpresasPorCarrera`),
+  INDEX `fk_EmpresasPorCarrera_Carrera_IdCarrera_idx` (`idCarrera` ASC),
+  INDEX `fk_EmpresasPorCarrera_Empresa_CedulaJuridica_idx` (`cedulaJuridicaEmpresa` ASC),
+  CONSTRAINT `fk_EmpresasPorCarrera_Carrera_IdCarrera`
+    FOREIGN KEY (`idCarrera`)
+    REFERENCES `SistemaPracticantes`.`Carrera` (`IdCarrera`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_EmpresasPorCarrera_Empresa_CedulaJuridica`
+    FOREIGN KEY (`cedulaJuridicaEmpresa`)
+    REFERENCES `SistemaPracticantes`.`Empresa` (`CedulaJuridica`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
