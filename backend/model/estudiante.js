@@ -62,7 +62,7 @@ exports.verificarCarne = function (carne) {
 
 exports.agregarEstudiante = function (cedula, universidad, escuela, sede, carrera, carne, estado) {
     let query = 'insert into estudiante(universidad,escuela,sede,carrera,cedula,carne,estado) values('
-        + universidad + ',' + escuela + ',' + sede + ',' + carrera + ',' + cedula  + ',' + carne + ',\'' + estado + ',\')';
+        + universidad + ',' + escuela + ',' + sede + ',' + carrera + ',' + cedula  + ',' + carne + ',\'' + estado + '\')';
     return new Promise( function (resolve, reject) {
         db_connection.query(query, function (err, result) {
             if (err) {

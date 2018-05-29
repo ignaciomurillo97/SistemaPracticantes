@@ -4,8 +4,9 @@ var db_config = {
    host: "localhost",
    user: "root",
    database: "SistemaPracticantes",
-   password: "root"
-}
+   password: "root",
+    multipleStatements: true
+};
 
 var pool = mysql.createPool(db_config);
 
@@ -14,6 +15,6 @@ pool.getConnection(function(err, connection) {
       throw err;
    }
    console.log("Conectado a la DB");
-})
+});
 
 module.exports = pool;
