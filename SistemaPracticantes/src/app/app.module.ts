@@ -39,7 +39,6 @@ import { UniversidadComponent } from './administrador/universidades/universidad/
 import { SedeComponent } from './administrador/sedes/sede/sede.component';
 import { AdministrarCoordinadoresComponent } from './administrador/administrar-coordinadores/administrar-coordinadores.component';
 import { EditarCoordinadoresComponent } from './administrador/editar-coordinadores/editar-coordinadores.component';
-import { UniversidadCardComponent } from './administrador/universidades/universidad-card/universidad-card.component';
 
 
 @NgModule({
@@ -78,10 +77,6 @@ import { UniversidadCardComponent } from './administrador/universidades/universi
     SedeComponent,
     AdministrarCoordinadoresComponent,
     EditarCoordinadoresComponent,
-    UniversidadCardComponent
-  ],
-  entryComponents: [
-    UniversidadCardComponent
   ],
   imports: [
     BrowserModule,
