@@ -403,6 +403,7 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Evento` (
   `TipoEvento` INT NULL,
   `Foto` BINARY NULL,
   `Coordinador` DECIMAL(9,0) NULL,
+  `Dia` DATE NULL,
   PRIMARY KEY (`IdEvento`),
   INDEX `fk_Evento_CatalogoEvento_IdTipoEvento_idx` (`TipoEvento` ASC),
   INDEX `fk_Evento_Coordinador_Cedula_idx` (`Coordinador` ASC),

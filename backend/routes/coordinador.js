@@ -106,5 +106,42 @@ router.post('/empresasSinAprobar', function (req, res) {
     })
 });
 
+router.post('/crearEvento', function (req, res) {
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    let horaInicioEvento = req.body.horaInicio;
+    let horaFinEvento = req.body.horaFin;
+    let dia = req.body.dia;
+    let tipoEvento = req.body.tipoEvento;
+
+    let listaActividadesEvento = [];
+
+    let actividadesEvento = req.body.listaActividades;
+
+    
+
+    coordinador.crearEvento(horaInicioEvento, horaFinEvento, cedulaCoordinador, dia, tipoEvento).then(function (evento) {
+        let idEvento = evento[2][0]['@lastId'];
+
+        for(let actividad = 0; actividad < actividadesEvento.length && actividadesEvento ; actividad++){
+            let horaInicioActividad = actividadesEvento[actividad].horaInicio;
+            let horaFinActividad = actividadesEvento[actividad].horaFin;
+            listaActividadesEvento.push([horaInicioActividad, horaFinActividad, idEvento]);
+        }
+        
+        coordinador.crearActividadAEvento(listaActividadesEvento).then(function () {
+            res.send('Se agregaron las actividades al evento');
+        })
+
+    });
+
+});
+
+router.post('/obtenerEventos', function (req,res) {
+   let cedulaCoordinador = req.body.cedulaCoordinador;
+   coordinador.obtenerEventos(cedulaCoordinador).then(function (listaEventos) {
+       res.send(listaEventos);
+   });
+});
+
 
 module.exports = router;

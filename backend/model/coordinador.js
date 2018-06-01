@@ -95,3 +95,48 @@ exports.obtenerEmpresas = function (idCarrera, estado) {
     });
 };
 
+exports.crearEvento = function (horaInicio, horaFin, cedulaCoordinador, dia, tipoEvento) {
+    let query = 'insert into evento(horaInicio, horaFin, coordinador,dia, tipoEvento) \n' +
+        'values(\'' + horaInicio + '\', \' ' + horaFin + '\',' + cedulaCoordinador + ',\'' + dia + '\', +' + tipoEvento + ' );' +
+        'set @lastId = LAST_INSERT_ID();' +
+        'select @lastId;';
+    return new Promise(function (resolve, reject) {
+        db_connection.query(query, function (err, result) {
+            if (err) {
+                console.log(err);
+                reject(err);
+            }
+            resolve(result);
+        });
+    });
+};
+
+exports.crearActividadAEvento = function (listaDeActividadesPorEvento) {
+    let query = 'insert into actividadesPorEvento(horaInicio, horaFin, Evento) values ? ;';
+    return new Promise (function (resolve, reject) {
+        db_connection.query(query, [listaDeActividadesPorEvento], function (err, result, fields) {
+            if (err) reject(err);
+            resolve(result);
+        });
+    });
+};
+
+
+exports.obtenerEventos = function (cedulaCoordinador) {
+    let query = 'select e.horaInicio,e.horaFin, ce.nombre, e.dia\n' +
+        'from evento as e\n' +
+        'inner join catalagoevento as ce on e.tipoEvento = ce.idTipoEvento\n' +
+        'inner join coordinadorpractica as c on e.Coordinador = c.cedula\n' +
+        'where c.cedula = ' + cedulaCoordinador + ';';
+    return new Promise(function (resolve, reject) {
+        db_connection.query(query, function (err, result) {
+            if (err) {
+                console.log(err);
+                reject(err);
+            }
+            resolve(result);
+        });
+    });
+
+};
+

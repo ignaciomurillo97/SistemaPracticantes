@@ -8,5 +8,5 @@ exports.seleccionarUniversidades = function () {;
          if (err) reject(err);
          resolve(result);
       });
-   })
-}
+   });
+};
