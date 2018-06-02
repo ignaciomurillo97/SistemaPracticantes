@@ -46,11 +46,3 @@ app.use('/estudiante'   , estudiante);
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));
 
 var usuario = require('./model/usuario.js');
-
-//var db_connection = require('./model/db_conection.js');
-//
-//db_connection.selectTest().then(function(res){
-//   console.log(res);
-//}).catch(function(err){
-//   console.log(err);
-//});

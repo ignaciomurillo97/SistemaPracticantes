@@ -13,21 +13,19 @@ export class CrearEstudianteComponent implements OnInit {
   nombreArchivo: string;
   archivoSeleccionado: File;
   formatoArchivoCorrecto : boolean = true;
-  formatosPermitidos = ['jpg', 'jpeg', 'png' , 'svg'];
+  formatosPermitidos: string[] = ['jpg', 'jpeg', 'png' , 'svg'];
   formularioEstudiante: FormGroup;
   ingresoArchivo: boolean = false;
 
-  universidades;
-
-  private url: string = 'http://localhost:3000/estudiante/universidades';
-
-  constructor(private http: HttpClient) {
+  universidades: Observable<Object>;
+  sedes: Observable<Object>;
+  carreras: Observable<Object>;
 
 
-  }
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.obtener();
+    this.obtenerUniversidades();
 
 
     this.formularioEstudiante = new FormGroup({
@@ -35,16 +33,20 @@ export class CrearEstudianteComponent implements OnInit {
                                             Validators.max(9999999999),
                                             Validators.required]),
       'foto': new FormControl(null),
-      'universidad': new FormControl(null)
+      'universidad': new FormControl(null),
+      'sede': new FormControl(null),
+      'carrera' : new FormControl(null)
     });
   }
 
   cambioEnArchivo(event) {
+    //funcion para verificar que se ingreso algo en el campo foto y ademas verificar el tipo de dato
+    //del mismo archivo
+
     this.ingresoArchivo = true;
     this.archivoSeleccionado = event.target.files[0];
     this.nombreArchivo = this.archivoSeleccionado.name;
-    let formatoArchivo = this.nombreArchivo.split('.')[1];
-    console.log(formatoArchivo);
+    let formatoArchivo = this.nombreArchivo.split('.')[1].toLowerCase();
     if( this.formatosPermitidos.indexOf(formatoArchivo) === -1 ){
       this.formatoArchivoCorrecto = false;
       this.formularioEstudiante.get('foto').setValue(this.archivoSeleccionado);
@@ -54,15 +56,20 @@ export class CrearEstudianteComponent implements OnInit {
     }
   }
 
-  obtener() {
-    this.http.get('http://localhost:3000/estudiante/universidades').subscribe(
-      (response) => {
-        // this.obtenerUniversidades(response);
-        this.universidades = response ;
-        console.log(response);
-        console.log(this.universidades);
-      }
-    );
+  obtenerUniversidades() {
+   this.universidades = this.http.get('http://localhost:3000/estudiante/universidades');
+  }
+
+  obtenerSedes(){
+    let idUniversidad = this.formularioEstudiante.get('universidad').value;
+
+    this.sedes = this.http.post('http://localhost:3000/estudiante/sedes',{idUniversidad: idUniversidad});
+  }
+
+  obtenerCarreras(){
+    let idSede = this.formularioEstudiante.get('sede').value;
+    console.log(idSede);
+    this.carreras = this.http.post('http://localhost:3000/estudiante/carreras',{idSede: idSede});
   }
 
 }
