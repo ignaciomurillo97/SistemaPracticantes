@@ -62,13 +62,11 @@ export class CrearEstudianteComponent implements OnInit {
 
   obtenerSedes(){
     let idUniversidad = this.formularioEstudiante.get('universidad').value;
-
     this.sedes = this.http.post('http://localhost:3000/estudiante/sedes',{idUniversidad: idUniversidad});
   }
 
   obtenerCarreras(){
     let idSede = this.formularioEstudiante.get('sede').value;
-    console.log(idSede);
     this.carreras = this.http.post('http://localhost:3000/estudiante/carreras',{idSede: idSede});
   }
 

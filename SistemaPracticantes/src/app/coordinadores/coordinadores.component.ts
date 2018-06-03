@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import {Router} from '@angular/router';
 
 
 declare const $: any;
@@ -12,7 +13,7 @@ export class CoordinadoresComponent implements OnInit {
   private sidebarVisible: boolean;
   private toggleButton: any;
 
-  constructor(private element: ElementRef) { }
+  constructor(private element: ElementRef, private router:Router) { }
 
   ngOnInit() {
     const navbar: HTMLElement = this.element.nativeElement;
@@ -47,5 +48,10 @@ export class CoordinadoresComponent implements OnInit {
       this.sidebarClose();
     }
   };
+
+  cerrarSesion(){
+    sessionStorage.clear();
+    this.router.navigate(['login']);
+  }
 
 }

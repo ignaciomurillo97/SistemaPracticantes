@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   enviarFormulario() {
-    if(this.formularioLogin.valid && this.formularioLogin.touched){
+    if(this.formularioLogin.valid){
       let nombreUsuario = this.formularioLogin.get('nombreUsuario').value;
       let contrasena    = this.formularioLogin.get('contrasena').value;
       let body          = {

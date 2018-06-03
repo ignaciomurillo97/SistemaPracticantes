@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
+import {Observable} from 'rxjs/Observable';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-profesores',
@@ -8,9 +10,17 @@ import { Router} from '@angular/router';
 })
 export class ProfesoresComponent implements OnInit {
 
-  constructor(private routes: Router) { }
+  profesores: Observable<Object>;
+
+  constructor(private routes: Router,private http: HttpClient) { }
 
   ngOnInit() {
+    this.obtenerProfesoresPractica();
+  }
+
+  obtenerProfesoresPractica(){
+    let cedulaCoordinador : string = sessionStorage.getItem('cedula');
+    this.profesores = this.http.post('http://localhost:3000/coordinador/profesoresDePractica',{'cedulaCoordinador':cedulaCoordinador});
   }
 
 }

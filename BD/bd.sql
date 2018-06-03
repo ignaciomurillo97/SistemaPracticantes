@@ -466,6 +466,29 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Semestre` (
 ENGINE = InnoDB;
 
 
+-- -----------------------------------------------------
+-- Table `SistemaPracticantes`.`ProfesorPractica`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SistemaPracticantes`.`ProfesorPractica` ;
+
+CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`ProfesorPractica` (
+  `cedula` DECIMAL(10,0) NOT NULL,
+  `carrera` INT NULL,
+  PRIMARY KEY (`cedula`),
+  INDEX `profesorPractica_Carrera_IdCarrera_idx` (`carrera` ASC),
+  CONSTRAINT `profesorPractica_Persona_Cedula`
+    FOREIGN KEY (`cedula`)
+    REFERENCES `SistemaPracticantes`.`Persona` (`Cedula`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `profesorPractica_Carrera_IdCarrera`
+    FOREIGN KEY (`carrera`)
+    REFERENCES `SistemaPracticantes`.`Carrera` (`IdCarrera`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

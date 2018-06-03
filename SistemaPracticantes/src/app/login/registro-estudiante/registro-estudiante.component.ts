@@ -18,7 +18,7 @@ export class RegistroEstudianteComponent implements OnInit {
   @ViewChild(CrearUsuarioComponent) crearUsuario: CrearUsuarioComponent;
 
   error : string;
-  errorDeAPI : object;
+  errorDeAPI : Object;
 
 
   constructor(private http: HttpClient,private router: Router) { }
@@ -49,7 +49,7 @@ export class RegistroEstudianteComponent implements OnInit {
 
       //datos estudiante
       let carne : number = this.crearEstudiante.formularioEstudiante.get('numeroCarne').value;
-      let foto : File = this.crearEstudiante.formularioEstudiante.get('foto').value;
+      let foto : File = this.crearEstudiante.archivoSeleccionado;
       let carrera : number = this.crearEstudiante.formularioEstudiante.get('carrera').value;
 
       let datos = {
@@ -63,15 +63,15 @@ export class RegistroEstudianteComponent implements OnInit {
         "carrera": carrera,
         "nombreUsuario" : nombreUsuario,
         "cedula" : cedula,
-        "correosContacto": numerosContacto,
-        "numerosContacto": correosContacto,
+        "correosContacto": correosContacto,
+        "numerosContacto": numerosContacto,
         "foto": foto
       };
 
       this.http.post('http://localhost:3000/estudiante/agregarEstudiante', datos)
         .subscribe(data => {
           this.errorDeAPI = data;
-          if (this.errorDeAPI.respuesta === ''){
+          if (this.errorDeAPI['respuesta'] === ''){
             this.router.navigate(['login']);
           }
         });
