@@ -4,6 +4,8 @@ var usuario = require('../model/usuario.js');
 let estudiante = require('../model/estudiante.js');
 var passwordHash  = require('password-hash');
 var usuario = require('../model/usuario.js');
+var universidad = require('../model/universidad.js')
+var sede = require('../model/sede.js')
 var router = express.Router();
 
 // Rutas de la API
@@ -36,6 +38,33 @@ router.post ('/login', function(req, res, next){
    })
 });
 
+router.get ('/universidad', function(req, res, next) {
+   universidad.seleccionarUniversidades().then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
+
+router.get ('/sede/:idUniversidad', function(req, res, next) {
+   idUniversidad = req.params.idUniversidad
+   sede.seleccionarSede(idUniversidad).then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
+
+router.get ('/sede', function(req, res, next) {
+   sede.seleccionarSede(1).then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
 
 function redireccionUsuario(tipoPersona) {
    if (tipoPersona == "coordinador") return "coordinadores"

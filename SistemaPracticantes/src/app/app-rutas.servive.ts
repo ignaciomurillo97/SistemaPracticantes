@@ -77,7 +77,7 @@ const rutas: Routes = [
      { path: 'universidades', component: UniversidadesComponent },
      { path: 'universidad', component: UniversidadComponent },
      { path: 'sedes', component: SedesComponent },
-     { path: 'sede', component: SedeComponent },
+     { path: 'sede/:id', component: SedeComponent },
      { path: 'carreras', component: CarrerasComponent },
      { path: 'administradores', component: AdministradoresComponent },
      { path: 'editar-administradores', component: EditarAdministradoresComponent},

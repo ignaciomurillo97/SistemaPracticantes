@@ -1,13 +1,7 @@
-import { 
-  ViewChild,
-  Component,
-  OnInit
-} from '@angular/core';
-
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-universidades',
@@ -32,7 +26,7 @@ export class UniversidadesComponent implements OnInit {
   }
 
   obtenerUniversidades() {
-    this.universidades = this.http.get('http://localhost:3000/administrador/universidad', {withCredentials: true})
+    this.universidades = this.http.get('http://localhost:3000/universidad', {withCredentials: true})
   }
 
 }

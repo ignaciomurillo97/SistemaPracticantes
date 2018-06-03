@@ -1,83 +1,38 @@
 <div class="row">
-   <div class="col-md-10 col-md-offset-1">
-      <h2 class="card-title">Sedes</h2>
-   </div>
+  <div class="col-md-10 col-md-offset-1">
+    <h2 class="card-title">Sedes</h2>
+  </div>
 </div>
 
 <div class="card-body table-responsive">
-   <table class="table table-hover">
+  <table class="table table-hover">
 
-      <thead class="text-warning">
-         <tr>
-            <th>Nombre Sede</th>
-            <th>Universidad</th>
-            <th>Ubicación</th>
-            <th>Acciones</th>
-         </tr>
-      </thead>
+    <thead class="text-warning">
+      <tr>
+        <th>Nombre Sede</th>
+        <th>Universidad</th>
+        <th>Ubicación</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
 
-      <tbody>
-         <tr (click)="view()">
-            <td>Centro Academico San Jose</td>
-            <td>Instituto Tecnologico de Costa Rica</td>
-            <td>Barrio Amón</td>
-            <td>
-               <div class="btn-group" role="group">
-                  <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                     <i class="material-icons">edit</i>
-                  </button>
-                  <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
-                     <i class="material-icons">close</i>
-                  </button>
-               </div>
-            </td>
-         </tr>
-         <tr>
-            <td>Sede Central</td>
-            <td>Instituto Tecnologico de Costa Rica</td>
-            <td>Cartago</td>
-            <td>
-               <div class="btn-group" role="group">
-                  <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                     <i class="material-icons">edit</i>
-                  </button>
-                  <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
-                     <i class="material-icons">close</i>
-                  </button>
-               </div>
-            </td>
-         </tr>
-         <tr>
-            <td>Sede del Pacifico</td>
-            <td>Instituto Tecnologico de Costa Rica</td>
-            <td>Limon</td>
-            <td>
-               <div class="btn-group" role="group">
-                  <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                     <i class="material-icons">edit</i>
-                  </button>
-                  <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
-                     <i class="material-icons">close</i>
-                  </button>
-               </div>
-            </td>
-         </tr>
-         <tr>
-            <td>Sede de Alajuela</td>
-            <td>Instituto Tecnologico de Costa Rica</td>
-            <td>Alajuela</td>
-            <td>
-               <div class="btn-group" role="group">
-                  <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                     <i class="material-icons">edit</i>
-                  </button>
-                  <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
-                     <i class="material-icons">close</i>
-                  </button>
-               </div>
-            </td>
-         </tr>
-      </tbody>
+    <tbody>
+      <tr *ngFor='let sede of sedes | async' (click)="view(1)">
+        <td>{{sede.NombreSede}}</td>
+        <td>{{sede.NombreUniversidad}}</td>
+        <td>{{sede.Ubicacion}}</td>
+        <td>
+          <div class="btn-group" role="group">
+            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+              <i class="material-icons">edit</i>
+            </button>
+            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
 
-   </table>
+  </table>
 </div>
