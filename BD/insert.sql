@@ -1,44 +1,46 @@
 use SistemaPracticantes;
 
 insert into TipoPersona(tipo) values('coordinador'),('estudiante'),('administrador'),('empresa'),('profesor');
+insert into CatalagoEvento(nombre) values('Charla'),('Taller'),('Vinculación con la empresa');
 
-select * from TipoPersona;
+select * from tipopersona;
+select * from catalagoEvento;
 
-insert into Persona(cedula,nombre,apellido,segundoapellido,sexo,tipopersona) 
+insert into persona(cedula,nombre,apellido,segundoapellido,sexo,tipopersona)
 values (116710731,'Alvaro', 'Castro', 'Venegas', 'masculino',2),
 		(111900849,'Adriana', 'Alvarez', 'Figueroa', 'femenino',1),
         (204800084,'Marcia', 'Venegas', 'Gamboa', 'femenino',4)
 ;
 
-select * from Persona;
+select * from persona;
 
 insert into Usuario(nombreusuario,contraseña,cedula)
-values ('acastrov','$2a$04$5NoHIFWinV2Hi98WgPNSZ.sk1r7wRIjdI31osl/HsU/yzHkeO1B2.', 116710731),
-		('aalvarezf','$2a$04$5NoHIFWinV2Hi98WgPNSZ.sk1r7wRIjdI31osl/HsU/yzHkeO1B2.', 111900849),
-        ('mvenegasg','$2a$04$5NoHIFWinV2Hi98WgPNSZ.sk1r7wRIjdI31osl/HsU/yzHkeO1B2.', 204800084);
+values ('acastrov','sha1$967c350c$1$77c4f72890f4d95a73da51118d4f5e5a4e609364', 116710731),
+		('aalvarezf','sha1$967c350c$1$77c4f72890f4d95a73da51118d4f5e5a4e609364', 111900849),
+        ('mvenegasg','sha1$967c350c$1$77c4f72890f4d95a73da51118d4f5e5a4e609364', 204800084);
 
-select * from Usuario;
+select * from usuario;
 
-insert into Universidad(NombreUniversidad) values ('Tecnologico de Costa Rica');
-select * from Universidad;
+insert into universidad(nombreuniversidad) values ('Tecnologico de Costa Rica');
+select * from universidad;
 
-insert into Escuela(NombreEscuela, idUniversidad) values('Escuela de computacion',1); 
-select * from Escuela;
+insert into escuela(nombreescuela, idUniversidad) values('Escuela de computacion',1);
+select * from escuela;
 
-insert into Sede(Nombresede,Ubicación, IdUniversidad) values('Centro Academico San Jose', 'San Jose centro',1);
-select * from Sede;
+insert into sede(nombresede,ubicación, iduniversidad) values('Centro Academico San Jose', 'San Jose centro',1);
+select * from sede;
 
-insert into Carrera(IdUniversidad,IdEscuela,IdSede,NombreCarrera) values(1,1,1,'Ingenieria en Computacion');
-select * from Carrera;
+insert into carrera(iduniversidad,idescuela,idsede,nombrecarrera) values(1,1,1,'Ingenieria en Computacion');
+select * from carrera;
 
-insert into Estudiante(Universidad,Escuela,Sede,Carrera,Cedula,Carne,Estado) values(1,1,1,1,116710731, 2015099369,'pendiente');
-select * from Estudiante;
+insert into estudiante(carrera,cedula,carne,estado) values(1,116710731, 2015099369,'pendiente');
+select * from estudiante;
 
-insert into CoordinadorPractica(Cedula,Escuela,Universidad,Carrera) values(111900849,1,1,1);
-select * from CoordinadorPractica;
+insert into coordinadorpractica(cedula,carrera) values(111900849,1);
+select * from coordinadorpractica;
 
-insert into Empresa(CedulaJuridica,NombreEmpresa,Estado) values(3101477078, 'Patito', 'pendiente' );
-select * from Empresa;
+insert into empresa(cedulajuridica,nombreempresa,estado) values(3101477078, 'Patito', 'pendiente' );
+select * from empresa;
 
-insert into ContactoEmpresa(Cedula,EmpresaAsociado) values(204800084,3101477078);
-select * from ContactoEmpresa;
+insert into contactoempresa(cedula,empresaasociado) values(204800084,3101477078);
+select * from contactoempresa;

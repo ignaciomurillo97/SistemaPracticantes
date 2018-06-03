@@ -10,18 +10,23 @@ router.get ('/', function(req, res, next) {
 });
 
 router.post('/estudiantesSinAprobar', function (req, res, next) {
-    let idCarrera = req.body.idCarrera;
+    let cedulaCoordinador = req.body.cedulaCoordinador;
     let estado = 'pendiente';
-    coordinador.obtenerEstudiantes(estado,idCarrera).then(function (listaEstudiantes) {
+    console.log(cedulaCoordinador);
+    coordinador.obtenerEstudiantes(estado,cedulaCoordinador).then(function (listaEstudiantes) {
+        listaEstudiantes = sacarRepetidosLista(listaEstudiantes,'correos');
+        listaEstudiantes = sacarRepetidosLista(listaEstudiantes,'numeros');
         res.send(listaEstudiantes);
-    })
+    });
 
 });
 
 router.post('/estudiantesEnPractica', function (req, res, next) {
-    let idCarrera = req.body.idCarrera;
+    let cedulaCoordinador = req.body.cedulaCoordinador;
     let estado = 'practica';
-    coordinador.obtenerEstudiantes(estado, idCarrera).then(function (listaEstudiantes) {
+    coordinador.obtenerEstudiantes(estado, cedulaCoordinador).then(function (listaEstudiantes) {
+        listaEstudiantes = sacarRepetidosLista(listaEstudiantes,'correos');
+        listaEstudiantes = sacarRepetidosLista(listaEstudiantes,'numeros');
         res.send(listaEstudiantes);
     })
 
@@ -52,9 +57,13 @@ router.post('/agregarProfesorPractica', function (req, res) {
     let sexo = req.body.sexo;
     let tipoPersona = 5;
     let cedula = req.body.cedula;
+    let cedulaCoordinador = req.body.cedulaCoordinador;
 
     let numerosContacto = [];
     let correosContacto = [];
+
+    //se podria asignar directamente el valor de las listas de correos y numeros de telefono
+    //pero para facilitar la insercion en la base de datos se hace [[valor, cedulaPersona]]
 
     for(let numero in req.body.numerosContacto){
         numerosContacto.push([req.body.numerosContacto[numero],cedula]);
@@ -66,19 +75,34 @@ router.post('/agregarProfesorPractica', function (req, res) {
 
     usuario.verificarCedula(cedula).then(function (verificacionCedula) {
         if(verificacionCedula.length > 0){
-            res.send('Ya existe este numero de cedula');
+            res.send({'respuesta': 'ya existe este número de cédula en el sistema'});
         }
         else {
             usuario.agregarPersona(cedula,nombre,segundoNombre,apellido,segundoApellido,sexo,tipoPersona)
                 .then(function () {
-                    usuario.agregarCorreosContacto(numerosContacto).then(function () {
+                    usuario.agregarCorreosContacto(correosContacto).then(function () {
                         usuario.agregarNumerosContacto(numerosContacto).then(function () {
-                            res.send('Se agrego el nuevo profesor de practica')
-                        })
+                            coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+                                let idCarrera = carreraCoordinador[0]['carrera'];
+                                coordinador.agregarProfesorPractica(cedula, idCarrera).then(function () {
+                                    res.send({'respuesta':''});
+                                });
+                            });
+                        });
                     });
                 });
         }
     });
+});
+
+router.post('/profesoresDePractica', function (req, res) {
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    coordinador.obtenerProfesoresDePractica(cedulaCoordinador).then(function (listaProfesoresPractica) {
+        listaProfesoresPractica = sacarRepetidosLista(listaProfesoresPractica,'correos');
+        listaProfesoresPractica = sacarRepetidosLista(listaProfesoresPractica,'numeros');
+        res.send(listaProfesoresPractica);
+    });
+
 });
 
 router.post('/asignarProfesorPractica', function (req, res) {
@@ -106,5 +130,52 @@ router.post('/empresasSinAprobar', function (req, res) {
     })
 });
 
+router.post('/crearEvento', function (req, res) {
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    let horaInicioEvento = req.body.horaInicio;
+    let horaFinEvento = req.body.horaFin;
+    let dia = req.body.dia;
+    let tipoEvento = req.body.tipoEvento;
+
+    let listaActividadesEvento = [];
+
+    let actividadesEvento = req.body.listaActividades;
+
+    
+
+    coordinador.crearEvento(horaInicioEvento, horaFinEvento, cedulaCoordinador, dia, tipoEvento).then(function (evento) {
+        let idEvento = evento[2][0]['@lastId'];
+
+        for(let actividad = 0; actividad < actividadesEvento.length && actividadesEvento ; actividad++){
+            let horaInicioActividad = actividadesEvento[actividad].horaInicio;
+            let horaFinActividad = actividadesEvento[actividad].horaFin;
+            listaActividadesEvento.push([horaInicioActividad, horaFinActividad, idEvento]);
+        }
+        
+        coordinador.crearActividadAEvento(listaActividadesEvento).then(function () {
+            res.send('Se agregaron las actividades al evento');
+        })
+
+    });
+
+});
+
+router.post('/obtenerEventos', function (req,res) {
+   let cedulaCoordinador = req.body.cedulaCoordinador;
+   coordinador.obtenerEventos(cedulaCoordinador).then(function (listaEventos) {
+       res.send(listaEventos);
+   });
+});
+
+
+function sacarRepetidosLista(listaPersonas, elementoConRepetidos){
+    for (let i = 0; i < listaPersonas.length; i++){
+        let listaCorreos = listaPersonas[i][elementoConRepetidos].split(',');
+        let correosSinRepetidos = new Set(listaCorreos); //un set no puede tener elementos repetidos
+        let arregloCorreosSinRepetidos = Array.from(correosSinRepetidos); //se necesiat convertir otra vez a arreglo ya que un json no puede contener un set
+        listaPersonas[i][elementoConRepetidos] = arregloCorreosSinRepetidos;
+    }
+    return listaPersonas;
+}
 
 module.exports = router;

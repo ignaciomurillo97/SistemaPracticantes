@@ -22,11 +22,11 @@
 
         </thead>
         <tbody>
-        <tr>
-          <td>Alvaro Castro Venegas</td>
-          <td>alvarocastro74@gmail.com</td>
-          <td>86424112</td>
-          <td>2015099369</td>
+        <tr *ngFor="let estudiante of estudiantes | async">
+          <td>{{ estudiante.Nombre + ' ' + estudiante.Apellido + ' ' + estudiante.SegundoApellido }}</td>
+          <td>{{ estudiante.correos[0] }}</td>
+          <td>{{ estudiante.numeros[0] }}</td>
+          <td>{{ estudiante.Carne }}</td>
           <td><i class="material-icons">account_box</i></td>
         </tr>
         </tbody>

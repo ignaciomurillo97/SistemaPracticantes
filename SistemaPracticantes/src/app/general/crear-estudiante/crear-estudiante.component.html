@@ -47,11 +47,39 @@
             <div class="col-md-4">
               <label class="bmd-label-floating"> Universidades</label>
               <div class="form-group">
-                <select class="form-control"
+                <select class="form-control" (change)="obtenerSedes()"
                         id="universidades"
                         formControlName="universidad">
-                  <option *ngFor="let universidad of universidades" [value]="universidad.IdUniversidad" ]>
+                  <option *ngFor="let universidad of universidades | async" [value]="universidad.IdUniversidad" >
                     {{ universidad.NombreUniversidad }}
+                  </option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <label class="bmd-label-floating"> Sedes</label>
+              <div class="form-group">
+                <select class="form-control" (change)="obtenerCarreras()"
+                        id="sedes"
+                        formControlName="sede">
+                  <option *ngFor="let sede of sedes | async" [value]="sede.IdSede" >
+                    {{ sede.NombreSede }}
+                  </option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <label class="bmd-label-floating"> Carreras</label>
+              <div class="form-group">
+                <select class="form-control"
+                        id="carreras"
+                        formControlName="carrera">
+                  <option *ngFor="let carrera of carreras | async" [value]="carrera.IdCarrera" >
+                    {{ carrera.NombreCarrera }}
                   </option>
                 </select>
               </div>

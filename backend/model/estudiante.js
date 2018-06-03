@@ -36,8 +36,8 @@ exports.obtenerEscuelas = function (idUniversidad) {
     })
 };
 
-exports.obtenerCarreras = function (idUniversidad, idSede) {
-    let query = 'select * from carrera where idUniversidad = ' + idUniversidad + 'and idsede = ' + idSede;
+exports.obtenerCarreras = function (idSede) {
+    let query = 'select * from carrera where idsede = ' + idSede;
     return new Promise( function (resolve, reject) {
         db_connection.query(query, function (err, result) {
             if (err) {
@@ -60,9 +60,9 @@ exports.verificarCarne = function (carne) {
     })
 };
 
-exports.agregarEstudiante = function (cedula, universidad, escuela, sede, carrera, carne, estado) {
-    let query = 'insert into estudiante(universidad,escuela,sede,carrera,cedula,carne,estado) values('
-        + universidad + ',' + escuela + ',' + sede + ',' + carrera + ',' + cedula  + ',' + carne + ',\'' + estado + '\')';
+exports.agregarEstudiante = function (cedula, carrera, carne, estado) {
+    let query = 'insert into estudiante(carrera,cedula,carne,estado) values('
+        + carrera + ',' + cedula  + ',' + carne + ',\'' + estado + '\')';
     return new Promise( function (resolve, reject) {
         db_connection.query(query, function (err, result) {
             if (err) {

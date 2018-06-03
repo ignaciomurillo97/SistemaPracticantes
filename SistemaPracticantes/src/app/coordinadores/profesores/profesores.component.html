@@ -20,11 +20,11 @@
 
         </thead>
         <tbody>
-        <tr>
-          <td>Adriana Alvarez</td>
-          <td>aalvarez@gmail.com</td>
-          <td>938449578</td>
-          <td><i class="material-icons">edit</i></td>
+        <tr *ngFor="let profesor of profesores | async">
+          <td>{{ profesor.Nombre + ' ' + profesor.Apellido + ' ' + profesor.SegundoApellido }}</td>
+          <td>{{ profesor.correos[0] }}</td>
+          <td>{{ profesor.numeros[0] }}</td>
+          <td><i class="material-icons">account_box</i></td>
         </tr>
         </tbody>
       </table>

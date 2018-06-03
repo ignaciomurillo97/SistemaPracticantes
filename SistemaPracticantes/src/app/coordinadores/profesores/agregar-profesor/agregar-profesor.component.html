@@ -10,7 +10,12 @@
         <app-crear-persona></app-crear-persona>
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <button class="btn btn-primary btn-round">Registrarse</button>
+            <div *ngIf="!crearPersona.formularioPersona.valid && crearPersona.formularioPersona.touched" class="text-danger">
+              Rellene la información necesaria para la persona
+            </div>
+            <div class="text-danger">{{ error }}</div>
+            <div class="text-danger" *ngIf="errorDeAPI != undefined">{{ errorDeAPI.respuesta }}</div>
+            <button class="btn btn-primary btn-round" (click)="agregarProfesor()">Registrarse</button>
             <button routerLink="/coordinadores/profesores" class="btn btn-danger btn-round">Cancelar</button>
           </div>
 

@@ -29,20 +29,19 @@
 
           </thead>
           <tbody>
-          <tr>
-            <td>Alvaro Castro Venegas</td>
-            <td>alvarocastro74@gmail.com</td>
-            <td>86424112</td>
-            <td>2015099369</td>
-            <td><i class="material-icons text-center">account_box</i></td>
+          <tr *ngFor="let estudiante of estudiantes | async">
+            <td>{{ estudiante.Nombre + ' ' + estudiante.Apellido + ' ' + estudiante.SegundoApellido }}</td>
+            <td>{{ estudiante.correos[0] }}</td>
+            <td>{{ estudiante.numeros[0] }}</td>
+            <td>{{ estudiante.Carne }}</td>
+            <td><i class="material-icons">account_box</i></td>
             <td>
               <div class="btn-group">
-                <button class="btn btn-primary" (click)="aprobarEstudiante()">Aprobar</button>
-                <button class="btn btn-primary" (click)="desaprobarEstudiante()">Desaprobar</button>
+                <button class="btn btn-primary" (click)="aprobarEstudiante(estudiante.Cedula)">Aprobar</button>
+                <button class="btn btn-primary" (click)="desaprobarEstudiante(estudiante.Cedula)">Desaprobar</button>
               </div>
 
             </td>
-
           </tr>
           </tbody>
         </table>

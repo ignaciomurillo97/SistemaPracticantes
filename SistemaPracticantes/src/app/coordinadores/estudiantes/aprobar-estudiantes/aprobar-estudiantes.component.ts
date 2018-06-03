@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-aprobar-estudiantes',
@@ -7,17 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AprobarEstudiantesComponent implements OnInit {
 
-  constructor() { }
+  estudiantes : Observable<Object>;
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.obtenerEstudiantesSinAprobar();
   }
 
-  aprobarEstudiante() {
+  aprobarEstudiante(cedulaEstudiante) {
+    this.http.post('http://localhost:3000/coordinador/estudianteAPractica',{cedula : cedulaEstudiante}).subscribe(data =>{
+
+    });
+
+    this.obtenerEstudiantesSinAprobar();
+  }
+
+  desaprobarEstudiante(cedulaEstudiante) {
+    this.http.post('http://localhost:3000/coordinador//eliminarEstudiante',{cedula : cedulaEstudiante}).subscribe(data =>{
+
+    });
+    this.obtenerEstudiantesSinAprobar();
 
   }
 
-  desaprobarEstudiante() {
-
+  obtenerEstudiantesSinAprobar(){
+    let cedulaCoordinador : string = sessionStorage.getItem('cedula');
+    this.estudiantes = this.http.post('http://localhost:3000/coordinador/estudiantesSinAprobar',{cedulaCoordinador : cedulaCoordinador});
   }
 
 }
