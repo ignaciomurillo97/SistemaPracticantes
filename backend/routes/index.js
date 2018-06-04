@@ -1,9 +1,12 @@
 let express = require('express');
 
-let usuario = require('../model/usuario.js');
 let estudiante = require('../model/estudiante.js');
-let passwordHash  = require('password-hash');
-let router = express.Router();
+var passwordHash  = require('password-hash');
+var usuario = require('../model/usuario.js');
+var universidad = require('../model/universidad.js')
+var sede = require('../model/sede.js')
+var carrera = require('../model/carrera.js')
+var router = express.Router();
 
 // Rutas de la API
 
@@ -34,6 +37,34 @@ router.post ('/login', function(req, res, next){
     })
 });
 
+router.get ('/universidad', function(req, res, next) {
+   universidad.seleccionarUniversidades().then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
+
+router.get ('/sede/:idUniversidad', function(req, res, next) {
+   idUniversidad = req.params.idUniversidad
+   sede.seleccionarSede(idUniversidad).then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
+
+router.get ('/carrera/:idSede', function(req, res, next) {
+   idSede = req.params.idSede;
+   carrera.seleccionarCarrera(idSede).then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
 
 function redireccionUsuario(tipoPersona) {
     if (tipoPersona === "coordinador") return "coordinadores";

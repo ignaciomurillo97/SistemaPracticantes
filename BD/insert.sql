@@ -1,4 +1,4 @@
-use sistemapracticantes;
+use SistemaPracticantes;
 
 insert into TipoPersona(tipo) values('coordinador'),('estudiante'),('administrador'),('empresa'),('profesor');
 insert into CatalagoEvento(nombre) values('Charla'),('Taller'),('Vinculación con la empresa');
