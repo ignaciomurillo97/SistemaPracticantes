@@ -1,20 +1,22 @@
 var express = require('express');
+var carrera = require('../model/carrera.js');
 var router = express.Router();
 
 // Rutas de la API
 
-// Ejemplo:
-router.get ('/Tmp', function(req, res, next) {
-   if (req.session.views) {
-      req.session.views ++;
-      res.setHeader('Content-Type', 'text/html');
-      res.write('<p>views: '+req.session.views+'</p>');
-      //res.write('<p>expires in: '+req.session.cookie.maxAge/1000+'</p>');
-      res.end();
-   } else {
-      req.session.views = 1;
-      res.end('Bienvenido al sitio!');
+router.put ('/modificar-carrera', function(req, res, next) {
+   let response = {}
+   let objetoCarrera = req.body;
+   if (req.session.usuario && req.session.usuario.Tipo == 'administrador') {
+      carrera.modificarCarrera(objetoCarrera).then(function(dbResponse) {
+         response.modificado = true;
+      });
    }
-})
+   else {
+      console.log('Advertencia: acceso no autorizado');
+      response.modificado = true;
+   }
+   res.send(response);
+});
 
 module.exports = router;

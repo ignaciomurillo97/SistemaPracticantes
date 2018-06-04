@@ -5,6 +5,7 @@ var passwordHash  = require('password-hash');
 var usuario = require('../model/usuario.js');
 var universidad = require('../model/universidad.js')
 var sede = require('../model/sede.js')
+var carrera = require('../model/carrera.js')
 var router = express.Router();
 
 // Rutas de la API
@@ -55,8 +56,9 @@ router.get ('/sede/:idUniversidad', function(req, res, next) {
    });
 });
 
-router.get ('/sede', function(req, res, next) {
-   sede.seleccionarSede(1).then(function(dbResponse){
+router.get ('/carrera/:idSede', function(req, res, next) {
+   idSede = req.params.idSede;
+   carrera.seleccionarCarrera(idSede).then(function(dbResponse){
       res.setHeader('Content-Type', 'text/html');
       res.send(dbResponse);
    }).catch(function(err){

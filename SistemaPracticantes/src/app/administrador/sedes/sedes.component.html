@@ -17,7 +17,7 @@
     </thead>
 
     <tbody>
-      <tr *ngFor='let sede of sedes | async' (click)="view(1)">
+      <tr *ngFor='let sede of sedes | async' (click)="view(sede.IdSede)">
         <td>{{sede.NombreSede}}</td>
         <td>{{sede.NombreUniversidad}}</td>
         <td>{{sede.Ubicacion}}</td>

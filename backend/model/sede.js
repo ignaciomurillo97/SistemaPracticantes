@@ -4,6 +4,7 @@ exports.seleccionarSede = function (i) {
    var query = `
       SELECT 
          s.NombreSede, 
+         s.IdSede,
          s.Ubicación as 'Ubicacion',
          u.NombreUniversidad 
       FROM 
