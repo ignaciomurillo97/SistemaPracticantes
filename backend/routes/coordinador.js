@@ -115,19 +115,58 @@ router.post('/asignarProfesorPractica', function (req, res) {
 
 router.post('/eliminarEmpresaDeCarrera', function (req, res) {
     let cedulaJuridica = req.body.cedulaJuridica;
-    let idCarrera = req.body.idCarrera;
-    coordinador.eliminarEmpresaDeCarrera(cedulaJuridica, idCarrera).then(function () {
-        res.send('se elimino la empresa de esa carrera');
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+
+    coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+        let idCarrera = carreraCoordinador[0]['carrera'];
+        coordinador.eliminarEmpresaDeCarrera(cedulaJuridica, idCarrera).then(function () {
+            res.send('se elimino la empresa de esa carrera');
+        });
     });
 });
 
 
 router.post('/empresasSinAprobar', function (req, res) {
-    let idCarrera = req.body.idCarrera;
+    let cedulaCoordinador = req.body.cedulaCoordinador;
     let estado = 'pendiente';
-    coordinador.obtenerEmpresas(idCarrera, estado).then(function (listaEmpresas) {
-        res.send(listaEmpresas);
-    })
+    coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+        let idCarrera = carreraCoordinador[0]['carrera'];
+
+        coordinador.obtenerEmpresas(idCarrera, estado).then(function (listaEmpresas) {
+            listaEmpresas = sacarRepetidosLista(listaEmpresas,'correos');
+            listaEmpresas = sacarRepetidosLista(listaEmpresas,'numeros')
+            res.send(listaEmpresas);
+        })
+    });
+});
+
+router.post('/empresasAprobadas', function (req, res) {
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    let estado = 'aprobado';
+    coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+        let idCarrera = carreraCoordinador[0]['carrera'];
+
+        coordinador.obtenerEmpresas(idCarrera, estado).then(function (listaEmpresas) {
+            listaEmpresas = sacarRepetidosLista(listaEmpresas,'correos');
+            listaEmpresas = sacarRepetidosLista(listaEmpresas,'numeros')
+            res.send(listaEmpresas);
+        })
+    });
+});
+
+router.post('/aprobarEmpresaACarrera', function (req, res) {
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    let cedulaJuridica = req.body.cedulaJuridica;
+    let estado = 'aprobado';
+    coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+        let idCarrera = carreraCoordinador[0]['carrera'];
+
+        coordinador.cambiarEstadoEmpresa(cedulaJuridica, idCarrera, estado).then(function (listaEmpresas) {
+            listaEmpresas = sacarRepetidosLista(listaEmpresas, 'correos');
+            listaEmpresas = sacarRepetidosLista(listaEmpresas, 'numeros');
+            res.send(listaEmpresas);
+        });
+    });
 });
 
 router.post('/crearEvento', function (req, res) {
@@ -136,6 +175,7 @@ router.post('/crearEvento', function (req, res) {
     let horaFinEvento = req.body.horaFin;
     let dia = req.body.dia;
     let tipoEvento = req.body.tipoEvento;
+    let foto = req.body.foto;
 
     let listaActividadesEvento = [];
 
@@ -143,7 +183,7 @@ router.post('/crearEvento', function (req, res) {
 
     
 
-    coordinador.crearEvento(horaInicioEvento, horaFinEvento, cedulaCoordinador, dia, tipoEvento).then(function (evento) {
+    coordinador.crearEvento(horaInicioEvento, horaFinEvento, cedulaCoordinador, dia, tipoEvento,foto).then(function (evento) {
         let idEvento = evento[2][0]['@lastId'];
 
         for(let actividad = 0; actividad < actividadesEvento.length && actividadesEvento ; actividad++){
@@ -153,7 +193,7 @@ router.post('/crearEvento', function (req, res) {
         }
         
         coordinador.crearActividadAEvento(listaActividadesEvento).then(function () {
-            res.send('Se agregaron las actividades al evento');
+            res.send({'respuesta':''});
         })
 
     });
@@ -165,6 +205,12 @@ router.post('/obtenerEventos', function (req,res) {
    coordinador.obtenerEventos(cedulaCoordinador).then(function (listaEventos) {
        res.send(listaEventos);
    });
+});
+
+router.get('/obtenerTiposDeEvento', function (req, res) {
+    coordinador.obtenerTiposDeEvento().then(function (tiposDeEvento) {
+        res.send(tiposDeEvento);
+    })
 });
 
 

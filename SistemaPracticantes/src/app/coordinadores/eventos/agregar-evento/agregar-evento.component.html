@@ -7,44 +7,128 @@
       <div class="card-content">
         <form [formGroup] = "formularioEvento">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <div class="form-group">
                 <label class="bmd-label-floating">Día del evento</label>
                 <input type="date"
                        class="form-control"
                        formControlName="diaEvento"
                 >
-                <span *ngIf="!formularioEvento.get('nombreDocumento').valid && formularioEvento.get('nombreDocumento').touched">
-                  <div *ngIf="formularioEvento.get('nombreDocumento').errors['required']" class="text-danger">Este campo es requerido</div>
+                <span *ngIf="!formularioEvento.get('diaEvento').valid && formularioEvento.get('diaEvento').touched">
+                  <div *ngIf="formularioEvento.get('diaEvento').errors['required']" class="text-danger">Este campo es requerido</div>
                 </span>
               </div>
             </div>
-            <div class="col-md-4" >
+            <div class="col-md-3" >
               <div class="form-group">
+                <label class="bmd-label-floating">Hora de inicio del evento</label>
+                <input type="time"
+                       class="form-control"
+                       formControlName="horaInicioEvento"
+                >
+                <span *ngIf="!formularioEvento.get('horaInicioEvento').valid && formularioEvento.get('horaInicioEvento').touched">
+                  <div *ngIf="formularioEvento.get('horaInicioEvento').errors['required']" class="text-danger">Este campo es requerido</div>
+                </span>
+              </div>
+            </div>
 
+            <div class="col-md-3" >
+              <div class="form-group">
+                <label class="bmd-label-floating">Hora de finalización del evento</label>
+                <input type="time"
+                       class="form-control"
+                       formControlName="horaFinEvento"
+                >
+                <span *ngIf="!formularioEvento.get('horaFinEvento').valid && formularioEvento.get('horaFinEvento').touched">
+                  <div *ngIf="formularioEvento.get('horaFinEvento').errors['required']" class="text-danger">Este campo es requerido</div>
+                  <div *ngIf="formularioEvento.get('horaFinEvento').errors['horaInicioErronea']" class="text-danger">La hora de finalización tiene que ser mayor a la de inicio</div>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label > Tipos de evento</label>
+                <select class="form-control"
+                        id="sedes"
+                        formControlName="tipoEvento">
+                  <option *ngFor="let tipoDeEvento of tiposDeEvento | async" [value]="tipoDeEvento.idTipoEvento" >
+                    {{ tipoDeEvento.nombre }}
+                  </option>
+                </select>
               </div>
 
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label class="bmd-label-floating"> Descripcion</label>
-                <textarea class="form-control"
-                          rows="3"
-                          formControlName="descripcion"
-                ></textarea>
-                <span *ngIf="!formularioEvento.get('descripcion').valid && formularioEvento.get('descripcion').touched">
-                  <div *ngIf="formularioEvento.get('descripcion').errors['required']" class="text-danger">Este campo es requerido</div>
+
+
+          </div>
+
+          <div class="row">
+
+
+            <div class="col-md-6">
+              <label class="bmd-label-floating">Foto</label>
+              <input type="file"
+                     class="form-control"
+                     style="display: none"
+                     (change)="cambioEnArchivo($event)"
+                     #archivo
+                     formControlName="foto"
+              >
+              <button class="btn btn-primary btn-round" (click)="archivo.click()">Seleccione su archivo</button>
+
+              <br>
+              <label>Nombre del archivo: {{nombreArchivo}}</label>
+              <br>
+              <span *ngIf="!formatoArchivoCorrecto" class="text-danger">
+                  Los formatos permitidos son SVG, PNG, JPG, JPEG
                 </span>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group" formArrayName="horaActividades">
+                <label>Horario de actividades del evento</label>
+                <button class="btn btn-primary btn-round" (click)="agregarEntrada()">Agregar</button>
+                <div *ngFor="let actividad of formularioEvento.get('horaActividades').controls; let i = index">
+
+                  <label class="bmd-label-floating" *ngIf="i % 2 == 0">Hora inicio</label>
+                  <label class="bmd-label-floating" *ngIf="i % 2 == 1">Hora fin</label>
+
+                  <input type="time" class="form-control" [formControlName]="i" >
+
+                  <div *ngIf="!actividad.valid && actividad.touched">
+                    <div *ngIf="actividad.errors['required']" class="text-danger">
+                      Este campo es requerido
+                    </div>
+                    <div *ngIf="actividad.errors['horaInicioActividadErronea'] " class="text-danger">
+                      La hora de inicio de la actividad tiene que ser minimo la hora de inicio del evento
+                    </div>
+                    <div *ngIf="actividad.errors['horaFinActividadErronea'] " class="text-danger">
+                      La hora de finalización de la actividad tiene que ser maximo la hora de finalización del evento
+                    </div>
+                    <div *ngIf="actividad.errors['actividadAnteriorErronea'] " class="text-danger">
+                      La hora tiene que ser mayor a la anterior
+                    </div>
+
+                    <div *ngIf="actividad.errors['horaInicioActividadErroneaFin'] " class="text-danger">
+                      La hora de inicio tiene que estar antes de la hora de finalización del evento
+                    </div>
+
+                  </div>
+
+
+                  <button class="btn btn-danger btn-round" (click)="eliminarEntrada(i)" *ngIf="i % 2 == 1">Eliminar</button>
+                </div>
+
               </div>
             </div>
 
           </div>
-
-          <button class="btn btn-primary btn-round pull-left" (click)="agregarDocumento()">Crear documento</button>
-          <button class="btn btn-danger btn-round pull-left" routerLink="/coordinadores/documentos">Cancelar</button>
+          <div class="text-danger">{{error}}</div>
+          <button class="btn btn-primary btn-round pull-left" (click)="crearEvento()" >Crear evento</button>
+          <button class="btn btn-danger btn-round pull-left" routerLink="/coordinadores/eventos">Cancelar</button>
           <div class="clearfix"></div>
         </form>
       </div>

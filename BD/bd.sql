@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Estudiante` (
   `Carne` DECIMAL(10,0) NULL,
   `Estado` VARCHAR(20) NULL,
   `profesorPractica` DECIMAL(9,0) NULL,
-  `rutaFoto` TEXT NULL,
+  `foto` TEXT NULL,
   PRIMARY KEY (`IdEstudiante`),
   UNIQUE INDEX `IdEstudiante_UNIQUE` (`IdEstudiante` ASC),
   INDEX `fk_Estudiante_Persona_Cedula_idx` (`Cedula` ASC),
@@ -290,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Documento` (
   `NombreDocumento` VARCHAR(60) NOT NULL,
   `Dueno` DECIMAL(9,0) NOT NULL,
   `FechaModificacion` TIME NULL,
-  `ruta` TEXT NULL,
+  `archivo` TEXT NULL,
   PRIMARY KEY (`NombreDocumento`, `Dueno`),
   INDEX `fk_Documento_Persona_Cedula_idx` (`Dueno` ASC),
   CONSTRAINT `fk_Documento_Persona_Cedula`
@@ -366,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Evento` (
   `HoraInicio` TIME NULL,
   `HoraFin` TIME NULL,
   `TipoEvento` INT NULL,
-  `Foto` BINARY NULL,
+  `Foto` TEXT NULL,
   `Coordinador` DECIMAL(9,0) NULL,
   `Dia` DATE NULL,
   PRIMARY KEY (`IdEvento`),
@@ -472,17 +472,17 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `SistemaPracticantes`.`ProfesorPractica` ;
 
 CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`ProfesorPractica` (
-  `cedula` DECIMAL(10,0) NOT NULL,
-  `carrera` INT NULL,
-  PRIMARY KEY (`cedula`),
-  INDEX `profesorPractica_Carrera_IdCarrera_idx` (`carrera` ASC),
-  CONSTRAINT `profesorPractica_Persona_Cedula`
-    FOREIGN KEY (`cedula`)
+  `Cedula` DECIMAL(9,0) NOT NULL,
+  `Carrera` INT NULL,
+  PRIMARY KEY (`Cedula`),
+  INDEX `profesorPractica_Carrera_IdCarrera_idx` (`Carrera` ASC),
+  CONSTRAINT `fk_profesorPractica_Persona_Cedula1`
+    FOREIGN KEY (`Cedula`)
     REFERENCES `SistemaPracticantes`.`Persona` (`Cedula`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `profesorPractica_Carrera_IdCarrera`
-    FOREIGN KEY (`carrera`)
+  CONSTRAINT `fk_profesorPractica_Carrera_IdCarrera`
+    FOREIGN KEY (`Carrera`)
     REFERENCES `SistemaPracticantes`.`Carrera` (`IdCarrera`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)

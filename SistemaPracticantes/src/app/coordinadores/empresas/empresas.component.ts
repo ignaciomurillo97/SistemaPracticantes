@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpresasComponent implements OnInit {
 
-  constructor() { }
+  //booleanos para saber cual componente cargar
+  aprobarEmpresas: boolean;
+  empresasAprobadas: boolean;
+
+  constructor() {
+    this.aprobarEmpresas = false;
+    this.empresasAprobadas = true;
+  }
 
   ngOnInit() {
+  }
+
+  componenteEmpresasAprobadas(){
+    this.aprobarEmpresas = false;
+    this.empresasAprobadas = true;
+  }
+
+  componenteAprobarEmpresas() {
+    this.aprobarEmpresas = true;
+    this.empresasAprobadas = false;
   }
 
 }
