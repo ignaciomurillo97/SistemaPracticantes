@@ -306,3 +306,25 @@ exports.eliminarDocumento = function (idDocumento) {
         });
     });
 };
+
+exports.obtenerCorreosParaEvento = function (idCarrera) {
+    let query = 'select c.correoelectronico\n' +
+        'from correoelectronico c\n' +
+        'where c.cedula in (select p.cedula \n' +
+        'from persona p\n' +
+        'inner join contactoempresa cp on p.cedula = cp.cedula\n' +
+        'inner join empresa e on e.cedulaJuridica = cp.empresaAsociado\n' +
+        'inner join empresasporcarrera ec on e.cedulaJuridica = ec.cedulaJuridicaEmpresa\n' +
+        'where ec.idCarrera = ' + idCarrera + ') or c.cedula in (select p.cedula \n' +
+        'from persona p \n' +
+        'inner join estudiante e on e.cedula = p.cedula\n' +
+        'where e.carrera = ' + idCarrera + ');';
+    return new Promise(function (resolve, reject) {
+        db_connection.query(query, function (err, result) {
+            if (err) {
+                reject(err);
+            }
+            resolve(result);
+        });
+    });
+};

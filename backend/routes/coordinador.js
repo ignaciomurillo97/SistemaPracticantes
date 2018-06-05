@@ -2,6 +2,7 @@ let express = require('express');
 let router = express.Router();
 let coordinador = require('../model/coordinador.js');
 let usuario = require('../model/usuario.js');
+const mandarCorreos = require('../mandarCorreos.js');
 // Rutas de la API
 
 // Ejemplo:
@@ -223,11 +224,27 @@ router.post('/crearEvento', function (req, res) {
 
         coordinador.crearActividadAEvento(listaActividadesEvento).then(function () {
             res.send({'respuesta':''});
+            coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+                let idCarrera = carreraCoordinador[0]['carrera'];
+                coordinador.obtenerCorreosParaEvento(idCarrera).then(function (listaCorreos) {
+                    let listaCorreosEvento = [];
+                    for (let i = 0; i<listaCorreos.length;i++ ){
+                        let correo = listaCorreos[i].correoelectronico;
+                        listaCorreosEvento.push(correo);
+                    }
+                    console.log(listaCorreosEvento);
+
+                    new mandarCorreos(listaCorreosEvento,'Evento Tecnologico de Costa Rica','Evento de vinculacion con la empresa');
+
+                });
+            });
+
         })
 
     });
 
 });
+
 
 router.post('/obtenerEventos', function (req,res) {
     let cedulaCoordinador = req.body.cedulaCoordinador;
@@ -276,5 +293,6 @@ function sacarRepetidosLista(listaPersonas, elementoConRepetidos){
     }
     return listaPersonas;
 }
+
 
 module.exports = router;
