@@ -40,6 +40,7 @@ import { SedeComponent } from './administrador/sedes/sede/sede.component';
 import { AdministrarCoordinadoresComponent } from './administrador/administrar-coordinadores/administrar-coordinadores.component';
 import { EditarCoordinadoresComponent } from './administrador/editar-coordinadores/editar-coordinadores.component';
 import { SemestresComponent } from './administrador/semestres/semestres.component';
+import { EmpresasAprobadasComponent } from './coordinadores/empresas/empresas-aprobadas/empresas-aprobadas.component';
 
 
 @NgModule({
@@ -79,6 +80,7 @@ import { SemestresComponent } from './administrador/semestres/semestres.componen
     AdministrarCoordinadoresComponent,
     EditarCoordinadoresComponent,
     SemestresComponent,
+    EmpresasAprobadasComponent
   ],
   imports: [
     BrowserModule,

@@ -1,28 +1,17 @@
 <div class="col-md-12">
-  <a class="btn btn-primary" routerLink="aprobarEmpresa" >Aprobar empresas</a>
-  <div class="card">
-    <div class="card-header card-header-primary" data-background-color="purple" >
-      <h4 class="title ">Empresas</h4>
+  <div class="text-center">
+    <div class="btn-group">
+      <button (click)="componenteEmpresasAprobadas()" class="btn btn-primary btn-round">Empresas</button>
+      <button (click)="componenteAprobarEmpresas()" class="btn btn-primary btn-round">Aprobar empresas </button>
     </div>
-    <div class="card-content table-responsive">
-        <table class="table table-hover">
-          <thead class=" text-primary">
-          <th>
-            Nombre de la empresa
-          </th>
-          <th>
-            Nombre del contacto con la empresa
-          </th>
 
-          </thead>
-          <tbody>
-          <tr>
-            <td>Intel</td>
-            <td>Alguien random</td>
-            <td><i class="material-icons">edit</i></td>
-          </tr>
-          </tbody>
-        </table>
-    </div>
   </div>
+</div>
+
+
+<div *ngIf="aprobarEmpresas">
+  <app-aprobar-empresas></app-aprobar-empresas>
+</div>
+<div *ngIf="empresasAprobadas">
+  <app-empresas-aprobadas></app-empresas-aprobadas>
 </div>

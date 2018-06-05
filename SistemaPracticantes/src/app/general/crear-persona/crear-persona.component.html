@@ -113,7 +113,7 @@
             <div class="col-md-6">
               <div class="form-group" formArrayName="correosContacto">
                 <label class="bmd-label-floating">Correo</label>
-                <button class="btn btn-primary btn-round" (click)="agregarEntrada('correosContacto')">Agregar</button>
+                <button class="btn btn-primary btn-round" >Agregar</button>
 
                 <div *ngFor="let correo of formularioPersona.get('correosContacto').controls; let i = index">
                   <input type="text" class="form-control" [formControlName]="i" >
@@ -128,7 +128,7 @@
                       Esta dirección de correo electronico ya ha sido ingresada
                     </div>
                   </div>
-                  <button class="btn btn-danger btn-round" (click)="eliminarEntrada(i,'correosContacto')">Eliminar</button>
+                  <button class="btn btn-danger btn-round" >Eliminar</button>
                 </div>
 
               </div>

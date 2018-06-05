@@ -1,8 +1,7 @@
 <div class="col-md-12">
-  <a class="btn btn-primary" routerLink="/coordinadores/empresas" >Atras</a>
   <div class="card">
     <div class="card-header card-header-primary" data-background-color="purple">
-      <h4 class="title ">Empresas </h4>
+      <h4 class="title ">Empresas por aprobar </h4>
     </div>
     <div class="card-content table-responsive">
         <table class="table table-hover">
@@ -17,18 +16,23 @@
             Correo contacto empresa
           </th>
           <th>
+            Numero contacto empresa
+          </th>
+          <th>
             Estado
           </th>
 
           </thead>
           <tbody>
-          <tr>
-            <td>Alvaro Castro Venegas</td>
-            <td>alvarocastro74@gmail.com</td>
+          <tr *ngFor="let empresa of empresas | async">
+            <td>{{ empresa.NombreEmpresa }}</td>
+            <td>{{ empresa.Nombre  + ' ' + empresa.Apellido + ' ' + empresa.SegundoApellido}}</td>
+            <td>{{ empresa.correos[0] }}</td>
+            <td>{{ empresa.numeros[0] }}</td>
             <td>
               <div class="btn-group">
-                <button class="btn btn-primary" (click)="aprobarEstudiante()">Aprobar</button>
-                <button class="btn btn-primary" (click)="desaprobarEstudiante()">Desaprobar</button>
+                <button class="btn btn-primary" (click)="aprobarEmpresa(empresa.CedulaJuridica)">Aprobar</button>
+                <button class="btn btn-primary" (click)="desaprobarEmpresa(empresa.CedulaJuridica)">Desaprobar</button>
               </div>
             </td>
             <td><i class="material-icons text-center">account_box</i></td>

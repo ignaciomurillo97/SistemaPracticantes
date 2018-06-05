@@ -65,10 +65,9 @@ export class CrearPersonaComponent implements OnInit {
   buscarDuplicado(arreglo : FormArray, elemento : any ) : boolean {
     //funcion que busca duplicados en el arreglo
 
-    let count = 0;
+    let count = 0; //contador de repetidos
     for( let i = 0; i < arreglo.length; i++){
 
-      console.log(arreglo.at(i).value);
       if(arreglo.at(i).value === elemento){
         count++;
         if(count >= 2){

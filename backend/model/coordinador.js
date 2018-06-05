@@ -65,6 +65,20 @@ exports.cambiarEstadoEstudiante = function (cedula, estado) {
     })
 };
 
+exports.cambiarEstadoEmpresa = function(cedulaJuridica,idCarrera,estado){
+    let query = 'update empresasporcarrera\n' +
+        'set estado = \'' + estado + '\'\n' +
+        'where cedulaJuridicaEmpresa = ' + cedulaJuridica + ' and idCarrera =' + idCarrera +';'
+    return new Promise(function (resolve, reject) {
+        db_connection.query(query, function (err, result) {
+            if (err) {
+                reject(err);
+            }
+            resolve(result);
+        });
+    });
+};
+
 exports.asignarProfesorPractica = function (cedulaProfesor, cedulaEstudiante) {
     let query = 'update estudiante \n' +
         'set profesorPractica = '+ cedulaProfesor +' \n' +
@@ -72,12 +86,11 @@ exports.asignarProfesorPractica = function (cedulaProfesor, cedulaEstudiante) {
     return new Promise(function (resolve, reject) {
         db_connection.query(query, function (err, result) {
             if (err) {
-                console.log(err);
                 reject(err);
             }
             resolve(result);
-        })
-    })
+        });
+    });
 };
 
 exports.eliminarEmpresaDeCarrera = function (cedulaJuridica, idCarrera) {
@@ -95,11 +108,15 @@ exports.eliminarEmpresaDeCarrera = function (cedulaJuridica, idCarrera) {
 };
 
 exports.obtenerEmpresas = function (idCarrera, estado) {
-    let query = 'select * from empresa \n' +
-        'inner join contactoempresa on empresa.cedulaJuridica = contactoempresa.empresaAsociado \n' +
-        'inner join persona on contactoempresa.cedula = persona.cedula\n' +
-        'inner join empresasPorCarrera on empresasPorCarrera.cedulaJuridicaEmpresa = empresa.cedulaJuridica \n' +
-        'where empresasPorCarrera.idCarrera = ' + idCarrera + ' and empresasPorCarrera.estado = \''+ estado +'\';';
+    let query = 'select e.*,p.*,GROUP_CONCAT(n.numerotelefono) as numeros,GROUP_CONCAT(c.correoElectronico) as correos \n' +
+        'from empresa e\n' +
+        'inner join contactoempresa ce on e.cedulaJuridica = ce.empresaAsociado\n' +
+        'inner join persona p on ce.cedula = p.cedula\n' +
+        'inner join numeroTelefono n on p.cedula = n.cedula\n' +
+        'inner join correoElectronico c on p.cedula = c.cedula\n' +
+        'inner join empresasPorCarrera ep on ep.cedulaJuridicaEmpresa = e.cedulaJuridica\n' +
+        'where ep.idCarrera =  + ' + idCarrera +' and ep.estado = \''  + estado + '\'\n' +
+        'group by ce.cedula;';
 
     return new Promise(function (resolve, reject) {
         db_connection.query(query, function (err, result) {
@@ -112,15 +129,15 @@ exports.obtenerEmpresas = function (idCarrera, estado) {
     });
 };
 
-exports.crearEvento = function (horaInicio, horaFin, cedulaCoordinador, dia, tipoEvento) {
-    let query = 'insert into evento(horaInicio, horaFin, coordinador,dia, tipoEvento) \n' +
-        'values(\'' + horaInicio + '\', \' ' + horaFin + '\',' + cedulaCoordinador + ',\'' + dia + '\', +' + tipoEvento + ' );' +
+exports.crearEvento = function (horaInicio, horaFin, cedulaCoordinador, dia, tipoEvento,foto) {
+    let query = 'insert into evento(horaInicio, horaFin, coordinador,dia, tipoEvento,foto) \n' +
+        'values(\'' + horaInicio + '\', \' ' + horaFin + '\',' + cedulaCoordinador + ',\'' + dia + '\', ' + tipoEvento + ', ' +
+        '\'' + foto + '\');' +
         'set @lastId = LAST_INSERT_ID();' +
         'select @lastId;';
     return new Promise(function (resolve, reject) {
         db_connection.query(query, function (err, result) {
             if (err) {
-                console.log(err);
                 reject(err);
             }
             resolve(result);
@@ -178,6 +195,18 @@ exports.obtenerProfesoresDePractica = function (cedulaCoordinador) {
         'inner join correoElectronico as c on c.cedula = pp.cedula\n' +
         'where cp.cedula = ' + cedulaCoordinador + '\n' +
         'group by pp.cedula;';
+    return new Promise(function (resolve, reject) {
+        db_connection.query(query, function (err, result) {
+            if (err) {
+                reject(err);
+            }
+            resolve(result);
+        });
+    });
+};
+
+exports.obtenerTiposDeEvento = function () {
+    let query = 'select idTipoEvento, nombre from catalagoEvento;';
     return new Promise(function (resolve, reject) {
         db_connection.query(query, function (err, result) {
             if (err) {

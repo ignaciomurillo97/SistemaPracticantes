@@ -1,0 +1,36 @@
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header card-header-primary" data-background-color="purple" >
+      <h4 class="title ">Empresas de la carrera</h4>
+    </div>
+    <div class="card-content table-responsive">
+      <table class="table table-hover">
+        <thead class=" text-primary">
+        <th>
+          Nombre de la empresa
+        </th>
+        <th>
+          Nombre del contacto con la empresa
+        </th>
+        <th>
+          Correo del contacto
+        </th>
+        <th>
+          Numero del contacto
+        </th>
+
+        </thead>
+        <tbody>
+        <tr *ngFor="let empresa of empresas | async">
+          <td>{{ empresa.NombreEmpresa }}</td>
+          <td>{{ empresa.Nombre  + ' ' + empresa.Apellido + ' ' + empresa.SegundoApellido}}</td>
+          <td>{{ empresa.correos[0] }}</td>
+          <td>{{ empresa.numeros[0] }}</td>
+          <td><i class="material-icons text-center">account_box</i></td>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
