@@ -10,3 +10,18 @@ exports.seleccionarUniversidades = function () {
       });
    });
 };
+
+exports.modificarUniversidad = function (universidad) {
+   var query = `
+   UPDATE Universidad 
+   SET NombreUniversidad = '${universidad.NombreUniversidad}'
+   WHERE IdUniversidad = ${universidad.IdUniversidad}
+   `
+
+   return new Promise (function (resolve, reject) {
+      db_connection.query(query, function (err, result, fields) {
+         if (err) reject(err);
+         resolve(result);
+      });
+   });
+}

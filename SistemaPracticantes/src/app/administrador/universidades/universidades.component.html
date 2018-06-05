@@ -1,15 +1,18 @@
 <div *ngFor='let universidad of universidades | async'>
-   <div (click)='view()' class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
       <div class="card card-stats">
          <div class="card-header card-header-warning card-header-icon" data-background-color="purple">
             <div class="card-icon">
                <i class="fa fa-university"></i>
             </div>
          </div>
-         <p>{{universidad.NombreUniversidad}}</p>
+         <p (click)='view()' *ngIf="!universidad.edit; else elseBlock">{{universidad.NombreUniversidad}}</p>
+         <ng-template #elseBlock>
+            <input type='text' value="{{universidad.NombreUniversidad}}" [(ngModel)]="universidad.NombreUniversidad"/>
+         </ng-template>
          <div class="card-footer">
             <div class="btn-group pull-right" role="group">
-              <button (click)="edit(universidad.IdUniversidad)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+               <button (click)="edit(universidad)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
                   <i class="material-icons">edit</i>
                </button>
                <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">

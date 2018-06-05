@@ -17,7 +17,6 @@ exports.seleccionarCarrera = function (i) {
 }
 
 exports.modificarCarrera = function (carrera) {
-   console.log(carrera);
    if (!carrera.IdCarrera) {
       console.log('No hay id carrera, el query es peligroso');
       return;

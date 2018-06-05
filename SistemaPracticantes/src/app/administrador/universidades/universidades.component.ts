@@ -22,8 +22,18 @@ export class UniversidadesComponent implements OnInit {
     this.obtenerUniversidades();
   }
 
-  edit() {
-    this.router.navigate(['administrador/editar-universidad']);
+  edit(universidad) {
+    if (universidad.edit) {
+      this.enviarModificacion(universidad);
+    }
+    universidad.edit = !universidad.edit;
+  }
+
+  enviarModificacion(universidad) {
+    this.http.put('http://localhost:3000/administrador/modificar-universidad', universidad, {withCredentials: true})
+      .subscribe(data => {
+        console.log('formulario enviado');
+      })
   }
 
   view() {
@@ -31,7 +41,14 @@ export class UniversidadesComponent implements OnInit {
   }
 
   obtenerUniversidades() {
-    this.universidades = this.http.get('http://localhost:3000/universidad', {withCredentials: true})
+     this.universidades = this.http.get('http://localhost:3000/universidad', {withCredentials: true})
+      .map(function (x:any, idx) {
+        for (let obj of x) {
+          obj.edit = false;
+        }
+        console.log(x);
+        return x;
+      });
   }
 
 }

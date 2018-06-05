@@ -53,7 +53,7 @@ export class CarrerasComponent implements OnInit {
         }
         console.log(x);
         return x;
-      });;
+      });
   }
 
 }
