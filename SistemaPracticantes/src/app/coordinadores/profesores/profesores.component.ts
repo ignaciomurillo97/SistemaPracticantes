@@ -23,4 +23,17 @@ export class ProfesoresComponent implements OnInit {
     this.profesores = this.http.post('http://localhost:3000/coordinador/profesoresDePractica',{'cedulaCoordinador':cedulaCoordinador});
   }
 
+  seleccionarProfesor(cedulaProfesor){
+    sessionStorage.setItem('profesorSeleccionado',cedulaProfesor);
+    this.routes.navigate(['coordinadores/profesores/profesorSeleccionado']);
+  }
+
+  eliminarProfesor(cedulaProfesor){
+    this.http.post('http://localhost:3000/coordinador/eliminarProfesorPractica',{'cedulaProfesor':cedulaProfesor})
+      .subscribe(data => {
+      });
+    this.obtenerProfesoresPractica();
+
+  }
+
 }

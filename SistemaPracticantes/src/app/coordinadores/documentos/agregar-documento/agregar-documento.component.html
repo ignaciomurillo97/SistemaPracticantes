@@ -19,6 +19,7 @@
                 </span>
               </div>
             </div>
+
             <div class="col-md-6">
               <div class="form-group">
                 <label >Documento</label>
@@ -40,24 +41,22 @@
                 <div>Los formatos permitidos son DOC, DOCX, PDF</div>
               </span>
             </div>
-          </div>
 
-          <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <label class="bmd-label-floating"> Descripcion</label>
-                <textarea class="form-control"
-                          rows="3"
-                          formControlName="descripcion"
+                <label class="bmd-label-floating">Descripción</label>
+                <textarea
+                  rows="1"
+                  class="form-control"
+                  formControlName="descripcion"
                 ></textarea>
                 <span *ngIf="!formularioDocumento.get('descripcion').valid && formularioDocumento.get('descripcion').touched">
                   <div *ngIf="formularioDocumento.get('descripcion').errors['required']" class="text-danger">Este campo es requerido</div>
                 </span>
               </div>
             </div>
-
           </div>
-
+          <div class="text-danger">{{error}}</div>
           <button class="btn btn-primary btn-round pull-left" (click)="agregarDocumento()">Crear documento</button>
           <button class="btn btn-danger btn-round pull-left" routerLink="/coordinadores/documentos">Cancelar</button>
           <div class="clearfix"></div>

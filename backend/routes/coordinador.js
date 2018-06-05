@@ -2,6 +2,7 @@ let express = require('express');
 let router = express.Router();
 let coordinador = require('../model/coordinador.js');
 let usuario = require('../model/usuario.js');
+const mandarCorreos = require('../mandarCorreos.js');
 // Rutas de la API
 
 // Ejemplo:
@@ -12,7 +13,6 @@ router.get ('/', function(req, res, next) {
 router.post('/estudiantesSinAprobar', function (req, res, next) {
     let cedulaCoordinador = req.body.cedulaCoordinador;
     let estado = 'pendiente';
-    console.log(cedulaCoordinador);
     coordinador.obtenerEstudiantes(estado,cedulaCoordinador).then(function (listaEstudiantes) {
         listaEstudiantes = sacarRepetidosLista(listaEstudiantes,'correos');
         listaEstudiantes = sacarRepetidosLista(listaEstudiantes,'numeros');
@@ -45,7 +45,7 @@ router.post('/estudianteAPractica', function (req, res) {
     let cedula = req.body.cedula;
     let estado = 'practica';
     coordinador.cambiarEstadoEstudiante(cedula,estado).then(function () {
-        res.send('Se paso el estudiante a practica');
+        res.send({'respuesta':''});
     })
 });
 
@@ -95,6 +95,22 @@ router.post('/agregarProfesorPractica', function (req, res) {
     });
 });
 
+router.post('/seleccionarProfesorPractica',function (req,res) {
+    let cedulaProfesor = req.body.cedulaProfesor;
+    coordinador.seleccionarProfesorPractica(cedulaProfesor).then(function (profesorSeleccionado) {
+        profesorSeleccionado = sacarRepetidosLista(profesorSeleccionado,'correos');
+        profesorSeleccionado = sacarRepetidosLista(profesorSeleccionado,'numeros');
+        res.send(profesorSeleccionado);
+    });
+});
+
+router.post('/eliminarProfesorPractica', function (req,res) {
+    let cedulaProfesor = req.body.cedulaProfesor;
+    coordinador.eliminarProfesorPractica(cedulaProfesor).then(function () {
+        res.send({'respuesta':''});
+    })
+});
+
 router.post('/profesoresDePractica', function (req, res) {
     let cedulaCoordinador = req.body.cedulaCoordinador;
     coordinador.obtenerProfesoresDePractica(cedulaCoordinador).then(function (listaProfesoresPractica) {
@@ -120,9 +136,23 @@ router.post('/eliminarEmpresaDeCarrera', function (req, res) {
     coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
         let idCarrera = carreraCoordinador[0]['carrera'];
         coordinador.eliminarEmpresaDeCarrera(cedulaJuridica, idCarrera).then(function () {
-            res.send('se elimino la empresa de esa carrera');
+            res.send({'respuesta':''});
         });
     });
+});
+
+router.post('/seleccionarEmpresa',function (req,res) {
+    let cedulaJuridica = req.body.cedulaJuridica;
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+        let idCarrera = carreraCoordinador[0]['carrera'];
+        coordinador.seleccionarEmpresa(idCarrera,cedulaJuridica).then(function (empresaSeleccionada) {
+            empresaSeleccionada = sacarRepetidosLista(empresaSeleccionada,'correos');
+            empresaSeleccionada = sacarRepetidosLista(empresaSeleccionada,'numeros');
+            res.send(empresaSeleccionada);
+        })
+    });
+
 });
 
 
@@ -181,7 +211,7 @@ router.post('/crearEvento', function (req, res) {
 
     let actividadesEvento = req.body.listaActividades;
 
-    
+
 
     coordinador.crearEvento(horaInicioEvento, horaFinEvento, cedulaCoordinador, dia, tipoEvento,foto).then(function (evento) {
         let idEvento = evento[2][0]['@lastId'];
@@ -191,25 +221,65 @@ router.post('/crearEvento', function (req, res) {
             let horaFinActividad = actividadesEvento[actividad].horaFin;
             listaActividadesEvento.push([horaInicioActividad, horaFinActividad, idEvento]);
         }
-        
+
         coordinador.crearActividadAEvento(listaActividadesEvento).then(function () {
             res.send({'respuesta':''});
+            coordinador.obtenerCarreraCoordinador(cedulaCoordinador).then(function (carreraCoordinador) {
+                let idCarrera = carreraCoordinador[0]['carrera'];
+                coordinador.obtenerCorreosParaEvento(idCarrera).then(function (listaCorreos) {
+                    let listaCorreosEvento = [];
+                    for (let i = 0; i<listaCorreos.length;i++ ){
+                        let correo = listaCorreos[i].correoelectronico;
+                        listaCorreosEvento.push(correo);
+                    }
+                    console.log(listaCorreosEvento);
+
+                    new mandarCorreos(listaCorreosEvento,'Evento Tecnologico de Costa Rica','Evento de vinculacion con la empresa');
+
+                });
+            });
+
         })
 
     });
 
 });
 
+
 router.post('/obtenerEventos', function (req,res) {
-   let cedulaCoordinador = req.body.cedulaCoordinador;
-   coordinador.obtenerEventos(cedulaCoordinador).then(function (listaEventos) {
-       res.send(listaEventos);
-   });
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    coordinador.obtenerEventos(cedulaCoordinador).then(function (listaEventos) {
+        res.send(listaEventos);
+    });
 });
 
 router.get('/obtenerTiposDeEvento', function (req, res) {
     coordinador.obtenerTiposDeEvento().then(function (tiposDeEvento) {
         res.send(tiposDeEvento);
+    })
+});
+
+router.post('/agregarDocumento', function (req,res) {
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    let archivo = req.body.archivo;
+    let nombreDocumento = req.body.nombreDocumento;
+    let descripcion = req.body.descripcion;
+    coordinador.agregarDocumento(cedulaCoordinador,archivo,nombreDocumento,descripcion).then(function () {
+        res.send({'respuesta':''});
+    })
+});
+
+router.post('/obtenerDocumentos',function (req,res) {
+    let cedulaCoordinador = req.body.cedulaCoordinador;
+    coordinador.obtenerDocumentos(cedulaCoordinador).then(function (listaDocumentos) {
+        res.send(listaDocumentos);
+    })
+});
+
+router.post('/eliminarDocumento', function (req, res) {
+    let idDocumento = req.body.idDocumento;
+    coordinador.eliminarDocumento(idDocumento).then(function () {
+        res.send({'respuesta': ''});
     })
 });
 
@@ -223,5 +293,6 @@ function sacarRepetidosLista(listaPersonas, elementoConRepetidos){
     }
     return listaPersonas;
 }
+
 
 module.exports = router;

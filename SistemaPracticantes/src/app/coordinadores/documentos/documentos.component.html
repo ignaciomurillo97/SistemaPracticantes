@@ -12,15 +12,23 @@
           Nombre
         </th>
         <th>
-          Descripcion
+          Fecha Modificacion
+        </th>
+        <th>
+          Descripción
+        </th>
+        <th>
+          Documento
         </th>
 
         </thead>
         <tbody>
-        <tr>
-          <td>Plantilla anteproyecto</td>
-          <td>Guia para realizar el anteproyecto</td>
-          <td><i class="material-icons">edit</i></td>
+        <tr *ngFor="let documento of documentos | async">
+          <td>{{ documento.NombreDocumento }}</td>
+          <td>{{ documento.FechaModificacion.split('T')[0] }}</td>
+          <td>{{ documento.descripcion }}</td>
+          <td><a [href]="limpiarDocumento(documento.archivo)" download>Documento</a></td>
+          <td><button class="btn btn-primary" (click)="eliminarDocumento(documento.IdDocumento)">Eliminar</button></td>
         </tr>
         </tbody>
       </table>

@@ -1,0 +1,52 @@
+<div class="col-md-12">
+  <div class="card" *ngFor="let profesor of profesores | async" >
+    <div class="card-header" data-background-color="purple">
+      <h4 class="title">Nombre de la profesor : {{ profesor.Nombreprofesor }}</h4>
+      <p> Cedula Juridica : {{ profesor.CedulaJuridica}}</p>
+    </div>
+    <div class="card-content">
+      <div class="row">
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Nombre contacto profesor</h6>
+            <p>{{ profesor.Nombre + ' ' + profesor.Apellido + ' ' + profesor.SegundoApellido }}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Cedula contacto profesor</h6>
+            <p>{{ profesor.Cedula }}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Genero</h6>
+            <p>{{ profesor.Sexo }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Correos de contacto</h6>
+            <p *ngFor="let correo of profesor.correos ">
+              {{correo}}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Numeros de contacto</h6>
+            <p *ngFor="let numero of profesor.numeros">
+              {{ numero }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <button type="button" routerLink="../" class="btn btn-primary pull-left">Atras</button>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
