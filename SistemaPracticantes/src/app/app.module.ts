@@ -39,6 +39,7 @@ import { UniversidadComponent } from './administrador/universidades/universidad/
 import { SedeComponent } from './administrador/sedes/sede/sede.component';
 import { AdministrarCoordinadoresComponent } from './administrador/administrar-coordinadores/administrar-coordinadores.component';
 import { EditarCoordinadoresComponent } from './administrador/editar-coordinadores/editar-coordinadores.component';
+import { SemestresComponent } from './administrador/semestres/semestres.component';
 import { EmpresasAprobadasComponent } from './coordinadores/empresas/empresas-aprobadas/empresas-aprobadas.component';
 import { SeleccionarEmpresaComponent } from './coordinadores/empresas/seleccionar-empresa/seleccionar-empresa.component';
 import { SeleccionarProfesorComponent } from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
@@ -82,7 +83,9 @@ import { SeleccionarProfesorComponent } from './coordinadores/profesores/selecci
     EditarCoordinadoresComponent,
     EmpresasAprobadasComponent,
     SeleccionarEmpresaComponent,
-    SeleccionarProfesorComponent
+    SeleccionarProfesorComponent,
+    SemestresComponent,
+    EmpresasAprobadasComponent
   ],
   imports: [
     BrowserModule,

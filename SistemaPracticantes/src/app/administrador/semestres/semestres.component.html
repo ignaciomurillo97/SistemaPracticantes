@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h2 class="card-title">Semestres:</h2>
+  </div>
+</div>
+
+<div class="card-body table-responsive">
+  <table class="table table-hover">
+
+    <thead class="text-warning">
+      <tr>
+        <th>Semestre</th>
+        <th>NumeroSemestre</th>
+        <th>Año</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor='let semestre of semestres | async'>
+        <td>{{semestre.idSemestre}}</td>
+        <td>{{semestre.numeroSemestre}}</td>
+        <td>{{semestre.ano}}</td>
+        <td>
+          <div class="btn-group" role="group">
+            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+              <i class="material-icons">edit</i>
+            </button>
+            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="text" [(ngModel)]="nuevoNumeroSemestre"/></td>
+        <td><input type="text" [(ngModel)]="nuevoAno"/></td>
+        <td>
+          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="" (click)="agregarSemestre()">
+            <i class="material-icons">add</i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

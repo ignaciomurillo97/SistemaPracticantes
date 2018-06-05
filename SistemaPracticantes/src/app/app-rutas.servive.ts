@@ -32,6 +32,8 @@ import {EditarCoordinadoresComponent} from './administrador/editar-coordinadores
 import {SeleccionarEmpresaComponent} from './coordinadores/empresas/seleccionar-empresa/seleccionar-empresa.component';
 import {SeleccionarProfesorComponent} from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
 
+import {SemestresComponent} from './administrador/semestres/semestres.component';
+
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', children: [
@@ -77,18 +79,33 @@ const rutas: Routes = [
     ]},
 
 
-  {path: 'administrador', component: AdministradorComponent, children: [
-      { path: 'universidades', component: UniversidadesComponent },
-      { path: 'universidad', component: UniversidadComponent },
-      { path: 'sedes', component: SedesComponent },
-      { path: 'sede/:id', component: SedeComponent },
-      { path: 'carreras', component: CarrerasComponent },
-      { path: 'administradores', component: AdministradoresComponent },
-      { path: 'editar-administradores', component: EditarAdministradoresComponent},
-      { path: 'editar-universidad', component: EditarUniversidadComponent},
-      { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent },
-      { path: 'editar-coordinadores', component: EditarCoordinadoresComponent }
+  {
+    path: 'administrador', component: AdministradorComponent, children: [
+      {path: 'universidades', component: UniversidadesComponent},
+      {path: 'universidad', component: UniversidadComponent},
+      {path: 'sedes', component: SedesComponent},
+      {path: 'sede/:id', component: SedeComponent},
+      {path: 'carreras', component: CarrerasComponent},
+      {path: 'administradores', component: AdministradoresComponent},
+      {path: 'editar-administradores', component: EditarAdministradoresComponent},
+      {path: 'editar-universidad', component: EditarUniversidadComponent},
+      {path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent},
+      {path: 'editar-coordinadores', component: EditarCoordinadoresComponent}
     ]
+  },
+   {path: 'administrador', component: AdministradorComponent, children: [
+     { path: 'universidades', component: UniversidadesComponent },
+     { path: 'universidad', component: UniversidadComponent },
+     { path: 'sedes', component: SedesComponent },
+     { path: 'sede/:id', component: SedeComponent },
+     { path: 'carreras', component: CarrerasComponent },
+     { path: 'administradores', component: AdministradoresComponent },
+     { path: 'editar-administradores', component: EditarAdministradoresComponent},
+     { path: 'editar-universidad', component: EditarUniversidadComponent},
+     { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent },
+     { path: 'editar-coordinadores', component: EditarCoordinadoresComponent },
+     { path: 'semestres', component: SemestresComponent }
+   ]
   }
 
 ];
