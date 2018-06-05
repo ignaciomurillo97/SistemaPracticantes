@@ -29,6 +29,7 @@ import {EditarUniversidadComponent} from './administrador/editar-universidad/edi
 import {UniversidadComponent} from './administrador/universidades/universidad/universidad.component';
 import {AdministrarCoordinadoresComponent} from './administrador/administrar-coordinadores/administrar-coordinadores.component';
 import {EditarCoordinadoresComponent} from './administrador/editar-coordinadores/editar-coordinadores.component';
+import {SemestresComponent} from './administrador/semestres/semestres.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -83,7 +84,8 @@ const rutas: Routes = [
      { path: 'editar-administradores', component: EditarAdministradoresComponent},
      { path: 'editar-universidad', component: EditarUniversidadComponent},
      { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent },
-     { path: 'editar-coordinadores', component: EditarCoordinadoresComponent }
+     { path: 'editar-coordinadores', component: EditarCoordinadoresComponent },
+     { path: 'semestres', component: SemestresComponent }
    ]
   }
 

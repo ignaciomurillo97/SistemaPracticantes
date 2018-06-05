@@ -6,6 +6,7 @@ var usuario = require('../model/usuario.js');
 var universidad = require('../model/universidad.js')
 var sede = require('../model/sede.js')
 var carrera = require('../model/carrera.js')
+var semestre = require('../model/semestres.js')
 var router = express.Router();
 
 // Rutas de la API
@@ -65,6 +66,27 @@ router.get ('/carrera/:idSede', function(req, res, next) {
       console.log(err);
    });
 });
+
+router.get ('/semestres', function(req, res, next) {
+   semestre.seleccionarSemestre().then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
+
+router.post ('/semestre/:numeroSemestre/:ano', function(req, res, next) {
+   numeroSemestre = req.params.numeroSemestre;
+   ano = req.params.ano;
+   semestre.agregarSemestre(numeroSemestre, ano).then(function(dbResponse){
+      res.setHeader('Content-Type', 'text/html');
+      res.send(dbResponse);
+   }).catch(function(err){
+      console.log(err);
+   });
+});
+
 
 function redireccionUsuario(tipoPersona) {
     if (tipoPersona === "coordinador") return "coordinadores";
