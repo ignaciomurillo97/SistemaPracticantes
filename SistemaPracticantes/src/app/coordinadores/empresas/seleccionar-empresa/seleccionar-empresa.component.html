@@ -1,0 +1,57 @@
+<div class="col-md-12">
+  <div class="card" *ngFor="let empresa of empresas | async" >
+    <div class="card-header" data-background-color="purple">
+      <h4 class="title">Nombre de la empresa : {{ empresa.NombreEmpresa }}</h4>
+      <p> Cedula Juridica : {{ empresa.CedulaJuridica}}</p>
+    </div>
+    <div class="card-content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class=" form-black label-floating is-empty">
+              <h6 class="control-label">Nombre contacto empresa</h6>
+              <p>{{ empresa.Nombre + ' ' + empresa.Apellido + ' ' + empresa.SegundoApellido }}</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class=" form-black label-floating is-empty">
+              <h6 class="control-label">Cedula contacto empresa</h6>
+              <p>{{ empresa.Cedula }}</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class=" form-black label-floating is-empty">
+              <h6 class="control-label">Genero</h6>
+              <p>{{ empresa.Sexo }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class=" form-black label-floating is-empty">
+              <h6 class="control-label">Correos de contacto</h6>
+              <p *ngFor="let correo of empresa.correos ">
+                {{correo}}
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class=" form-black label-floating is-empty">
+              <h6 class="control-label">Numeros de contacto</h6>
+              <p *ngFor="let numero of empresa.numeros">
+                {{ numero }}
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class=" form-black label-floating is-empty">
+              <h6 class="control-label">Estado</h6>
+              <p>{{empresa.Estado }}</p>
+            </div>
+          </div>
+        </div>
+        <button type="button" routerLink="../" class="btn btn-primary pull-left">Atras</button>
+        <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

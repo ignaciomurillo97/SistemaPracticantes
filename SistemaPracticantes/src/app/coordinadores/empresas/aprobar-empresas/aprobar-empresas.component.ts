@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-aprobar-empresas',
@@ -11,7 +12,7 @@ export class AprobarEmpresasComponent implements OnInit {
 
   empresas: Observable<Object>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.obtenerEmpresasSinAprobar();
@@ -39,6 +40,11 @@ export class AprobarEmpresasComponent implements OnInit {
 
       });
     this.obtenerEmpresasSinAprobar();
+  }
+
+  seleccionarEmpresa(cedulaJuridica){
+    sessionStorage.setItem('cedulaJuridicaEmpresaSeleccionada',cedulaJuridica);
+    this.router.navigate(['/coordinadores/empresas/empresaSeleccionada']);
   }
 
 }

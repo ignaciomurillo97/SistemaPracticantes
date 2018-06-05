@@ -24,7 +24,13 @@
           <td>{{ profesor.Nombre + ' ' + profesor.Apellido + ' ' + profesor.SegundoApellido }}</td>
           <td>{{ profesor.correos[0] }}</td>
           <td>{{ profesor.numeros[0] }}</td>
-          <td><i class="material-icons">account_box</i></td>
+          <td>
+            <div class="btn-group">
+              <button class="btn btn-primary" (click)="seleccionarProfesor(profesor.Cedula)">Seleccionar</button>
+              <button (click)="eliminarProfesor(profesor.Cedula)" class="btn btn-primary ">Eliminar </button>
+            </div>
+
+          </td>
         </tr>
         </tbody>
       </table>

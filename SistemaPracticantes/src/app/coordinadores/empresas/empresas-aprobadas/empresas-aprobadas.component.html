@@ -26,7 +26,12 @@
           <td>{{ empresa.Nombre  + ' ' + empresa.Apellido + ' ' + empresa.SegundoApellido}}</td>
           <td>{{ empresa.correos[0] }}</td>
           <td>{{ empresa.numeros[0] }}</td>
-          <td><i class="material-icons text-center">account_box</i></td>
+          <td>
+            <div class="btn-group">
+              <button  class="btn btn-primary btn-round" (click)="eliminarEmpresa(empresa.CedulaJuridica)">Eliminar</button>
+              <button  class="btn btn-primary btn-round" (click)="seleccionarEmpresa(empresa.CedulaJuridica)">Seleccionar</button>
+            </div>
+          </td>
 
         </tr>
         </tbody>

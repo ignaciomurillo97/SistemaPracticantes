@@ -199,6 +199,19 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `SistemaPracticantes`.`Semestre`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SistemaPracticantes`.`Semestre` ;
+
+CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Semestre` (
+  `idSemestre` INT NOT NULL AUTO_INCREMENT,
+  `numeroSemestre` VARCHAR(45) NULL,
+  `ano` YEAR NULL,
+  PRIMARY KEY (`idSemestre`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `SistemaPracticantes`.`Estudiante`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `SistemaPracticantes`.`Estudiante` ;
@@ -210,12 +223,14 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Estudiante` (
   `Carne` DECIMAL(10,0) NULL,
   `Estado` VARCHAR(20) NULL,
   `profesorPractica` DECIMAL(9,0) NULL,
-  `foto` TEXT NULL,
+  `foto` MEDIUMTEXT NULL,
+  `semestrePractica` INT NULL,
   PRIMARY KEY (`IdEstudiante`),
   UNIQUE INDEX `IdEstudiante_UNIQUE` (`IdEstudiante` ASC),
   INDEX `fk_Estudiante_Persona_Cedula_idx` (`Cedula` ASC),
   INDEX `fk_Estudiante_Carrera_IdCarrera_idx` (`Carrera` ASC),
   INDEX `fk_Estudiante_Persona_CedulaProfesor_idx` (`profesorPractica` ASC),
+  INDEX `fk_Estudiante_Semestre_IdSemestre_idx` (`semestrePractica` ASC),
   CONSTRAINT `fk_Estudiante_Persona_Cedula`
     FOREIGN KEY (`Cedula`)
     REFERENCES `SistemaPracticantes`.`Persona` (`Cedula`)
@@ -229,6 +244,11 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Estudiante` (
   CONSTRAINT `fk_Estudiante_Persona_CedulaProfesor`
     FOREIGN KEY (`profesorPractica`)
     REFERENCES `SistemaPracticantes`.`Persona` (`Cedula`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Estudiante_Semestre_IdSemestre`
+    FOREIGN KEY (`semestrePractica`)
+    REFERENCES `SistemaPracticantes`.`Semestre` (`idSemestre`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -287,11 +307,13 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `SistemaPracticantes`.`Documento` ;
 
 CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Documento` (
-  `NombreDocumento` VARCHAR(60) NOT NULL,
-  `Dueno` DECIMAL(9,0) NOT NULL,
-  `FechaModificacion` TIME NULL,
-  `archivo` TEXT NULL,
-  PRIMARY KEY (`NombreDocumento`, `Dueno`),
+  `IdDocumento` INT NOT NULL AUTO_INCREMENT,
+  `NombreDocumento` VARCHAR(60) NULL,
+  `Dueno` DECIMAL(9,0) NULL,
+  `FechaModificacion` DATETIME NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `archivo` MEDIUMTEXT NULL,
+  `descripcion` TEXT NULL,
+  PRIMARY KEY (`IdDocumento`),
   INDEX `fk_Documento_Persona_Cedula_idx` (`Dueno` ASC),
   CONSTRAINT `fk_Documento_Persona_Cedula`
     FOREIGN KEY (`Dueno`)
@@ -366,7 +388,7 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Evento` (
   `HoraInicio` TIME NULL,
   `HoraFin` TIME NULL,
   `TipoEvento` INT NULL,
-  `Foto` TEXT NULL,
+  `Foto` MEDIUMTEXT NULL,
   `Coordinador` DECIMAL(9,0) NULL,
   `Dia` DATE NULL,
   PRIMARY KEY (`IdEvento`),
@@ -450,19 +472,6 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`EmpresasPorCarrera` (
     REFERENCES `SistemaPracticantes`.`Empresa` (`CedulaJuridica`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `SistemaPracticantes`.`Semestre`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `SistemaPracticantes`.`Semestre` ;
-
-CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Semestre` (
-  `idSemestre` INT NOT NULL AUTO_INCREMENT,
-  `numeroSemestre` VARCHAR(45) NULL,
-  `ano` YEAR NULL,
-  PRIMARY KEY (`idSemestre`))
 ENGINE = InnoDB;
 
 
