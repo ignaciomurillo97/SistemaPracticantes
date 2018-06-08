@@ -30,7 +30,7 @@ select * from escuela;
 insert into sede(nombresede,ubicación, iduniversidad) values('Centro Academico San Jose', 'San Jose centro',1);
 select * from sede;
 
-insert into carrera(iduniversidad,idescuela,idsede,nombrecarrera) values(1,1,1,'Ingenieria en Computacion');
+insert into carrera(idsede,nombrecarrera) values(1,'Ingenieria en Computacion');
 select * from carrera;
 
 insert into estudiante(carrera,cedula,carne,estado) values(1,116710731, 2015099369,'pendiente');

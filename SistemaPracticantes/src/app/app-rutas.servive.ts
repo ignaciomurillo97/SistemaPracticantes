@@ -75,29 +75,12 @@ const rutas: Routes = [
           { path: '', component: EventosComponent },
           { path: 'agregarEvento', component: AgregarEventoComponent}
         ]}
-
-    ]},
-
-
-  {
-    path: 'administrador', component: AdministradorComponent, children: [
-      {path: 'universidades', component: UniversidadesComponent},
-      {path: 'universidad', component: UniversidadComponent},
-      {path: 'sedes', component: SedesComponent},
-      {path: 'sede/:id', component: SedeComponent},
-      {path: 'carreras', component: CarrerasComponent},
-      {path: 'administradores', component: AdministradoresComponent},
-      {path: 'editar-administradores', component: EditarAdministradoresComponent},
-      {path: 'editar-universidad', component: EditarUniversidadComponent},
-      {path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent},
-      {path: 'editar-coordinadores', component: EditarCoordinadoresComponent}
-    ]
-  },
+]},
    {path: 'administrador', component: AdministradorComponent, children: [
      { path: 'universidades', component: UniversidadesComponent },
-     { path: 'universidad', component: UniversidadComponent },
+     { path: 'universidad/:id', component: UniversidadComponent },
      { path: 'sedes', component: SedesComponent },
-     { path: 'sede/:id', component: SedeComponent },
+     { path: 'sede/:id/:nombreSede', component: SedeComponent },
      { path: 'carreras', component: CarrerasComponent },
      { path: 'administradores', component: AdministradoresComponent },
      { path: 'editar-administradores', component: EditarAdministradoresComponent},

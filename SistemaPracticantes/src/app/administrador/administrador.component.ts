@@ -1,4 +1,9 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { Router} from '@angular/router';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+import 'rxjs/add/operator/map';
 
 declare const $: any;
 @Component({
@@ -11,7 +16,7 @@ export class AdministradorComponent implements OnInit {
   private sidebarVisible: boolean;
   private toggleButton: any;
 
-  constructor(private element: ElementRef) { }
+  constructor(private element: ElementRef, private router : Router, private http:HttpClient, private route:ActivatedRoute) { }
 
   ngOnInit() {
     const navbar: HTMLElement = this.element.nativeElement;
@@ -19,6 +24,7 @@ export class AdministradorComponent implements OnInit {
     $.material.init();
     const elemMainPanel = <HTMLElement>document.querySelector('.main-panel');
     const elemSidebar = <HTMLElement>document.querySelector('.sidebar .sidebar-wrapper');
+    this.validarCredenciales();
   }
    
   sidebarOpen() {
@@ -44,4 +50,18 @@ export class AdministradorComponent implements OnInit {
       this.sidebarClose();
     }
   };
+
+  validarCredenciales() {
+    this.http.get('http://localhost:3000/administrador/validar-credenciales', {withCredentials: true})
+      .subscribe(data => {
+        this.checkCreds(data);
+      });
+  }
+  
+  checkCreds(response) {
+    if (!response.autorizado){
+      this.router.navigate(['/']);
+    }
+  }
+
 }

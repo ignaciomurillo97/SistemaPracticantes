@@ -23,6 +23,12 @@ export class SemestresComponent implements OnInit {
 
   obtenerSemestre() {
     this.semestres = this.http.get('http://localhost:3000/semestres', {withCredentials: true})
+      .map(function (x:any, idx) {
+        for (let obj of x) {
+          obj.edit = false;
+        }
+        return x;
+      });
   }
 
   agregarSemestre() {
@@ -32,5 +38,19 @@ export class SemestresComponent implements OnInit {
       });
     this.nuevoAno = '';
     this.nuevoNumeroSemestre = '';
+  }
+
+  editar(semestre) {
+    if (semestre.edit){
+      this.enviarModificacion(semestre);
+    }
+    semestre.edit = !semestre.edit;
+  }
+
+  enviarModificacion(semestre) {
+    this.http.post('http://localhost:3000/administrador/modificar-semestre', semestre, {withCredentials: true})
+      .subscribe(data => {
+        this.obtenerSemestre();
+      })
   }
 }

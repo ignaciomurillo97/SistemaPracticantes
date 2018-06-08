@@ -18,16 +18,23 @@
 
     <tbody>
       <tr *ngFor='let semestre of semestres | async'>
-        <td>{{semestre.idSemestre}}</td>
-        <td>{{semestre.numeroSemestre}}</td>
-        <td>{{semestre.ano}}</td>
+        <td> {{semestre.idSemestre}} </td>
         <td>
-          <div class="btn-group" role="group">
+          <div *ngIf="!semestre.edit; else elseBlock1">{{semestre.numeroSemestre}}</div>
+          <ng-template #elseBlock1>
+            <input type='text' value="{{semestre.numeroSemestre}}" [(ngModel)]="semestre.numeroSemestre"/>
+          </ng-template>
+        </td>
+        <td>
+          <div *ngIf="!semestre.edit; else elseBlock2">{{semestre.ano}}</div>
+          <ng-template #elseBlock2>
+            <input type='text' value="{{semestre.ano}}" [(ngModel)]="semestre.ano"/>
+          </ng-template>
+        </td>
+        <td>
+          <div (click)="editar(semestre)" class="btn-group" role="group">
             <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
               <i class="material-icons">edit</i>
-            </button>
-            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
-              <i class="material-icons">close</i>
             </button>
           </div>
         </td>

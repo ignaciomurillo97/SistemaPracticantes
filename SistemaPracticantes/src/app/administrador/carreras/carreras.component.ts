@@ -21,12 +21,14 @@ export class CarrerasComponent implements OnInit {
 
   carreras: Observable<Object>;
   @Input() idSede: string;
+  nuevoNombreCarrera: string;
 
   constructor(private router : Router, private http:HttpClient, private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.idSede = this.route.snapshot.paramMap.get('id');
     this.obtenerCarreras(this.idSede);
+    this.validarCredenciales();
   }
 
   editarCarrera(carrera) {
@@ -41,7 +43,16 @@ export class CarrerasComponent implements OnInit {
   enviarModificacion(carrera) {
     this.http.put('http://localhost:3000/administrador/modificar-carrera', carrera, {withCredentials: true})
       .subscribe(data => {
-        console.log('formulario enviado');
+         this.obtenerCarreras(this.idSede);
+      })
+  }
+
+  agregarCarrera() {
+    console.log(this.nuevoNombreCarrera);
+    this.http.post('http://localhost:3000/administrador/agregar-carrera/'+this.idSede+'/'+this.nuevoNombreCarrera, {}, {withCredentials: true})
+      .subscribe(data => {
+         this.nuevoNombreCarrera = '';
+         this.obtenerCarreras(this.idSede);
       })
   }
 
@@ -54,6 +65,19 @@ export class CarrerasComponent implements OnInit {
         console.log(x);
         return x;
       });
+  }
+
+  validarCredenciales() {
+    this.http.get('http://localhost:3000/administrador/validar-credenciales', {withCredentials: true})
+      .subscribe(data => {
+        this.checkCreds(data);
+      });
+  }
+  
+  checkCreds(response) {
+    if (!response.autorizado){
+      this.router.navigate(['/']);
+    }
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-universidad',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UniversidadComponent implements OnInit {
 
-  constructor() { }
+  idUniversidad:string;
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.idUniversidad = this.route.snapshot.paramMap.get('id');
   }
 
 }

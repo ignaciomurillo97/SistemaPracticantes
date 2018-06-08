@@ -1,4 +1,7 @@
-import { ViewChild, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -9,12 +12,13 @@ import {ActivatedRoute} from '@angular/router';
 
 export class SedeComponent implements OnInit {
 
-  idSede: string;
+  sedeId: string;
+  sedeNombre: string;
 
-  constructor(private route:ActivatedRoute) { }
+  constructor(private router : Router, private http:HttpClient, private route:ActivatedRoute) { }
 
   ngOnInit() {
-    this.idSede = this.route.snapshot.paramMap.get('id');
+    this.sedeId = this.route.snapshot.paramMap.get('id');
+    this.sedeNombre = this.route.snapshot.paramMap.get('nombreSede')
   }
-
 }

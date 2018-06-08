@@ -34,3 +34,40 @@ exports.modificarCarrera = function (carrera) {
       });
    })
 }
+
+exports.eliminarCarrera = function (idCarrera) {
+   if (!idCarrera) {
+      console.log('No hay id carrera, el query es peligroso');
+      return;
+   }
+   var query = `
+   DELETE FROM Carrera
+   where IdCarrera = ${idCarrera};
+   `
+
+   return new Promise (function (resolve, reject) {
+      db_connection.query(query, function (err, result, fields) {
+         if (err) reject(err);
+         resolve(result);
+      });
+   })
+}
+
+exports.agregarCarrera = function (idSede, nombreCarrera) {
+   var query = `
+   INSERT INTO Carrera (
+     idSede,
+     NombreCarrera
+   ) VALUES (
+     ${idSede},
+     '${nombreCarrera}'
+   );
+   `
+
+   return new Promise (function (resolve, reject) {
+      db_connection.query(query, function (err, result, fields) {
+         if (err) reject(err);
+         resolve(result);
+      });
+   })
+}

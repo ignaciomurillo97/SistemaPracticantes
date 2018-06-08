@@ -23,8 +23,17 @@
                   <button (click)="editarCarrera(carrera)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
                      <i class="material-icons">edit</i>
                   </button>
-                  <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
-                     <i class="material-icons">close</i>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type='text' value="{{nuevoNombreCarrera}}" [(ngModel)]="nuevoNombreCarrera"/>
+            </td>
+            <td align="right">
+               <div class="btn-group" role="group">
+                  <button (click)="agregarCarrera()" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+                     <i class="material-icons">add</i>
                   </button>
                </div>
             </td>

@@ -10,24 +10,47 @@
     <thead class="text-warning">
       <tr>
         <th>Nombre Sede</th>
-        <th>Universidad</th>
         <th>Ubicación</th>
         <th>Acciones</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr *ngFor='let sede of sedes | async' (click)="view(sede.IdSede)">
-        <td>{{sede.NombreSede}}</td>
-        <td>{{sede.NombreUniversidad}}</td>
-        <td>{{sede.Ubicacion}}</td>
+      <tr *ngFor='let sede of sedes | async' >
+        <td>
+          <div (click)="view(sede.IdSede, sede.NombreSede)" *ngIf="!sede.edit; else elseBlock1">{{sede.NombreSede}}</div>
+          <ng-template #elseBlock1>
+            <input type='text' value="{{sede.NombreSede}}" [(ngModel)]="sede.NombreSede"/>
+          </ng-template>
+        </td>
+
+        <td>
+          <div *ngIf="!sede.edit; else elseBlock3">{{sede.Ubicacion}}</div>
+          <ng-template #elseBlock3>
+            <input type='text' value="{{sede.Ubicacion}}" [(ngModel)]="sede.Ubicacion"/>
+          </ng-template>
+        </td>
         <td>
           <div class="btn-group" role="group">
-            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+            <button (click)="editarSede(sede)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
               <i class="material-icons">edit</i>
             </button>
-            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="">
-              <i class="material-icons">close</i>
+          </div>
+        </td>
+      </tr>
+      <!--agregar-->
+      <tr>
+        <td>
+          <input type='text' value="{{nuevoNombreSede}}" [(ngModel)]="nuevoNombreSede"/>
+        </td>
+
+        <td>
+          <input type='text' value="{{nuevaUbicacion}}" [(ngModel)]="nuevaUbicacion"/>
+        </td>
+        <td>
+          <div class="btn-group" role="group">
+            <button (click)="agregarSede()" type="button" rel="tooltip" title="" class="btn btn-success btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+              <i class="material-icons">add</i>
             </button>
           </div>
         </td>

@@ -17,9 +17,9 @@ var corsOptions = {
 app.set('trust proxy', 1);
 app.use(session({
    secret: 'culpa de torres',
-   resave: false,
+   resave: true,
    saveUninitialized: true,
-   cookie: { maxAge: 60000 }
+   cookie: { maxAge: 6000000 }
 }))
 
 app.use(cors(corsOptions));

@@ -171,25 +171,11 @@ DROP TABLE IF EXISTS `SistemaPracticantes`.`Carrera` ;
 
 CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Carrera` (
   `IdCarrera` INT NOT NULL AUTO_INCREMENT,
-  `IdUniversidad` INT NULL,
-  `IdEscuela` INT NULL,
   `IdSede` INT NULL,
   `NombreCarrera` VARCHAR(60) NULL,
   PRIMARY KEY (`IdCarrera`),
   UNIQUE INDEX `IdCarrera_UNIQUE` (`IdCarrera` ASC),
-  INDEX `fk_Carrera_Universidad_IdUniversidad_idx` (`IdUniversidad` ASC),
-  INDEX `fk_Carrera_Escuela_IdEscuela_idx` (`IdEscuela` ASC),
   INDEX `fk_Carrera_Sede_IdSede_idx` (`IdSede` ASC),
-  CONSTRAINT `fk_Carrera_Universidad_IdUniversidad`
-    FOREIGN KEY (`IdUniversidad`)
-    REFERENCES `SistemaPracticantes`.`Universidad` (`IdUniversidad`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Carrera_Escuela_IdEscuela`
-    FOREIGN KEY (`IdEscuela`)
-    REFERENCES `SistemaPracticantes`.`Escuela` (`IdEscuela`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_Carrera_Sede_IdSede`
     FOREIGN KEY (`IdSede`)
     REFERENCES `SistemaPracticantes`.`Sede` (`IdSede`)
