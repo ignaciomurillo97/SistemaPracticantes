@@ -87,7 +87,6 @@ router.post ('/semestre/:numeroSemestre/:ano', function(req, res, next) {
    });
 });
 
-
 function redireccionUsuario(tipoPersona) {
     if (tipoPersona === "coordinador") return "coordinadores";
     if (tipoPersona === "estudiante") return "estudiante";

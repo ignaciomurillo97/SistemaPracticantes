@@ -23,10 +23,11 @@ exports.editarSemestre = function(semestre) {
   UPDATE Semestre
   SET 
     NumeroSemestre = '${semestre.numeroSemestre}',
-    Ano = '$(semestre.numeroSemestre)'
+    Ano = '${semestre.ano}'
   WHERE
     idSemestre = ${semestre.idSemestre}
   `
+  console.log(query);
 
   return new Promise (function (resolve, reject) {
     db_connection.query(query, function (err, result, fields) {
