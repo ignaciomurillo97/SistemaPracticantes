@@ -24,7 +24,6 @@ import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estud
 
 import { RegistroEmpresaComponent } from './login/registro-empresa/registro-empresa.component';
 import { RegistroEstudianteComponent } from './login/registro-estudiante/registro-estudiante.component';
-import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
 import { AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
 
 import { UniversidadesComponent } from './administrador/universidades/universidades.component';
@@ -43,7 +42,7 @@ import { SemestresComponent } from './administrador/semestres/semestres.componen
 import { EmpresasAprobadasComponent } from './coordinadores/empresas/empresas-aprobadas/empresas-aprobadas.component';
 import { SeleccionarEmpresaComponent } from './coordinadores/empresas/seleccionar-empresa/seleccionar-empresa.component';
 import { SeleccionarProfesorComponent } from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
-
+import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header card-header-primary" data-background-color="purple">
+        <h4 class="card-title">Información de la empresa</h4>
+      </div>
+      <div class="card-content">
+        <form [formGroup] = "formularioEmpresa">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group label-floating is-empty">
+                <label class="bmd-label-floating">Cedula Juridica</label>
+                <input type="number"
+                       class="form-control"
+                       id="nombreDeUsuario"
+                       formControlName="cedulaJuridica"
+                >
+                <span *ngIf="!formularioEmpresa.get('cedulaJuridica').valid && formularioEmpresa.get('cedulaJuridica').touched">
+
+                  <div *ngIf="formularioEmpresa.get('cedulaJuridica').errors['required']" class="text-danger"> Este campo es necesario</div>
+                  <div *ngIf="formularioEmpresa.get('cedulaJuridica').errors['min'] || formularioEmpresa.get('cedulaJuridica').errors['max']"
+                       class="text-danger"> La cedula juridica tiene que ser de 10 digitos</div>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Nombre de la empresa</label>
+                <input type="text"
+                       class="form-control"
+                       id="contraseña"
+                       formControlName="nombreEmpresa"
+                >
+                <span *ngIf="!formularioEmpresa.get('nombreEmpresa').valid && formularioEmpresa.get('nombreEmpresa').touched">
+
+                  <div *ngIf="formularioEmpresa.get('nombreEmpresa').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
