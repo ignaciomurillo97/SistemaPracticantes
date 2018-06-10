@@ -1,68 +1,127 @@
 <div class="col-md-12">
-   <div class="card">
+  <div class="card">
 
-      <div class="card-header card-header-warning" data-background-color="purple">
-         <div class="row">
-            <div class="col-md-10">
-               <h4 class="card-title">Coordinadores</h4>
-            </div>
-            <div class="col-md-2" align="right">
-               <button type="button" rel="tooltip" title="" class="btn btn-success btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                  <i class="material-icons">add</i>
-               </button>
-            </div>
-         </div>
+    <div class="card-header card-header-warning" data-background-color="purple">
+      <div class="row">
+        <div class="col-md-10">
+          <h4 class="card-title">Coordinadores</h4>
+        </div>
+        <div class="col-md-2" align="right">
+          <button type="button" rel="tooltip" title="" class="btn btn-success btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+            <i class="material-icons">add</i>
+          </button>
+        </div>
       </div>
+    </div>
 
-      <div class="card-body table-responsive">
-         <table class="table table-hover">
+    <div class="card-body table-responsive">
+      <table class="table table-hover">
 
-            <thead class="text-warning">
-               <tr>
-                  <th>Nombre Completo</th>
-                  <th>Carrera</th>
-                  <th>Sede</th>
-                  <th>Universidad</th>
-                  <th>Telefonos</th>
-                  <th>Correos</th>
-                  <th>Acciones</th>
-               </tr>
-            </thead>
+        <thead class="text-warning">
+          <tr>
+            <th>Nombre Completo</th>
+            <th>Universidad</th>
+            <th>Sede</th>
+            <th>Carrera</th>
+            <th>Telefonos</th>
+            <th>Correos</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
 
-            <tbody>
-               <tr>
-                  <td>Ignacio Murillo Masis</td>
-                  <td>IC</td>
-                  <td>CASJ</td>
-                  <td>ITCR</td>
-                  <td> 
-                     <a data-toggle="collapse" href="#telefono1">Telefonos <i class="fa fa-caret-down"></i></a>
-                     <div id="telefono1" class="panel-collapse collapse">
-                        <div>Telefono 1</div>
-                        <div>Telefono 2</div>
-                        <div>Telefono 3</div>
-                     </div>
-                  </td>
-                  <td>
-                     <a data-toggle="collapse" href="#correos1">Correos <i class="fa fa-caret-down"></i></a>
-                     <div id="correos1" class="panel-collapse collapse">
-                        <div>correo 1</div>
-                        <div>correo 2</div>
-                        <div>correo 3</div>
-                     </div>
-                  </td>
-                  <td>
-                     <div class="btn-group" role="group">
-                        <button (click)="change()" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                           <i class="material-icons">edit</i>
-                        </button>
-                        <button type="button" rel="tooltip" title="" class="btn btn-danger btn-link btn-sm" data-original-title="Remove" data-_extension-text-contrast="" > <i class="material-icons">close</i>
-                        </button>
-                     </div>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
-   </div>
+        <tbody>
+          <tr *ngFor="let coordinador of coordinadores | async">
+            <td>
+              <div *ngIf='!coordinador.edit; else elseBlock2'>{{coordinador.Nombre}} {{coordinador.SegundoNombre}} {{coordinador.Apellido}} {{coordinador.SegundoApellido}}</div>
+              <ng-template #elseBlock2>
+                <input type='text' placeholder="Nombre" value="{{coordinador.Nombre}}" [(ngModel)]="coordinador.Nombre"/>
+                <input type='text' placeholder="SegundoNombre" value="{{coordinador.SegundoNombre}}" [(ngModel)]="coordinador.SegundoNombre"/>
+                <input type='text' placeholder="Apellido" value="{{coordinador.Apellido}}" [(ngModel)]="coordinador.Apellido"/>
+                <input type='text' placeholder="SegundoApellido" value="{{coordinador.SegundoApellido}}" [(ngModel)]="coordinador.SegundoApellido"/>
+              </ng-template>
+            </td>
+
+            <td>
+              <div *ngIf='!coordinador.edit; else elseBlock3'>{{coordinador.NombreUniversidad}}</div>
+              <ng-template #elseBlock3>
+                <label for="opcionUniversidad">Universidad</label>
+                <select 
+                  (change)="universidadSeleccionada($event.target.value)" 
+                  id="opcionUniversidad" 
+                  required
+                  #opcionUniversidad
+                  [(ngModel)]="coordinador.IdUniversidad">
+                  <option disabled>Universidad</option>
+                  <option *ngFor="let x of universidades | async" [value]="+x.IdUniversidad">{{x.NombreUniversidad}}</option>
+                </select>
+              </ng-template>
+            </td>
+
+            <td>
+              <div *ngIf='!coordinador.edit; else elseBlock4'>{{coordinador.NombreSede}}</div>
+              <ng-template #elseBlock4>
+                <label for="opcionSede">Sede</label>
+                <select 
+                  (change)="sedeSeleccionada($event.target.value)" 
+                  id="opcionSede" 
+                  required
+                  disabled
+                  #opcionSede
+                  [(ngModel)]="coordinador.IdSede">
+                  <option disabled>Sede</option>
+                  <option *ngFor="let x of sedes | async" [value]="+x.IdSede">{{x.NombreSede}}</option>
+                </select>
+              </ng-template>
+            </td>
+
+            <td>
+              <div *ngIf='!coordinador.edit; else elseBlock5'>{{coordinador.NombreCarrera}}</div>
+              <ng-template #elseBlock5>
+                <label for="opcionCarrera">Carrera</label>
+                <select 
+                  id="opcionCarrera" 
+                  required
+                  disabled
+                  #opcionCarrera
+                  [(ngModel)]="coordinador.IdCarrera">
+                  <option disabled>Carrera</option>
+                  <option *ngFor="let x of carreras | async" [value]="+x.IdCarrera">{{x.NombreCarrera}}</option>
+                </select>
+              </ng-template>
+            </td>
+
+            <td> 
+              <a (click)="obtenerTelefonos(coordinador)" data-toggle="collapse" href="#t{{coordinador.Cedula}}">Telefonos <i class="fa fa-caret-down"></i></a>
+              <div id="t{{coordinador.Cedula}}" class="panel-collapse collapse">
+                <div *ngFor="let telefono of coordinador.telefonos">{{telefono.NumeroTelefono}}</div>
+                <div class="input-group input-group-sm"><input class="form-control" [(ngModel)]="coordinador.nuevoTelefono" type="text"/>
+                  <button (click)="agregarTelefono(coordinador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+                    <i class="material-icons">add</i>
+                  </button>
+                </div>
+              </div>
+            </td>
+            <td>
+              <a (click)="obtenerCorreos(coordinador)" data-toggle="collapse" href="#{{coordinador.Cedula}}">Correos <i class="fa fa-caret-down"></i></a>
+              <div id="{{coordinador.Cedula}}" class="panel-collapse collapse">
+                <div *ngFor="let correo of coordinador.correos">{{correo.CorreoElectronico}}</div>
+                <div class="input-group input-group-sm"><input class="form-control" [(ngModel)]="coordinador.nuevoCorreo" type="text"/>
+                  <button (click)="agregarCorreo(coordinador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+                    <i class="material-icons">add</i>
+                  </button>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="btn-group" role="group">
+                <button (click)="edit(coordinador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
+                  <i class="material-icons">edit</i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

@@ -86,19 +86,28 @@ router.get ('/validar-credenciales', function(req, res, next){
     res.send({autorizado : true});
   }
   else {
-
     res.send({autorizado : false});
   }
 })
 
 router.route('/coordinador')
 .get(function(req, res, next) {
-  administrador.seleccionarAdministrador().then(function(dbResponse){
+  administrador.seleccionarCoordinador().then(function(dbResponse){
     res.setHeader('Content-Type', 'text/html');
     res.send(dbResponse);
   }).catch(function(err){
     console.log(err);
   })
+})
+.post(function(req, res, next) {
+  let response = {}
+  let coordinador = req.body;
+  administrador.modificarCoordinadorPersona(coordinador).then(function(dbResponse) {
+    administrador.modificarCoordinadorCarrera(coordinador).then(function(dbResponse) {
+      response.modificado = true;
+      res.send(response);
+    });
+  });
 })
 
 router.put ('/modificar-carrera', function(req, res, next) {

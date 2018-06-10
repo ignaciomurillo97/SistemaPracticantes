@@ -1,20 +1,68 @@
 
 const db_connection = require('./db_conection.js');
 
-exports.seleccionarAdministrador = function () {
+exports.seleccionarCoordinador = function () {
   var query = `
   SELECT 
+  u.NombreUniversidad, 
+    s.NombreSede, 
+    c.NombreCarrera, 
+    s.Ubicación, 
     p.Cedula, 
-    p.Nombre,
-    p.SegundoNombre,
-    p.Apellido,
-    p.SegundoApellido,
-    p.Sexo
+    p.Nombre, 
+    p.SegundoNombre, 
+    p.Apellido, 
+    p.SegundoApellido, 
+    p.Sexo, 
+    p.TipoPersona,
+    s.IdSede,
+    c.IdCarrera,
+    u.IdUniversidad
   FROM 
-    Persona p
-  WHERE 
+    universidad u inner join 
+    sede s on u.IdUniversidad = s.IdUniversidad inner join 
+    carrera c on c.IdSede = s.Idsede inner join 
+    coordinadorpractica cp on cp.Carrera = c.IdCarrera inner join 
+    Persona p on p.Cedula = cp.Cedula
+  WHERE
     p.TipoPersona = 1
   `
+
+  return new Promise (function (resolve, reject) {
+    db_connection.query(query, function (err, result, fields) {
+      if (err) reject(err);
+      resolve(result);
+    });
+  })
+}
+
+exports.modificarCoordinadorPersona = function(coordinador) {
+  var query = `
+  UPDATE Persona
+  SET
+    Nombre = '${coordinador.Nombre}',
+    SegundoNombre = '${coordinador.SegundoNombre}',
+    Apellido = '${coordinador.Apellido}',
+    SegundoApellido = '${coordinador.SegundoApellido}'
+  WHERE
+    Cedula = ${coordinador.Cedula};
+  `
+
+  return new Promise (function (resolve, reject) {
+    db_connection.query(query, function (err, result, fields) {
+      if (err) reject(err);
+      resolve(result);
+    });
+  })
+}
+
+exports.modificarCoordinadorCarrera = function(coordinador) {
+  var query = `
+  UPDATE CoordinadorPractica
+  SET Carrera = ${coordinador.IdCarrera}
+  WHERE Cedula = ${coordinador.Cedula};
+  `
+  console.log(query);
 
   return new Promise (function (resolve, reject) {
     db_connection.query(query, function (err, result, fields) {

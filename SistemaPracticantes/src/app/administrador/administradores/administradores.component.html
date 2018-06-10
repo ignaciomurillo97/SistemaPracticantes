@@ -46,8 +46,8 @@
                      </ng-template>
                   </td>
                   <td> 
-                     <a (click)='obtenerTelefonos(administrador)' data-toggle="collapse" href="#{{administrador.Cedula}}">Telefonos <i class="fa fa-caret-down"></i></a>
-                     <div id="{{administrador.Cedula}}" class="panel-collapse collapse">
+                     <a (click)='obtenerTelefonos(administrador)' data-toggle="collapse" href="#t{{administrador.Cedula}}">Telefonos <i class="fa fa-caret-down"></i></a>
+                     <div id="t{{administrador.Cedula}}" class="panel-collapse collapse">
                         <div *ngFor='let telefono of administrador.telefonos'>{{telefono.NumeroTelefono}}</div>
                         <div class="input-group input-group-sm"><input class="form-control" [(ngModel)]="administrador.nuevoTelefono" type="text"/>
                            <button (click)="agregarTelefono(administrador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
@@ -57,8 +57,8 @@
                      </div>
                   </td>
                   <td>
-                     <a (click)='obtenerCorreos(administrador)' data-toggle="collapse" href="#correos1">Correos <i class="fa fa-caret-down"></i></a>
-                     <div id="correos1" class="panel-collapse collapse">
+                     <a (click)='obtenerCorreos(administrador)' data-toggle="collapse" href="#c{{administrador.Cedula}}">Correos <i class="fa fa-caret-down"></i></a>
+                     <div id="c{{administrador.Cedula}}" class="panel-collapse collapse">
                         <div *ngFor='let correo of administrador.correos'>{{correo.CorreoElectronico}}</div>
                         <div class="input-group input-group-sm"><input class="form-control" [(ngModel)]="administrador.nuevoCorreo" type="text"/>
                            <button (click)="agregarCorreo(administrador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
