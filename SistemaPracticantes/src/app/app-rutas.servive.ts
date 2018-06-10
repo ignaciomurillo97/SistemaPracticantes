@@ -34,6 +34,9 @@ import {SeleccionarProfesorComponent} from './coordinadores/profesores/seleccion
 
 import {SemestresComponent} from './administrador/semestres/semestres.component';
 
+// Estudiantes
+import {ModuloEstudiantesComponent} from './modulo-estudiantes/modulo-estudiantes.component';
+
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', children: [
@@ -89,8 +92,8 @@ const rutas: Routes = [
      { path: 'editar-coordinadores', component: EditarCoordinadoresComponent },
      { path: 'semestres', component: SemestresComponent }
    ]
-  }
-
+  },
+  {path: 'modulo-estudiantes', component: ModuloEstudiantesComponent, children: []}
 ];
 SedeComponent
 @NgModule({

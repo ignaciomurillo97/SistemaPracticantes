@@ -89,7 +89,7 @@ router.post ('/semestre/:numeroSemestre/:ano', function(req, res, next) {
 
 function redireccionUsuario(tipoPersona) {
     if (tipoPersona === "coordinador") return "coordinadores";
-    if (tipoPersona === "estudiante") return "estudiante";
+    if (tipoPersona === "estudiante") return "modulo-estudiantes";
     if (tipoPersona === "administrador") return "administrador";
     if (tipoPersona === "empresa") return "empresa";
 }

@@ -43,6 +43,7 @@ import { SemestresComponent } from './administrador/semestres/semestres.componen
 import { EmpresasAprobadasComponent } from './coordinadores/empresas/empresas-aprobadas/empresas-aprobadas.component';
 import { SeleccionarEmpresaComponent } from './coordinadores/empresas/seleccionar-empresa/seleccionar-empresa.component';
 import { SeleccionarProfesorComponent } from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
+import { ModuloEstudiantesComponent } from './modulo-estudiantes/modulo-estudiantes.component';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { SeleccionarProfesorComponent } from './coordinadores/profesores/selecci
     SeleccionarEmpresaComponent,
     SeleccionarProfesorComponent,
     SemestresComponent,
-    EmpresasAprobadasComponent
+    EmpresasAprobadasComponent,
+    ModuloEstudiantesComponent
   ],
   imports: [
     BrowserModule,
