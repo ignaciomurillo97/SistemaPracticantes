@@ -49,37 +49,55 @@ export class RegistroEstudianteComponent implements OnInit {
 
       //datos estudiante
       let carne : number = this.crearEstudiante.formularioEstudiante.get('numeroCarne').value;
-      let foto : File = this.crearEstudiante.archivoSeleccionado;
       let carrera : number = this.crearEstudiante.formularioEstudiante.get('carrera').value;
 
-      let datos = {
-        "nombre" : nombre,
-        "segundoNombre": "",
-        "apellido": apellido,
-        "segundoApellido": segundoApellido,
-        "sexo": genero,
-        "contrasena": contrasena,
-        "numeroCarne": carne,
-        "carrera": carrera,
-        "nombreUsuario" : nombreUsuario,
-        "cedula" : cedula,
-        "correosContacto": correosContacto,
-        "numerosContacto": numerosContacto,
-        "foto": foto
-      };
+      this.convertirImagen(this.crearEstudiante.archivoSeleccionado).then((imagenConvertida)=>{
+        let foto = imagenConvertida;
 
-      this.http.post('http://localhost:3000/estudiante/agregarEstudiante', datos)
-        .subscribe(data => {
-          this.errorDeAPI = data;
-          if (this.errorDeAPI['respuesta'] === ''){
-            this.router.navigate(['login']);
-          }
-        });
+        let datos = {
+          "nombre" : nombre,
+          "segundoNombre": "",
+          "apellido": apellido,
+          "segundoApellido": segundoApellido,
+          "sexo": genero,
+          "contrasena": contrasena,
+          "numeroCarne": carne,
+          "carrera": carrera,
+          "nombreUsuario" : nombreUsuario,
+          "cedula" : cedula,
+          "correosContacto": correosContacto,
+          "numerosContacto": numerosContacto,
+          "foto": foto
+        };
+
+        this.http.post('http://localhost:3000/estudiante/agregarEstudiante', datos)
+          .subscribe(data => {
+            this.errorDeAPI = data;
+            if (this.errorDeAPI['respuesta'] === ''){
+              this.router.navigate(['login']);
+            }
+          });
+      });
+
+
     }
     else {
       this.error = 'Datos invalidos';
     }
 
+  }
+
+  convertirImagen(archivoSeleccionado : File){
+    //funcion para convertir un archivo a base64
+    return new Promise(function (resolve,reject) {
+      let reader = new FileReader();
+      let archivo;
+      reader.onloadend = (e) => {
+        archivo = reader.result;
+        resolve(archivo);
+      };
+      reader.readAsDataURL(archivoSeleccionado);
+    });
   }
 
 

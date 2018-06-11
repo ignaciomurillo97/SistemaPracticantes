@@ -124,26 +124,6 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `SistemaPracticantes`.`Escuela`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `SistemaPracticantes`.`Escuela` ;
-
-CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Escuela` (
-  `IdEscuela` INT NOT NULL AUTO_INCREMENT,
-  `NombreEscuela` VARCHAR(60) NULL,
-  `IdUniversidad` INT NULL,
-  PRIMARY KEY (`IdEscuela`),
-  UNIQUE INDEX `IdEscuela_UNIQUE` (`IdEscuela` ASC),
-  INDEX `fk_Escuela_Universidad_IdUniverisdad_idx` (`IdUniversidad` ASC),
-  CONSTRAINT `fk_Escuela_Universidad_IdUniverisdad`
-    FOREIGN KEY (`IdUniversidad`)
-    REFERENCES `SistemaPracticantes`.`Universidad` (`IdUniversidad`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `SistemaPracticantes`.`Sede`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `SistemaPracticantes`.`Sede` ;
@@ -235,6 +215,26 @@ CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Estudiante` (
   CONSTRAINT `fk_Estudiante_Semestre_IdSemestre`
     FOREIGN KEY (`semestrePractica`)
     REFERENCES `SistemaPracticantes`.`Semestre` (`idSemestre`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `SistemaPracticantes`.`Escuela`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `SistemaPracticantes`.`Escuela` ;
+
+CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`Escuela` (
+  `IdEscuela` INT NOT NULL AUTO_INCREMENT,
+  `NombreEscuela` VARCHAR(60) NULL,
+  `IdUniversidad` INT NULL,
+  PRIMARY KEY (`IdEscuela`),
+  UNIQUE INDEX `IdEscuela_UNIQUE` (`IdEscuela` ASC),
+  INDEX `fk_Escuela_Universidad_IdUniverisdad_idx` (`IdUniversidad` ASC),
+  CONSTRAINT `fk_Escuela_Universidad_IdUniverisdad`
+    FOREIGN KEY (`IdUniversidad`)
+    REFERENCES `SistemaPracticantes`.`Universidad` (`IdUniversidad`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

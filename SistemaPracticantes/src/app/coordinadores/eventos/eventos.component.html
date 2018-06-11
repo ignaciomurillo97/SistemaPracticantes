@@ -27,7 +27,7 @@
           <td>{{ evento.horaFin }}</td>
           <td>{{ evento.dia.split('T')[0] }}</td>
           <td>{{ evento.nombre }}</td>
-          <td><i class="material-icons">account_box</i></td>
+          <td><button class="btn btn-primary" (click)="seleccionarEvento(evento.idEvento)">Seleccionar</button></td>
         </tr>
         </tbody>
       </table>

@@ -149,6 +149,26 @@ router.post('/agregarEstudiante',function (req, res, next) {
 });
 
 
+router.post('/seleccionarEstudiante', function (req, res) {
+    let cedulaEstudiante = req.body.cedulaEstudiante;
+    estudiante.seleccionarEstudiante(cedulaEstudiante).then(function (estudiante) {
+        estudiante = sacarRepetidosLista(estudiante,'numeros');
+        estudiante = sacarRepetidosLista(estudiante,'correos');
+        res.send(estudiante);
+    });
+});
+
+router.get('/semestres', )
+
+function sacarRepetidosLista(listaPersonas, elementoConRepetidos){
+    for (let i = 0; i < listaPersonas.length; i++){
+        let listaCorreos = listaPersonas[i][elementoConRepetidos].split(',');
+        let correosSinRepetidos = new Set(listaCorreos); //un set no puede tener elementos repetidos
+        let arregloCorreosSinRepetidos = Array.from(correosSinRepetidos); //se necesiat convertir otra vez a arreglo ya que un json no puede contener un set
+        listaPersonas[i][elementoConRepetidos] = arregloCorreosSinRepetidos;
+    }
+    return listaPersonas;
+}
 
 
 

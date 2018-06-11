@@ -24,7 +24,6 @@ import { CrearEstudianteComponent } from './general/crear-estudiante/crear-estud
 
 import { RegistroEmpresaComponent } from './login/registro-empresa/registro-empresa.component';
 import { RegistroEstudianteComponent } from './login/registro-estudiante/registro-estudiante.component';
-import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
 import { AgregarEventoComponent} from './coordinadores/eventos/agregar-evento/agregar-evento.component';
 
 import { UniversidadesComponent } from './administrador/universidades/universidades.component';
@@ -47,7 +46,16 @@ import { ModuloEstudiantesComponent } from './modulo-estudiantes/modulo-estudian
 import { EventosEstudiantesComponent } from './modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component';
 import { DatosPersonalesComponent } from './modulo-estudiantes/datos-personales/datos-personales.component';
 import { EvaluacionCoordinadorComponent } from './modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component';
-
+import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
+import { EmpresaComponent } from './empresa/empresa.component';
+import { EventosEmpresaComponent } from './empresa/eventos-empresa/eventos-empresa.component';
+import { CarrerasEmpresaComponent } from './empresa/carreras-empresa/carreras-empresa.component';
+import { DocumentosEmpresaComponent } from './empresa/documentos-empresa/documentos-empresa.component';
+import { VerEventoComponent } from './general/ver-evento/ver-evento.component';
+import { EnviarSolicitudComponent } from './empresa/carreras-empresa/enviar-solicitud/enviar-solicitud.component';
+import { VerEstudianteComponent } from './general/ver-estudiante/ver-estudiante.component';
+import { EstudiantePracticaComponent } from './coordinadores/estudiantes/estudiante-practica/estudiante-practica.component';
+import { AsignarProfesorPracticaComponent } from './coordinadores/estudiantes/asignar-profesor-practica/asignar-profesor-practica.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +102,15 @@ import { EvaluacionCoordinadorComponent } from './modulo-estudiantes/evaluacion-
     EventosEstudiantesComponent,
     DatosPersonalesComponent,
     EvaluacionCoordinadorComponent,
+    EmpresaComponent,
+    EventosEmpresaComponent,
+    CarrerasEmpresaComponent,
+    DocumentosEmpresaComponent,
+    VerEventoComponent,
+    EnviarSolicitudComponent,
+    VerEstudianteComponent,
+    EstudiantePracticaComponent,
+    AsignarProfesorPracticaComponent
   ],
   imports: [
     BrowserModule,

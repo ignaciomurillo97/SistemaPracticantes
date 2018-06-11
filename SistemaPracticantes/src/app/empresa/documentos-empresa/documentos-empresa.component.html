@@ -1,0 +1,32 @@
+<div class="col-md-12" >
+  <a class="btn btn-primary" routerLink="agregarDocumento" >Agregar un documento</a>
+  <div class="card ">
+    <div class="card-header card-header-primary" data-background-color="purple" >
+      <h4 class="title ">Documentos de empresas</h4>
+    </div>
+    <div class="card-content table-responsive">
+
+      <table class="table table-hover">
+        <thead class=" text-primary">
+        <th>
+          Nombre
+        </th>
+        <th>
+          Descripción
+        </th>
+        <th>
+          Documento
+        </th>
+
+        </thead>
+        <tbody>
+        <tr *ngFor="let documento of documentos | async">
+          <td>{{ documento.NombreDocumento }}</td>
+          <td>{{ documento.descripcion }}</td>
+          <td><a [href]="limpiarDocumento(documento.archivo)" download>Documento</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

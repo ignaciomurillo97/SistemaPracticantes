@@ -1,0 +1,75 @@
+<div class="col-md-12">
+  <div class="card" *ngFor="let estudiante of estudiantes | async" >
+    <div class="card-header" data-background-color="purple">
+      <h4 class="title">Estudiante</h4>
+    </div>
+    <div class="card-content">
+      <div class="row">
+        <div class="col-md-4" *ngIf="estudiante.foto !== null"><img [src]="limpiarImage(estudiante.foto)"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Nombre contacto estudiante</h6>
+            <p>{{ estudiante.Nombre + ' ' + estudiante.Apellido + ' ' + estudiante.SegundoApellido }}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Cedula contacto estudiante</h6>
+            <p>{{ estudiante.Cedula }}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Genero</h6>
+            <p>{{ estudiante.Sexo }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Carne del estudiante</h6>
+            <p>{{ estudiante.Carne }}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Estado estudiante</h6>
+            <p>{{ estudiante.Estado }}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Profesor de practica</h6>
+            <p>{{ estudiante.profesorPractica }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Correos de contacto</h6>
+            <p *ngFor="let correo of estudiante.correos ">
+              {{correo}}
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Numeros de contacto</h6>
+            <p *ngFor="let numero of estudiante.numeros">
+              {{ numero }}
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <button type="button" routerLink="../" class="btn btn-primary pull-left">Atras</button>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

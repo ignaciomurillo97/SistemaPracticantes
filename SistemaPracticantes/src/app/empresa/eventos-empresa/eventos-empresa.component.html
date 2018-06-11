@@ -1,0 +1,42 @@
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header card-header-primary" data-background-color="purple">
+      <h4 class="title ">Eventos proximos</h4>
+    </div>
+    <div class="card-content table-responsive">
+      <table class="table table-hover">
+        <thead class=" text-primary">
+        <th>
+          Hora Inicio
+        </th>
+        <th>
+          Hora Finalización
+        </th>
+        <th>
+          Día
+        </th>
+        <th>
+          Universidad
+        </th>
+        <th>
+          Sede
+        </th>
+        <th>
+          Carrera
+        </th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let evento of eventos | async">
+          <td>{{ evento.HoraInicio }}</td>
+          <td>{{ evento.HoraFin }}</td>
+          <td>{{ evento.Dia.split('T')[0] }}</td>
+          <td>{{ evento.NombreUniversidad }}</td>
+          <td>{{ evento.NombreSede }}</td>
+          <td>{{ evento.NombreCarrera }}</td>
+          <td><button class="btn btn-primary" (click)="seleccionarEvento(evento.IdEvento)">Seleccionar</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

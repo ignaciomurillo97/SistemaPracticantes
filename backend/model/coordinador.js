@@ -114,8 +114,9 @@ exports.obtenerEmpresas = function (idCarrera, estado) {
         'inner join numeroTelefono n on p.cedula = n.cedula\n' +
         'inner join correoElectronico c on p.cedula = c.cedula\n' +
         'inner join empresasPorCarrera ep on ep.cedulaJuridicaEmpresa = e.cedulaJuridica\n' +
-        'where ep.idCarrera =  + ' + idCarrera +' and ep.estado = \''  + estado + '\'\n' +
+        'where ep.idCarrera = ' + idCarrera +' and ep.estado = \''  + estado + '\'\n' +
         'group by ce.cedula;';
+    console.log(query);
 
     return new Promise(function (resolve, reject) {
         db_connection.query(query, function (err, result) {
@@ -282,9 +283,9 @@ exports.obtenerDocumentos = function (cedulaCoordinador) {
     });
 };
 
-exports.agregarDocumento = function (cedulaCoordinador, documento, nombreDocumento,descripcion ) {
-    let query = 'insert into documento(nombreDocumento,dueno,archivo,descripcion) ' +
-        'values(\'' + nombreDocumento + '\',' + cedulaCoordinador + ',\'' + documento + '\',\'' + descripcion + '\');';
+exports.agregarDocumento = function (cedulaCoordinador, documento, nombreDocumento,descripcion,tipoDocumento ) {
+    let query = 'insert into documento(nombreDocumento,dueno,archivo,descripcion,tipoDocumento) ' +
+        'values(\'' + nombreDocumento + '\',' + cedulaCoordinador + ',\'' + documento + '\',\'' + descripcion + '\',\'' + tipoDocumento +'\');';
     return new Promise(function (resolve, reject) {
         db_connection.query(query, function (err, result) {
             if (err) {

@@ -23,9 +23,10 @@ app.use(session({
 }))
 
 app.use(cors(corsOptions));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
-    extended: true
+    extended: true,
+    limit: '50mb'
 }));
 
 app.set('views', path.join(__dirname, 'views'));

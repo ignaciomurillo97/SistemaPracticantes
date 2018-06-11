@@ -51,7 +51,7 @@ export class AgregarProfesorComponent implements OnInit {
         .subscribe(data => {
           this.errorDeAPI = data;
           if (this.errorDeAPI['respuesta'] === ''){
-            this.router.navigate(['profesores']);
+            this.router.navigate(['coordinadores/profesores']);
           }
         });
     }
