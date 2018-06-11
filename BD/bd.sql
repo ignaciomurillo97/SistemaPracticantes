@@ -272,7 +272,7 @@ DROP TABLE IF EXISTS `SistemaPracticantes`.`EvaluacionCoordinador` ;
 CREATE TABLE IF NOT EXISTS `SistemaPracticantes`.`EvaluacionCoordinador` (
   `CedulaEstudiante` DECIMAL(9,0) NOT NULL,
   `CedulaCoordinador` DECIMAL(9,0) NOT NULL,
-  `JSONEvaluacion` VARCHAR(45) NULL,
+  `JSONEvaluacion` TEXT NULL,
   PRIMARY KEY (`CedulaEstudiante`, `CedulaCoordinador`),
   CONSTRAINT `fk_EvaluacionCoordinador_Estudiante_Cedula`
     FOREIGN KEY (`CedulaEstudiante`)

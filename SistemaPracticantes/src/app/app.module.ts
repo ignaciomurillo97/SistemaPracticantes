@@ -44,6 +44,9 @@ import { EmpresasAprobadasComponent } from './coordinadores/empresas/empresas-ap
 import { SeleccionarEmpresaComponent } from './coordinadores/empresas/seleccionar-empresa/seleccionar-empresa.component';
 import { SeleccionarProfesorComponent } from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
 import { ModuloEstudiantesComponent } from './modulo-estudiantes/modulo-estudiantes.component';
+import { EventosEstudiantesComponent } from './modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component';
+import { DatosPersonalesComponent } from './modulo-estudiantes/datos-personales/datos-personales.component';
+import { EvaluacionCoordinadorComponent } from './modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component';
 
 
 @NgModule({
@@ -87,7 +90,10 @@ import { ModuloEstudiantesComponent } from './modulo-estudiantes/modulo-estudian
     SeleccionarProfesorComponent,
     SemestresComponent,
     EmpresasAprobadasComponent,
-    ModuloEstudiantesComponent
+    ModuloEstudiantesComponent,
+    EventosEstudiantesComponent,
+    DatosPersonalesComponent,
+    EvaluacionCoordinadorComponent,
   ],
   imports: [
     BrowserModule,

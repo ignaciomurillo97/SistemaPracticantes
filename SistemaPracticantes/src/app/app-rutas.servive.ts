@@ -36,6 +36,9 @@ import {SemestresComponent} from './administrador/semestres/semestres.component'
 
 // Estudiantes
 import {ModuloEstudiantesComponent} from './modulo-estudiantes/modulo-estudiantes.component';
+import {EventosEstudiantesComponent} from './modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component';
+import {DatosPersonalesComponent} from './modulo-estudiantes/datos-personales/datos-personales.component';
+import {EvaluacionCoordinadorComponent} from './modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -93,7 +96,11 @@ const rutas: Routes = [
      { path: 'semestres', component: SemestresComponent }
    ]
   },
-  {path: 'modulo-estudiantes', component: ModuloEstudiantesComponent, children: []}
+  {path: 'modulo-estudiantes', component: ModuloEstudiantesComponent, children: [
+     { path: 'eventos-estudiantes', component: EventosEstudiantesComponent },
+     { path: 'evaluacion-coordinadores', component: EvaluacionCoordinadorComponent },
+     { path: 'datos-personales', component: DatosPersonalesComponent }
+  ]}
 ];
 SedeComponent
 @NgModule({

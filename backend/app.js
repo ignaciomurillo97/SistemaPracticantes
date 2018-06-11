@@ -31,17 +31,19 @@ app.use(bodyParser.urlencoded({
 app.set('views', path.join(__dirname, 'views'));
 
 // Archivos de rutas
-var index         = require('./routes/index.js');
-var administrador = require('./routes/administrador.js');
-var empresa       = require('./routes/empresa.js');
-var coordinador   = require('./routes/coordinador.js');
-var estudiante    = require('./routes/estudiante.js');
+var index             = require('./routes/index.js');
+var administrador     = require('./routes/administrador.js');
+var empresa           = require('./routes/empresa.js');
+var coordinador       = require('./routes/coordinador.js');
+var estudiante        = require('./routes/estudiante.js');
+var moduloEstudiante  = require('./routes/moduloEstudiantes.js');
 
 app.use('/'             , index);
 app.use('/administrador', administrador);
 app.use('/empresa'      , empresa);
 app.use('/coordinador'  , coordinador);
 app.use('/estudiante'   , estudiante);
+app.use('/modulo-estudiante', moduloEstudiante);
 
 app.listen(port, () => console.log('Servidor corriendo en el puerto: ' + port));
 

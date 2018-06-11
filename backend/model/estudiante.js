@@ -72,3 +72,62 @@ exports.agregarEstudiante = function (cedula, carrera, carne, estado) {
         })
     })
 };
+
+exports.obtenerEstudiante = function (cedula) {
+  let query = `
+    SELECT * 
+    FROM Persona p
+    INNER JOIN Estudiante e
+    ON p.Cedula = e.Cedula;
+  ` 
+
+  return new Promise( function (resolve, reject) {
+    db_connection.query(query, function (err, result) {
+      if (err) {
+        reject(err);
+      }
+      resolve(result);
+    })
+  })
+}
+
+exports.modificarEstudiante = function (estudiante) {
+  var query = `
+  UPDATE Persona
+  SET
+    Nombre = '${estudiante.Nombre}',
+    SegundoNombre = '${estudiante.SegundoNombre}',
+    Apellido = '${estudiante.Apellido}',
+    SegundoApellido = '${estudiante.SegundoApellido}',
+    Sexo = '${estudiante.Sexo}'
+  WHERE
+    Cedula = ${estudiante.Cedula};
+  `
+
+  return new Promise (function (resolve, reject) {
+    db_connection.query(query, function (err, result, fields) {
+      if (err) reject(err);
+      resolve(result);
+    });
+  })
+}
+
+exports.agregarEvaluacion = function (encuesta, cedulaEstudiante, cedulaCoordinador) {
+   var query = `
+   INSERT INTO evaluacioncoordinador (
+      CedulaEstudiante,
+      CedulaCoordinador,
+      JSONEvaluacion
+   ) VALUES ( 
+      ${cedulaEstudiante},
+      ${cedulaCoordinador},
+      ${encuesta.JSON.stringify()}
+   )
+   `
+  return new Promise (function (resolve, reject) {
+    db_connection.query(query, function (err, result, fields) {
+      if (err) reject(err);
+      resolve(result);
+    });
+  })
+}

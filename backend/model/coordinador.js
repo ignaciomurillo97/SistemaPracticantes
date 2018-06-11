@@ -328,3 +328,17 @@ exports.obtenerCorreosParaEvento = function (idCarrera) {
         });
     });
 };
+
+exports.obtenerCoordinadores = function () {
+   let query = `
+      SELECT * FROM Persona WHERE TipoPersona = 1;
+   `
+   return new Promise(function (resolve, reject) {
+      db_connection.query(query, function (err, result) {
+         if (err) {
+            reject(err);
+         }
+         resolve(result);
+      });
+   });
+}

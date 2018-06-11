@@ -1,4 +1,3 @@
-
 const db_connection = require('./db_conection.js');
 
 exports.seleccionarCoordinador = function () {
@@ -43,7 +42,8 @@ exports.modificarCoordinadorPersona = function(coordinador) {
     Nombre = '${coordinador.Nombre}',
     SegundoNombre = '${coordinador.SegundoNombre}',
     Apellido = '${coordinador.Apellido}',
-    SegundoApellido = '${coordinador.SegundoApellido}'
+    SegundoApellido = '${coordinador.SegundoApellido}',
+    Sexo = '${administrador.Sexo}'
   WHERE
     Cedula = ${coordinador.Cedula};
   `
@@ -102,8 +102,7 @@ exports.modificarAdministrador = function(administrador) {
     SegundoNombre = '${administrador.SegundoNombre}',
     Apellido = '${administrador.Apellido}',
     SegundoApellido = '${administrador.SegundoApellido}',
-    Sexo = '${administrador.Sexo}',
-    TipoPersona = 3
+    Sexo = '${administrador.Sexo}'
   WHERE
   Cedula = ${administrador.Cedula}
   `
