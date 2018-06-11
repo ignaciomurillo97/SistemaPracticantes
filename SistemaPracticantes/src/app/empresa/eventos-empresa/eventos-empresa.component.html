@@ -1,5 +1,4 @@
 <div class="col-md-12">
-  <a class="btn btn-primary" routerLink="agregarEvento" >Agregar evento</a>
   <div class="card">
     <div class="card-header card-header-primary" data-background-color="purple">
       <h4 class="title ">Eventos proximos</h4>
@@ -17,17 +16,24 @@
           Día
         </th>
         <th>
-          Tipo de evento
+          Universidad
         </th>
-
+        <th>
+          Sede
+        </th>
+        <th>
+          Carrera
+        </th>
         </thead>
         <tbody>
         <tr *ngFor="let evento of eventos | async">
-          <td>{{ evento.horaInicio }}</td>
-          <td>{{ evento.horaFin }}</td>
-          <td>{{ evento.dia.split('T')[0] }}</td>
-          <td>{{ evento.nombre }}</td>
-          <td><button class="btn btn-primary" (click)="seleccionarEvento(evento.idEvento)">Seleccionar</button></td>
+          <td>{{ evento.HoraInicio }}</td>
+          <td>{{ evento.HoraFin }}</td>
+          <td>{{ evento.Dia.split('T')[0] }}</td>
+          <td>{{ evento.NombreUniversidad }}</td>
+          <td>{{ evento.NombreSede }}</td>
+          <td>{{ evento.NombreCarrera }}</td>
+          <td><button class="btn btn-primary" (click)="seleccionarEvento(evento.IdEvento)">Seleccionar</button></td>
         </tr>
         </tbody>
       </table>

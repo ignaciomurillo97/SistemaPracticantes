@@ -9,16 +9,20 @@ let usuario = require('../model/usuario.js');
 
 // Ejemplo:
 router.get ('/', function(req, res, next) {
-   res.send('Hello World!');
+    res.send('Hello World!');
 });
 
 router.post('/solicitudEmpresaACarrera', function (req, res) {
-    let cedulaJuridica = req.body.cedulaJuridica;
+    let cedulaContacto = req.body.cedulaContacto;
     let idCarrera = req.body.idCarrera;
     let estado = 'pendiente';
-    empresa.solicitudEmpresa(cedulaJuridica,idCarrera, estado).then(function () {
-        res.send('Se mando la solicitud')
-    })
+    empresa.obtenerCedulaJuridicaEmpresa(cedulaContacto).then(function (cedulaJuridica) {
+        let cedulaJuridicaEmpresa = cedulaJuridica[0]['empresaAsociado'];
+        empresa.solicitudEmpresa(cedulaJuridicaEmpresa,idCarrera, estado).then(function () {
+            res.send({'respuesta':''})
+        });
+    });
+
 });
 
 router.post('/crearEmpresa', function (req, res) {
@@ -80,6 +84,42 @@ router.post('/crearEmpresa', function (req, res) {
         }
     });
 
+});
+
+router.post('/obtenerEventosEmpresa', function (req, res) {
+    let cedulaContacto = req.body.cedulaContacto;
+    empresa.obtenerCedulaJuridicaEmpresa(cedulaContacto).then(function (cedulaJuridica) {
+        let cedulaJuridicaEmpresa = cedulaJuridica[0]['empresaAsociado'];
+        empresa.obtenerEventosEmpresa(cedulaJuridicaEmpresa).then(function (listaEventos) {
+            res.send(listaEventos);
+        })
+    })
+});
+
+router.post('/seleccionarEvento', function (req, res) {
+    let idEvento = req.body.idEvento;
+    empresa.seleccionarEvento(idEvento).then(function (evento) {
+        empresa.seleccionarActividadesPorEvento(idEvento).then(function (actividadesEvento) {
+            res.send([{'evento':evento,'actividadesEvento':actividadesEvento}]);
+        });
+
+    });
+});
+
+router.post('/obtenerCarrerasAsociadas', function (req, res) {
+    let cedulaContacto = req.body.cedulaContacto;
+    empresa.obtenerCedulaJuridicaEmpresa(cedulaContacto).then(function (cedulaJuridica) {
+        let cedulaJuridicaEmpresa = cedulaJuridica[0]['empresaAsociado'];
+        empresa.obtenerCarrerasAsociadas(cedulaJuridicaEmpresa).then(function (lista) {
+            res.send(lista);
+        })
+    })
+});
+
+router.get('/obtenerDocumentosEmpresa', function (req, res) {
+    empresa.obtenerDocumentos().then(function (listaDocumentos) {
+        res.send(listaDocumentos);
+    })
 });
 
 module.exports = router;

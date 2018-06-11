@@ -23,7 +23,8 @@ export class AgregarDocumentoComponent implements OnInit {
     this.formularioDocumento = new FormGroup({
       'nombreDocumento': new FormControl(null, [Validators.required]),
       'documento' : new FormControl(null, [Validators.required]),
-      'descripcion': new FormControl(null, [Validators.required])
+      'descripcion': new FormControl(null, [Validators.required]),
+      'tipoDocumento': new FormControl(null, [Validators.required])
     });
   }
 
@@ -34,6 +35,7 @@ export class AgregarDocumentoComponent implements OnInit {
       let nombreDocumento = this.formularioDocumento.get('nombreDocumento').value;
       let cedulaCoordinador = sessionStorage.getItem('cedula');
       let descripcion = this.formularioDocumento.get('descripcion').value;
+      let tipoDocumento = this.formularioDocumento.get('tipoDocumento').value;
 
       this.convertirImagen(this.archivoSeleccionado).then((documentoConvertido) =>{
         let documento = documentoConvertido;
@@ -41,7 +43,8 @@ export class AgregarDocumentoComponent implements OnInit {
           'nombreDocumento':nombreDocumento,
           'cedulaCoordinador':cedulaCoordinador,
           'archivo':documento,
-          'descripcion': descripcion
+          'descripcion': descripcion,
+          'tipoDocumento': tipoDocumento
         };
 
         this.http.post('http://localhost:3000/coordinador/agregarDocumento',datos).subscribe(data=>{

@@ -1,0 +1,38 @@
+<div class="col-md-12">
+  <a class="btn btn-primary" routerLink="enviarSolicitud" >Enviar solicitud</a>
+  <div class="card">
+    <div class="card-header card-header-primary" data-background-color="purple">
+      <h4 class="title ">Carreras asocidas</h4>
+    </div>
+    <div class="card-content table-responsive">
+      <table class="table table-hover">
+        <thead class=" text-primary">
+        <th>
+          Estado
+        </th>
+        <th>
+          Universidad
+        </th>
+        <th>
+          Sede
+        </th>
+        <th>
+          Ubicación
+        </th>
+        <th>
+          Carrera
+        </th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let carreraAsociada of carrerasAsociadas | async">
+          <td>{{ carreraAsociada.estado }}</td>
+          <td>{{ carreraAsociada.NombreUniversidad }}</td>
+          <td>{{ carreraAsociada.NombreSede }}</td>
+          <td>{{ carreraAsociada['Ubicación'] }}</td>
+          <td>{{ carreraAsociada.NombreCarrera }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

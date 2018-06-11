@@ -1,0 +1,70 @@
+<div class="col-md-12">
+  <div class="card" *ngFor="let informacionEvento of informacionEventos | async" >
+    <div class="card-header" data-background-color="purple">
+      <h4 class="title">Evento</h4>
+
+    </div>
+    <div class="card-content">
+      <div class="row" *ngFor="let evento of informacionEvento.evento">
+        <div class="row">
+          <div class="col-md-4"><img [src]="limpiarImage(evento.Foto)"></div>
+
+        </div>
+        <div class="col-md-3">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Hora inicio</h6>
+            <p>{{ evento.HoraInicio }}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Hora finalización</h6>
+            <p>{{ evento.HoraFin }}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Dia</h6>
+            <p>{{ evento.Dia.split('T')[0] }}</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Tipo de evento</h6>
+            <p>{{ evento.nombre }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class=" form-black label-floating is-empty">
+            <h6 class="control-label">Actividades del evento</h6>
+            <div class="row" *ngFor="let actividad of informacionEvento.actividadesEvento">
+              <div class="col-md-3">
+                <h6 class="control-label">Hora inicio actividad</h6>
+                <p>{{actividad.HoraInicio}}</p>
+              </div>
+              <div class="col-md-3">
+                <h6 class="control-label">Hora finalización actividad</h6>
+                <p>{{actividad.HoraFin}}</p>
+              </div>
+              <div class="col-md-3">
+                <h6 class="control-label">Empresa que da la actividad</h6>
+                <p>{{actividad.nombreEmpresa}}</p>
+              </div>
+              <div class="col-md-3">
+                <h6 class="control-label">Descripcion de la actividad</h6>
+                <p>{{actividad.Empresa}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <button type="button" routerLink="../" class="btn btn-primary pull-left">Atras</button>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header card-header-primary" data-background-color="purple">
+        <h4 class="card-title">Asignar profesor de practica</h4>
+      </div>
+      <div class="card-content">
+        <form [formGroup] = "formularioProfesor">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group label-floating is-empty">
+                <label class="bmd-label-floating">Nombre del profesor</label>
+                <select  class="form-control"
+                       id="nombreDeUsuario"
+                       formControlName="profesor"
+                >
+                  <option *ngFor="let profesor of profesores | async" [value]="profesor.Cedula">
+                    {{profesor.Nombre + ' ' + profesor.Apellido}}
+                  </option>
+                </select>
+                <span *ngIf="!formularioProfesor.get('profesor').valid && formularioProfesor.get('profesor').touched">
+
+                  <div *ngIf="formularioProfesor.get('profesor').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+              </div>
+              <button class="btn btn-primary" (click)="asignarProfesorPractica()">Asignar profesor</button>
+              <button class="btn btn-danger" routerLink="../">Cancelar</button>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

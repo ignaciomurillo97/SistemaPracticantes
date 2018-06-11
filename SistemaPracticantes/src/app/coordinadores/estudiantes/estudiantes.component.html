@@ -27,7 +27,7 @@
           <td>{{ estudiante.correos[0] }}</td>
           <td>{{ estudiante.numeros[0] }}</td>
           <td>{{ estudiante.Carne }}</td>
-          <td><i class="material-icons">account_box</i></td>
+          <td><button class="btn btn-primary" (click)="seleccionarEstudiante(estudiante.Cedula)">Seleccionar</button></td>
         </tr>
         </tbody>
       </table>

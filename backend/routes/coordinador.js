@@ -125,7 +125,7 @@ router.post('/asignarProfesorPractica', function (req, res) {
     let cedulaProfesor = req.body.cedulaProfesor;
     let cedulaEstudiante = req.body.cedulaEstudiante;
     coordinador.asignarProfesorPractica(cedulaProfesor,cedulaEstudiante).then(function () {
-        res.send('Se asigno el profesor de practica');
+        res.send({respuesta:''});
     })
 });
 
@@ -163,6 +163,7 @@ router.post('/empresasSinAprobar', function (req, res) {
         let idCarrera = carreraCoordinador[0]['carrera'];
 
         coordinador.obtenerEmpresas(idCarrera, estado).then(function (listaEmpresas) {
+            console.log(listaEmpresas);
             listaEmpresas = sacarRepetidosLista(listaEmpresas,'correos');
             listaEmpresas = sacarRepetidosLista(listaEmpresas,'numeros')
             res.send(listaEmpresas);
@@ -264,7 +265,8 @@ router.post('/agregarDocumento', function (req,res) {
     let archivo = req.body.archivo;
     let nombreDocumento = req.body.nombreDocumento;
     let descripcion = req.body.descripcion;
-    coordinador.agregarDocumento(cedulaCoordinador,archivo,nombreDocumento,descripcion).then(function () {
+    let tipoDocumento = req.body.tipoDocumento;
+    coordinador.agregarDocumento(cedulaCoordinador,archivo,nombreDocumento,descripcion,tipoDocumento).then(function () {
         res.send({'respuesta':''});
     })
 });

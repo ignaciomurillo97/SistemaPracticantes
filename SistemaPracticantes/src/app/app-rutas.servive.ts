@@ -33,6 +33,15 @@ import {SeleccionarEmpresaComponent} from './coordinadores/empresas/seleccionar-
 import {SeleccionarProfesorComponent} from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
 
 import {SemestresComponent} from './administrador/semestres/semestres.component';
+import {EmpresaComponent} from './empresa/empresa.component';
+import {EventosEmpresaComponent} from './empresa/eventos-empresa/eventos-empresa.component';
+import {CarrerasEmpresaComponent} from './empresa/carreras-empresa/carreras-empresa.component';
+import {DocumentosEmpresaComponent} from './empresa/documentos-empresa/documentos-empresa.component';
+import {VerEventoComponent} from './general/ver-evento/ver-evento.component';
+import {EnviarSolicitudComponent} from './empresa/carreras-empresa/enviar-solicitud/enviar-solicitud.component';
+import {VerEstudianteComponent} from './general/ver-estudiante/ver-estudiante.component';
+import {EstudiantePracticaComponent} from './coordinadores/estudiantes/estudiante-practica/estudiante-practica.component';
+import {AsignarProfesorPracticaComponent} from './coordinadores/estudiantes/asignar-profesor-practica/asignar-profesor-practica.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -62,6 +71,9 @@ const rutas: Routes = [
       { path: 'estudiantes', children:[
           { path: '', component: EstudiantesComponent},
           { path: 'aprobarEstudiantes', component: AprobarEstudiantesComponent },
+          { path: 'estudiantePractica', component: EstudiantePracticaComponent },
+          { path: 'estudianteSeleccionado', component: VerEstudianteComponent },
+          { path: 'asignarProfesorPractica', component: AsignarProfesorPracticaComponent}
         ] },
 
 
@@ -73,23 +85,36 @@ const rutas: Routes = [
 
       { path: 'eventos', children:[
           { path: '', component: EventosComponent },
-          { path: 'agregarEvento', component: AgregarEventoComponent}
+          { path: 'agregarEvento', component: AgregarEventoComponent},
+          {path:'eventoSeleccionado', component: VerEventoComponent}
         ]}
-]},
-   {path: 'administrador', component: AdministradorComponent, children: [
-     { path: 'universidades', component: UniversidadesComponent },
-     { path: 'universidad/:id', component: UniversidadComponent },
-     { path: 'sedes', component: SedesComponent },
-     { path: 'sede/:id/:nombreSede', component: SedeComponent },
-     { path: 'carreras', component: CarrerasComponent },
-     { path: 'administradores', component: AdministradoresComponent },
-     { path: 'editar-administradores', component: EditarAdministradoresComponent},
-     { path: 'editar-universidad', component: EditarUniversidadComponent},
-     { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent },
-     { path: 'editar-coordinadores', component: EditarCoordinadoresComponent },
-     { path: 'semestres', component: SemestresComponent }
-   ]
-  }
+    ]},
+  {path: 'administrador', component: AdministradorComponent, children: [
+      { path: 'universidades', component: UniversidadesComponent },
+      { path: 'universidad/:id', component: UniversidadComponent },
+      { path: 'sedes', component: SedesComponent },
+      { path: 'sede/:id/:nombreSede', component: SedeComponent },
+      { path: 'carreras', component: CarrerasComponent },
+      { path: 'administradores', component: AdministradoresComponent },
+      { path: 'editar-administradores', component: EditarAdministradoresComponent},
+      { path: 'editar-universidad', component: EditarUniversidadComponent},
+      { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent },
+      { path: 'editar-coordinadores', component: EditarCoordinadoresComponent },
+      { path: 'semestres', component: SemestresComponent }
+    ]
+  },
+  {path: 'empresa', component: EmpresaComponent, children:[
+      { path: '', redirectTo: 'eventosEmpresa', pathMatch: 'full'},
+      { path: 'eventosEmpresa' , children: [
+          {path: '' , component: EventosEmpresaComponent},
+          {path: 'eventoSeleccionado', component: VerEventoComponent}
+        ]},
+      { path: 'carrerasEmpresa', children:[
+          { path: '', component: CarrerasEmpresaComponent },
+          { path: 'enviarSolicitud', component: EnviarSolicitudComponent}
+        ]},
+      { path: 'documentosEmpresa', component: DocumentosEmpresaComponent}
+    ]}
 
 ];
 SedeComponent

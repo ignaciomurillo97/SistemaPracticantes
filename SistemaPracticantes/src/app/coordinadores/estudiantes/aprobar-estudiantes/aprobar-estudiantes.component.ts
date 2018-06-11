@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-aprobar-estudiantes',
@@ -10,7 +11,7 @@ import {HttpClient} from '@angular/common/http';
 export class AprobarEstudiantesComponent implements OnInit {
 
   estudiantes : Observable<Object>;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router:Router) { }
 
   ngOnInit() {
     this.obtenerEstudiantesSinAprobar();
@@ -35,6 +36,12 @@ export class AprobarEstudiantesComponent implements OnInit {
   obtenerEstudiantesSinAprobar(){
     let cedulaCoordinador : string = sessionStorage.getItem('cedula');
     this.estudiantes = this.http.post('http://localhost:3000/coordinador/estudiantesSinAprobar',{cedulaCoordinador : cedulaCoordinador});
+  }
+
+  seleccionarEstudiante(cedulaEstudiante){
+    sessionStorage.setItem('cedulaEstudiante', cedulaEstudiante);
+    this.router.navigate(['coordinadores/estudiantes/estudianteSeleccionado']);
+
   }
 
 }

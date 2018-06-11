@@ -7,7 +7,7 @@
       <div class="card-content">
         <form [formGroup] = "formularioDocumento">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
               <div class="form-group">
                 <label class="bmd-label-floating">Nombre</label>
                 <input type="text"
@@ -20,7 +20,23 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Tipo de documento</label>
+                <select type="text"
+                       class="form-control"
+                       formControlName="tipoDocumento"
+                >
+                  <option value="estudiante">Estudiante</option>
+                  <option value="empresa">Empresa</option>
+                </select>
+                <span *ngIf="!formularioDocumento.get('tipoDocumento').valid && formularioDocumento.get('tipoDocumento').touched">
+                  <div *ngIf="formularioDocumento.get('tipoDocumento').errors['required']" class="text-danger">Este campo es requerido</div>
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-4">
               <div class="form-group">
                 <label >Documento</label>
                 <input type="file"
