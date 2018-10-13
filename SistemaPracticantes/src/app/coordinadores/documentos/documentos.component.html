@@ -1,34 +1,34 @@
 <div class="col-md-12" >
-  <a class="btn btn-primary" routerLink="agregarDocumento" >Agregar un documento</a>
+  <a class="btn btn-primary" routerlink="crearDocumentp" >agregar un documento</a>
   <div class="card ">
     <div class="card-header card-header-primary" data-background-color="purple" >
-      <h4 class="title ">Documentos de practica</h4>
+      <h4 class="title ">documentos de practica</h4>
     </div>
     <div class="card-content table-responsive">
 
       <table class="table table-hover">
         <thead class=" text-primary">
         <th>
-          Nombre
+          nombre
         </th>
         <th>
-          Fecha Modificacion
+          fecha modificacion
         </th>
         <th>
-          Descripción
+          descripción
         </th>
         <th>
-          Documento
+          documento
         </th>
 
         </thead>
         <tbody>
-        <tr *ngFor="let documento of documentos | async">
-          <td>{{ documento.NombreDocumento }}</td>
-          <td>{{ documento.FechaModificacion.split('T')[0] }}</td>
-          <td>{{ documento.descripcion }}</td>
-          <td><a [href]="limpiarDocumento(documento.archivo)" download>Documento</a></td>
-          <td><button class="btn btn-primary" (click)="eliminarDocumento(documento.IdDocumento)">Eliminar</button></td>
+        <tr>
+          <td>Nombre</td>
+          <td>Fecha</td>
+          <td>Descripción</td>
+          <td><a [href]="limpiardocumento(documento.archivo)" download>documento</a></td>
+          <td><button class="btn btn-primary" (click)="eliminardocumento(documento.iddocumento)">eliminar</button></td>
         </tr>
         </tbody>
       </table>
