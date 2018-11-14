@@ -17,7 +17,7 @@ router.get('/estadistica/genero', function (req, res, next) {
 })
 
 router.get('/estadistica/graduacion', function (req, res, next) {
-    coordinador.obtenerEstadisticasGraduacion(new Date('2017-1-1'), new Date('2030-1-1')).then(function (estadisticas) {
+    coordinador.obtenerEstadisticasGraduacion(new Date(req.query.fechaInicio), new Date(req.query.fechaFin)).then(function (estadisticas) {
         res.send(estadisticas);
     })
 })
