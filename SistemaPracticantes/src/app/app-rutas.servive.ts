@@ -122,7 +122,7 @@ const rutas: Routes = [
           { path: '', component: AdministrarCoordinadoresComponent },
           { path: 'crearCoordinador', component: CrearCoordinadorComponent }
         ] },
-      { path: 'semestres', children[
+      { path: 'semestres', children:[
           { path: '', component: SemestresComponent },
           { path: 'crearSemestre', component: CrearSemestreComponent }
         ] }
