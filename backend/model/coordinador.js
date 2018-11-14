@@ -371,3 +371,25 @@ exports.obtenerEstadisticasGenero = function () {
       });
    });
 }
+
+exports.obtenerEstadisticasGraduacion = function (dateStart, dateEnd) {
+  let query = `
+SELECT p.Proyeccion, COUNT(*) as Cantidad
+FROM (
+    SELECT  YEAR(DATE_ADD(FechaCreacion, INTERVAL 4 YEAR)) as Proyeccion
+    FROM  Persona
+    WHERE TipoPersona = 2 
+) p
+WHERE Proyeccion BETWEEN ${dateStart.getFullYear()} AND ${dateEnd.getFullYear()}
+GROUP BY Proyeccion
+  `
+  console.log(query);
+  return new Promise(function (resolve, reject) {
+    db_connection.query(query, function (err, result) {
+      if (err) {
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
