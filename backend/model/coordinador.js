@@ -343,3 +343,31 @@ exports.obtenerCoordinadores = function () {
       });
    });
 }
+
+exports.obtenerEstadisticasGenero = function () {
+  let query = `
+    SELECT Sexo, count(*) FROM Persona WHERE TipoPersona = 2 GROUP BY Sexo
+  `
+   return new Promise(function (resolve, reject) {
+      db_connection.query(query, function (err, result) {
+         if (err) {
+            reject(err);
+         }
+         resolve(result);
+      });
+   });
+}
+
+exports.obtenerEstadisticasGenero = function () {
+  let query = `
+    SELECT Sexo, count(*) as Cantidad FROM Persona WHERE TipoPersona = 2 GROUP BY Sexo
+  `
+   return new Promise(function (resolve, reject) {
+      db_connection.query(query, function (err, result) {
+         if (err) {
+            reject(err);
+         }
+         resolve(result);
+      });
+   });
+}

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1fb313-1cad-4eb8-8643-f2b366720ebe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/coordinador.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/coordinador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/coordinador.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/coordinador.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +30,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="sql" value="1" />
           <entry key="ts" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="SQL" value="1" />
           <entry key="TypeScript" value="3" />
         </counts>
       </usages-collector>
@@ -48,7 +53,16 @@
         <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BD/bd.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -328,12 +342,12 @@
       <workItem from="1537308097104" duration="1576000" />
       <workItem from="1537373142679" duration="4000" />
       <workItem from="1537418280564" duration="26000" />
-      <workItem from="1542169095549" duration="682000" />
+      <workItem from="1542169095549" duration="1122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320144000" />
+    <option name="totallyTimeSpent" value="320584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,6 +360,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18770654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -378,13 +393,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-242">
@@ -719,17 +727,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="128" column="2" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/node_modules/@angular/router/src/config.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7348">
           <caret line="336" column="4" selection-start-line="336" selection-start-column="4" selection-end-line="336" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD/bd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>

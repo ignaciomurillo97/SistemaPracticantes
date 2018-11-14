@@ -10,6 +10,12 @@ router.get ('/', function(req, res, next) {
     res.send('Hello World!');
 });
 
+router.get('/estadistica/genero', function (req, res, next) {
+    coordinador.obtenerEstadisticasGenero().then(function (estadisticas) {
+        res.send(estadisticas);
+    })
+})
+
 router.post('/estudiantesSinAprobar', function (req, res, next) {
     let cedulaCoordinador = req.body.cedulaCoordinador;
     let estado = 'pendiente';

@@ -127,6 +127,7 @@ const rutas: Routes = [
       { path: 'documentosEmpresa', component: DocumentosEmpresaComponent}
     ]}
 ];
+
 @NgModule({
   imports: [
     // RouterModule.forRoot(appRoutes, {useHash: true})
