@@ -16,6 +16,12 @@ router.get('/estadistica/genero', function (req, res, next) {
     })
 })
 
+router.get('/estadistica/graduacion', function (req, res, next) {
+    coordinador.obtenerEstadisticasGraduacion(new Date(req.query.fechaInicio), new Date(req.query.fechaFin)).then(function (estadisticas) {
+        res.send(estadisticas);
+    })
+})
+
 router.post('/estudiantesSinAprobar', function (req, res, next) {
     let cedulaCoordinador = req.body.cedulaCoordinador;
     let estado = 'pendiente';
