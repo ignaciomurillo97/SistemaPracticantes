@@ -50,5 +50,10 @@ export class ModuloEstudiantesComponent implements OnInit {
     } else {
       this.sidebarClose();
     }
-  };
+  }
+
+  cerrarSesion(){
+    sessionStorage.clear();
+    this.router.navigate(['login']);
+  }
 }

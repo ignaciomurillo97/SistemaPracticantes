@@ -1,0 +1,45 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="card">
+        <div class="card-header card-header-primary" data-background-color="purple" >
+          <h4 class="card-title">Creacion de sede</h4>
+        </div>
+        <div class="card-content">
+          <form [formGroup] = "formularioUniversidad">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group label-floating is-empty">
+                  <label class="bmd-label-floating">Nombre de la sede</label>
+                  <input type="text"
+                         class="form-control"
+                         id="nombreDeUsuario"
+                         formControlName="universidad"
+                  >
+                  <span *ngIf="!formularioUniversidad.get('universidad').valid && formularioUniversidad.get('universidad').touched">
+
+                  <div *ngIf="formularioUniversidad.get('universidad').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <button class="btn btn-primary" (click)="crearUniversidad()">Crear universidad</button>
+                <a routerLink=".." class="btn btn-danger">Cancelar</a>
+              </div>
+
+
+
+            </div>
+
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+

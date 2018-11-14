@@ -13,15 +13,9 @@
                     </a>
                  </li>
                  <li  routerLinkActive="active">
-                    <a class="nav-link" routerLink="evaluacion-coordinadores">
+                    <a class="nav-link" routerLink="evaluaciones">
                        <i class="material-icons">dashboard</i>
                        <p>Evaluaciones</p>
-                    </a>
-                 </li>
-                 <li  routerLinkActive="active">
-                    <a class="nav-link" routerLink="datos-personales">
-                       <i class="material-icons">dashboard</i>
-                       <p>Información Personal</p>
                     </a>
                  </li>
               </ul>
@@ -50,6 +44,11 @@
                         <p class="hidden-lg hidden-md">Profile</p>
                      </a>
                   </li>
+                 <li>
+                   <button class="btn btn-primary" (click)="cerrarSesion()">
+                     Cerrar Sesión
+                   </button>
+                 </li>
                </ul>
 
             </div>

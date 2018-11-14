@@ -1,0 +1,143 @@
+<div class="col-md-10 col-md-offset-1">
+  <div class="card">
+    <div class="card-header card-header-primary" data-background-color="purple">
+      <h4 class="card-title">Evaluación proceso de práctica</h4>
+    </div>
+    <div class="card-content">
+      <form [formGroup] = "formularioEvaluacion" >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Cómo calificaría el evento de vinculación con las empresas?</label>
+              <select class="form-control"
+                      id="profesorAsesor"
+                      formControlName="profesorAsesor"
+              >
+                <option>Totalmente de acuedrdo</option>
+                <option>Más o menos de acuerdo</option>
+                <option>En desacuerdo</option>
+                <option>No aplica</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Cómo calificaría el apoyo de parte del coordinador de práctica durante el proceso? *</label>
+              <select class="form-control"
+                      id="profesorAsesor"
+                      formControlName="profesorAsesor"
+              >
+                <option>Totalmente de acuedrdo</option>
+                <option>Más o menos de acuerdo</option>
+                <option>En desacuerdo</option>
+                <option>No aplica</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Cómo calificaría la presentación y aprobación del anteproyecto de práctica? *</label>
+              <select class="form-control"
+                      id="Empresa"
+                      formControlName="profesorAsesor"
+              >
+                <option>Empresa 1</option>
+                <option>Empresa 2</option>
+                <option>Empresa 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Cómo calificaría el proceso general de práctica? *</label>
+              <select class="form-control"
+                      id="Empresa"
+                      formControlName="profesorAsesor"
+              >
+                <option>Empresa 1</option>
+                <option>Empresa 2</option>
+                <option>Empresa 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Cómo calificaría a la empresa donde hizo la práctica? *</label>
+              <select class="form-control"
+                      id="profesorAsesor"
+                      formControlName="profesorAsesor"
+              >
+                <option>Totalmente de acuedrdo</option>
+                <option>Más o menos de acuerdo</option>
+                <option>En desacuerdo</option>
+                <option>No aplica</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Cuántas visitas hizo su profesor asesor a la empresa?</label>
+              <select class="form-control"
+                      id="Empresa"
+                      formControlName="profesorAsesor"
+              >
+                <option>Empresa 1</option>
+                <option>Empresa 2</option>
+                <option>Empresa 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Qué considera que se puede mejorar en le evento de vinculación con las empresas?</label>
+              <textarea class="form-control">
+
+              </textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Cómo podríamos mejorar la presentación y aprobación del anteproyecto de Práctica?
+              </label>
+              <textarea class="form-control">
+
+              </textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Qué podría haber hecho el coordinador de práctica mejor para ayudar durante el proceso?
+              </label>
+              <textarea class="form-control">
+
+              </textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿Qué podría haber hecho su asesor de práctica mejor para ayudar durante el proceso?
+              </label>
+              <textarea class="form-control">
+
+              </textarea>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group is-empty">
+              <label>¿En general qué podríamos mejorar para futuros procesos de práctica?
+              </label>
+              <textarea class="form-control">
+
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <button (click)="enviarEvaluacion()" type="button"  class="btn btn-primary " >
+          Enviar
+        </button>
+        <div class="clearfix"></div>
+      </form>
+    </div>
+  </div>
+</div>

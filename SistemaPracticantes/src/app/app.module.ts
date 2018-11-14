@@ -32,20 +32,15 @@ import { CarrerasComponent } from './administrador/carreras/carreras.component';
 import { AdministradorComponent } from './administrador/administrador.component';
 
 import { AdministradoresComponent } from './administrador/administradores/administradores.component';
-import { EditarAdministradoresComponent } from './administrador/administradores/editar-administradores/editar-administradores.component';
-import { EditarUniversidadComponent } from './administrador/editar-universidad/editar-universidad.component';
 import { UniversidadComponent } from './administrador/universidades/universidad/universidad.component';
 import { SedeComponent } from './administrador/sedes/sede/sede.component';
 import { AdministrarCoordinadoresComponent } from './administrador/administrar-coordinadores/administrar-coordinadores.component';
-import { EditarCoordinadoresComponent } from './administrador/editar-coordinadores/editar-coordinadores.component';
 import { SemestresComponent } from './administrador/semestres/semestres.component';
 import { EmpresasAprobadasComponent } from './coordinadores/empresas/empresas-aprobadas/empresas-aprobadas.component';
 import { SeleccionarEmpresaComponent } from './coordinadores/empresas/seleccionar-empresa/seleccionar-empresa.component';
 import { SeleccionarProfesorComponent } from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
 import { ModuloEstudiantesComponent } from './modulo-estudiantes/modulo-estudiantes.component';
 import { EventosEstudiantesComponent } from './modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component';
-import { DatosPersonalesComponent } from './modulo-estudiantes/datos-personales/datos-personales.component';
-import { EvaluacionCoordinadorComponent } from './modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component';
 import { CrearEmpresaComponent } from './general/crear-empresa/crear-empresa.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { EventosEmpresaComponent } from './empresa/eventos-empresa/eventos-empresa.component';
@@ -56,6 +51,13 @@ import { EnviarSolicitudComponent } from './empresa/carreras-empresa/enviar-soli
 import { VerEstudianteComponent } from './general/ver-estudiante/ver-estudiante.component';
 import { EstudiantePracticaComponent } from './coordinadores/estudiantes/estudiante-practica/estudiante-practica.component';
 import { AsignarProfesorPracticaComponent } from './coordinadores/estudiantes/asignar-profesor-practica/asignar-profesor-practica.component';
+import { EvaluacionesComponent } from './modulo-estudiantes/evaluaciones/evaluaciones.component';
+import { ProfesorPracticaComponent } from './modulo-estudiantes/evaluaciones/profesor-practica/profesor-practica.component';
+import { PracticaComponent } from './modulo-estudiantes/evaluaciones/practica/practica.component';
+import { AgregarAdministradorComponent } from './administrador/administradores/agregar-administrador/agregar-administrador.component';
+import { CrearCoordinadorComponent } from './administrador/administrar-coordinadores/crear-coordinador/crear-coordinador.component';
+import { CrearUniversidadComponent } from './administrador/universidades/crear-universidad/crear-universidad.component';
+import { CrearSemestreComponent } from './administrador/semestres/crear-semestre/crear-semestre.component';
 
 @NgModule({
   declarations: [
@@ -87,12 +89,9 @@ import { AsignarProfesorPracticaComponent } from './coordinadores/estudiantes/as
     AdministradorComponent,
 
     AdministradoresComponent,
-    EditarAdministradoresComponent,
-    EditarUniversidadComponent,
     UniversidadComponent,
     SedeComponent,
     AdministrarCoordinadoresComponent,
-    EditarCoordinadoresComponent,
     EmpresasAprobadasComponent,
     SeleccionarEmpresaComponent,
     SeleccionarProfesorComponent,
@@ -100,8 +99,6 @@ import { AsignarProfesorPracticaComponent } from './coordinadores/estudiantes/as
     EmpresasAprobadasComponent,
     ModuloEstudiantesComponent,
     EventosEstudiantesComponent,
-    DatosPersonalesComponent,
-    EvaluacionCoordinadorComponent,
     EmpresaComponent,
     EventosEmpresaComponent,
     CarrerasEmpresaComponent,
@@ -110,7 +107,14 @@ import { AsignarProfesorPracticaComponent } from './coordinadores/estudiantes/as
     EnviarSolicitudComponent,
     VerEstudianteComponent,
     EstudiantePracticaComponent,
-    AsignarProfesorPracticaComponent
+    AsignarProfesorPracticaComponent,
+    EvaluacionesComponent,
+    ProfesorPracticaComponent,
+    PracticaComponent,
+    AgregarAdministradorComponent,
+    CrearCoordinadorComponent,
+    CrearUniversidadComponent,
+    CrearSemestreComponent
   ],
   imports: [
     BrowserModule,

@@ -1,123 +1,27 @@
 <div class="col-md-12">
-   <div class="card">
-
-      <div class="card-header card-header-warning" data-background-color="purple">
-         <div class="row">
-            <div class="col-md-10">
-               <h4 class="card-title">Administradores</h4>
-            </div>
-            <div class="col-md-2" align="right">
-            </div>
-         </div>
-      </div>
-
-      <div class="card-body table-responsive">
-         <table class="table table-hover">
-
-            <thead class="text-warning">
-               <tr>
-                  <th>Cedula</th>
-                  <th>Nombre Completo</th>
-                  <th>Sexo</th>
-                  <th>Telefonos</th>
-                  <th>Correos</th>
-                  <th>Acciones</th>
-               </tr>
-            </thead>
-
-            <tbody>
-               <tr *ngFor='let administrador of administradores | async'>
-                  <td>
-                     {{administrador.Cedula}}
-                  </td>
-                  <td>
-                     <div *ngIf='!administrador.edit; else elseBlock2'>{{administrador.Nombre}} {{administrador.SegundoNombre}} {{administrador.Apellido}} {{administrador.SegundoApellido}}</div>
-                     <ng-template #elseBlock2>
-                        <input type='text' placeholder="Nombre" value="{{administrador.Nombre}}" [(ngModel)]="administrador.Nombre"/>
-                        <input type='text' placeholder="SegundoNombre" value="{{administrador.SegundoNombre}}" [(ngModel)]="administrador.SegundoNombre"/>
-                        <input type='text' placeholder="Apellido" value="{{administrador.Apellido}}" [(ngModel)]="administrador.Apellido"/>
-                        <input type='text' placeholder="SegundoApellido" value="{{administrador.SegundoApellido}}" [(ngModel)]="administrador.SegundoApellido"/>
-                     </ng-template>
-                  </td>
-                  <td>
-                     <div *ngIf='!administrador.edit; else elseBlock3'>{{administrador.Sexo}}</div>
-                     <ng-template #elseBlock3>
-                        <input type='text' value="{{administrador.Sexo}}" [(ngModel)]="administrador.Sexo"/>
-                     </ng-template>
-                  </td>
-                  <td> 
-                     <a (click)='obtenerTelefonos(administrador)' data-toggle="collapse" href="#t{{administrador.Cedula}}">Telefonos <i class="fa fa-caret-down"></i></a>
-                     <div id="t{{administrador.Cedula}}" class="panel-collapse collapse">
-                        <div *ngFor='let telefono of administrador.telefonos'>{{telefono.NumeroTelefono}}</div>
-                        <div class="input-group input-group-sm"><input class="form-control" [(ngModel)]="administrador.nuevoTelefono" type="text"/>
-                           <button (click)="agregarTelefono(administrador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                              <i class="material-icons">add</i>
-                           </button>
-                        </div>
-                     </div>
-                  </td>
-                  <td>
-                     <a (click)='obtenerCorreos(administrador)' data-toggle="collapse" href="#c{{administrador.Cedula}}">Correos <i class="fa fa-caret-down"></i></a>
-                     <div id="c{{administrador.Cedula}}" class="panel-collapse collapse">
-                        <div *ngFor='let correo of administrador.correos'>{{correo.CorreoElectronico}}</div>
-                        <div class="input-group input-group-sm"><input class="form-control" [(ngModel)]="administrador.nuevoCorreo" type="text"/>
-                           <button (click)="agregarCorreo(administrador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                              <i class="material-icons">add</i>
-                           </button>
-                        </div>
-                     </div>
-                  </td>
-                  <td>
-                     <div class="btn-group" role="group">
-                        <button (click)="editar(administrador)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                           <i class="material-icons">edit</i>
-                        </button>
-                     </div>
-                  </td>
-               </tr>
-            </tbody>
-         </table>
-      </div>
-   </div>
-</div>
-
-<div class="col-md-12">
-   <div class="card">
-
-      <div class="card-header card-header-warning" data-background-color="purple">
-         <div class="row">
-            <div class="col-md-10">
-               <h4 class="card-title">Agregar Administrador</h4>
-            </div>
-            <div class="col-md-2" align="right">
-            </div>
-         </div>
-      </div>
-
-      <div class="card-body table-responsive">
-         <div class="row">
-            <div class="col-md-4">
-               <input [(ngModel)]="nuevoCedula" type="text" class="form-control" placeholder="Cedula"/>
-            </div>
-            <div class="col-md-4">
-               <input [(ngModel)]="nuevoNombre" type="text" class="form-control" placeholder="Nombre"/>
-               <input [(ngModel)]="nuevoSegundoNombre" type="text" class="form-control" placeholder="SegundoNombre"/>
-               <input [(ngModel)]="nuevoApellido" type="text" class="form-control" placeholder="Apellido"/>
-               <input [(ngModel)]="nuevoSegundoApellido" type="text" class="form-control" placeholder="Cedula"/>
-            </div>
-            <div class="col-md-2">
-               <select [(ngModel)]="nuevoSexo" class="form-control" name="cars">
-                  <option value="masculino">Masculino</option>
-                  <option value="femenino">Femenino</option>
-               </select>
-
-            </div>
-            <div class="col-md-2">
-               <button (click)="agregarAdministrador()" type="button" rel="tooltip" title="" class="btn btn-success btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                  <i class="material-icons">add</i>
-               </button>
-            </div>
-         </div>
-      </div>
-   </div>
+  <a routerLink="crearAdministrador" class="btn btn-primary">Agregar administrador</a>
+  <div class="card">
+    <div class="card-header card-header-primary" data-background-color="purple">
+      <h4 class="title ">Administradores</h4>
+    </div>
+    <div class="card-content table-responsive">
+      <table class="table table-hover">
+        <thead class=" text-primary">
+        <th>
+          Nombre Completo
+        </th>
+        <th>
+          Cédula
+        </th>
+        </thead>
+        <tbody>
+        <tr *ngFor='let administrador of administradores | async'>
+          <td>{{administrador.Nombre}} {{administrador.Apellido}} {{administrador.SegundoApellido}}</td>
+          <td>{{administrador.Cedula}}</td>
+          <td><button class="btn btn-primary" >Seleccionar</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

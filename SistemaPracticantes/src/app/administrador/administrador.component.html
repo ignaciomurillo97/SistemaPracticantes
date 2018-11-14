@@ -20,7 +20,7 @@
                     </a>
                  </li>
                  <li  routerLinkActive="active">
-                    <a class="nav-link" routerLink="administrar-coordinadores">
+                    <a class="nav-link" routerLink="coordinadores">
                        <i class="material-icons">dashboard</i>
                        <p>Coordinadores</p>
                     </a>
@@ -58,6 +58,11 @@
                         <p class="hidden-lg hidden-md">Profile</p>
                      </a>
                   </li>
+                 <li>
+                   <button class="btn btn-primary" (click)="cerrarSesion()">
+                     Cerrar Sesión
+                   </button>
+                 </li>
                </ul>
 
             </div>
@@ -65,7 +70,6 @@
       </nav>
 
       <br>
-      <!--<button class="btn btn-primary">Cerrar sesion</button>-->
       <router-outlet class="container-fluid"></router-outlet>
    </div>
 </div>

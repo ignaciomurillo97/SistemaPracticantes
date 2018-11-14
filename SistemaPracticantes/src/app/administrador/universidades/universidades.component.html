@@ -1,40 +1,25 @@
-<div *ngFor='let universidad of universidades | async'>
-   <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-      <div class="card card-stats">
-         <div class="card-header card-header-warning card-header-icon" data-background-color="purple">
-            <div class="card-icon">
-               <i class="fa fa-university"></i>
-            </div>
-         </div>
-         <p (click)='view(universidad.IdUniversidad)' *ngIf="!universidad.edit; else elseBlock">{{universidad.NombreUniversidad}}</p>
-         <ng-template #elseBlock>
-            <input type='text' value="{{universidad.NombreUniversidad}}" [(ngModel)]="universidad.NombreUniversidad"/>
-         </ng-template>
-         <div class="card-footer">
-            <div class="btn-group pull-right" role="group">
-               <button (click)="edit(universidad)" type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-                  <i class="material-icons">edit</i>
-               </button>
-            </div>
-         </div>
-      </div>
-   </div>
+<div class="col-md-12">
+  <a routerLink="crearUniversidad" class="btn btn-primary">Agregar universidad</a>
+  <div class="card">
+    <div class="card-header card-header-primary" data-background-color="purple">
+      <h4 class="title ">Sedes</h4>
+    </div>
+    <div class="card-content table-responsive">
+      <table class="table table-hover">
+        <thead class=" text-primary">
+        <th>
+          Nombre Universidad
+        </th>
+
+        </thead>
+        <tbody>
+        <tr *ngFor='let sede of universidades | async'>
+          <td>{{sede.NombreUniversidad}}</td>
+          <td><button class="btn btn-primary" >Seleccionar</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
-<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-   <div class="card card-stats">
-      <div class="card-header card-header-warning card-header-icon" data-background-color="purple">
-         <div class="card-icon">
-            <i class="fa fa-university"></i>
-         </div>
-      </div>
-      <label for="nombreNuevaUniversidad">Nombre: </label>
-      <input id="nombreNuevaUniversidad" type='text' [(ngModel)]="nombreNuevaUniversidad"/>
-      <div class="card-footer">
-         <div class="btn-group pull-right" role="group">
-            <button (click)="add()" type="button" rel="tooltip" title="" class="btn btn-primary btn-success btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-               <i class="material-icons">add</i>
-            </button>
-         </div>
-      </div>
-   </div>
-</div>
+

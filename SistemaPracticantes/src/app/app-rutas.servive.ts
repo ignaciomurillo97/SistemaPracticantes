@@ -24,11 +24,8 @@ import {SedesComponent} from './administrador/sedes/sedes.component';
 import {SedeComponent} from './administrador/sedes/sede/sede.component';
 import {CarrerasComponent} from './administrador/carreras/carreras.component';
 import {AdministradoresComponent} from './administrador/administradores/administradores.component';
-import {EditarAdministradoresComponent} from './administrador/administradores/editar-administradores/editar-administradores.component';
-import {EditarUniversidadComponent} from './administrador/editar-universidad/editar-universidad.component';
 import {UniversidadComponent} from './administrador/universidades/universidad/universidad.component';
 import {AdministrarCoordinadoresComponent} from './administrador/administrar-coordinadores/administrar-coordinadores.component';
-import {EditarCoordinadoresComponent} from './administrador/editar-coordinadores/editar-coordinadores.component';
 import {SeleccionarEmpresaComponent} from './coordinadores/empresas/seleccionar-empresa/seleccionar-empresa.component';
 import {SeleccionarProfesorComponent} from './coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component';
 
@@ -46,8 +43,13 @@ import {AsignarProfesorPracticaComponent} from './coordinadores/estudiantes/asig
 // Estudiantes
 import {ModuloEstudiantesComponent} from './modulo-estudiantes/modulo-estudiantes.component';
 import {EventosEstudiantesComponent} from './modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component';
-import {DatosPersonalesComponent} from './modulo-estudiantes/datos-personales/datos-personales.component';
-import {EvaluacionCoordinadorComponent} from './modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component';
+import {EvaluacionesComponent} from './modulo-estudiantes/evaluaciones/evaluaciones.component';
+import {PracticaComponent} from './modulo-estudiantes/evaluaciones/practica/practica.component';
+import {ProfesorPracticaComponent} from './modulo-estudiantes/evaluaciones/profesor-practica/profesor-practica.component';
+import {AgregarAdministradorComponent} from './administrador/administradores/agregar-administrador/agregar-administrador.component';
+import {CrearCoordinadorComponent} from './administrador/administrar-coordinadores/crear-coordinador/crear-coordinador.component';
+import {CrearUniversidadComponent} from './administrador/universidades/crear-universidad/crear-universidad.component';
+import {CrearSemestreComponent} from './administrador/semestres/crear-semestre/crear-semestre.component';
 
 const rutas: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -94,24 +96,36 @@ const rutas: Routes = [
           { path: 'agregarEvento', component: AgregarEventoComponent},
           {path:'eventoSeleccionado', component: VerEventoComponent}
         ]}
-  ]},
+    ]},
   {path: 'modulo-estudiantes', component: ModuloEstudiantesComponent, children: [
-     { path: 'eventos-estudiantes', component: EventosEstudiantesComponent },
-     { path: 'evaluacion-coordinadores', component: EvaluacionCoordinadorComponent },
-     { path: 'datos-personales', component: DatosPersonalesComponent }
-  ]},
+      { path: '', redirectTo: 'eventos-estudiantes', pathMatch: 'full' },
+      { path: 'eventos-estudiantes', component: EventosEstudiantesComponent },
+      { path: 'evaluaciones', component: EvaluacionesComponent, children:[
+          { path: 'procesoPractica', component: PracticaComponent },
+          { path: 'profesorPractica', component: ProfesorPracticaComponent }
+        ]}
+    ]},
   {path: 'administrador', component: AdministradorComponent, children: [
-      { path: 'universidades', component: UniversidadesComponent },
+      { path: 'universidades', children:[
+          { path:'', component: UniversidadesComponent},
+          { path: 'crearUniversidad', component: CrearUniversidadComponent }
+        ] },
       { path: 'universidad/:id', component: UniversidadComponent },
       { path: 'sedes', component: SedesComponent },
       { path: 'sede/:id/:nombreSede', component: SedeComponent },
       { path: 'carreras', component: CarrerasComponent },
-      { path: 'administradores', component: AdministradoresComponent },
-      { path: 'editar-administradores', component: EditarAdministradoresComponent},
-      { path: 'editar-universidad', component: EditarUniversidadComponent},
-      { path: 'administrar-coordinadores', component: AdministrarCoordinadoresComponent },
-      { path: 'editar-coordinadores', component: EditarCoordinadoresComponent },
-      { path: 'semestres', component: SemestresComponent }
+      { path: 'administradores', children:[
+          { path: '', component: AdministradoresComponent },
+          { path: 'crearAdministrador', component: AgregarAdministradorComponent }
+        ] },
+      { path: 'coordinadores', children:[
+          { path: '', component: AdministrarCoordinadoresComponent },
+          { path: 'crearCoordinador', component: CrearCoordinadorComponent }
+        ] },
+      { path: 'semestres', children[
+          { path: '', component: SemestresComponent },
+          { path: 'crearSemestre', component: CrearSemestreComponent }
+        ] }
     ]
   },
   {path: 'empresa', component: EmpresaComponent, children:[

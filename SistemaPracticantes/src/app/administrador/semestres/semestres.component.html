@@ -1,55 +1,27 @@
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-    <h2 class="card-title">Semestres:</h2>
+<div class="col-md-12">
+  <a routerLink="crearSemestre" class="btn btn-primary">Agregar semestre</a>
+  <div class="card">
+    <div class="card-header card-header-primary" data-background-color="purple">
+      <h4 class="title ">Semestres</h4>
+    </div>
+    <div class="card-content table-responsive">
+      <table class="table table-hover">
+        <thead class=" text-primary">
+        <th>
+          Año
+        </th>
+        <th>
+          Número de semestre
+        </th>
+
+        </thead>
+        <tbody>
+        <tr *ngFor='let semester of semestres | async'>
+          <td>{{semester.ano}}</td>
+          <td>{{semester.numeroSemestre}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
-
-<div class="card-body table-responsive">
-  <table class="table table-hover">
-
-    <thead class="text-warning">
-      <tr>
-        <th>Semestre</th>
-        <th>NumeroSemestre</th>
-        <th>Año</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr *ngFor='let semestre of semestres | async'>
-        <td> {{semestre.idSemestre}} </td>
-        <td>
-          <div *ngIf="!semestre.edit; else elseBlock1">{{semestre.numeroSemestre}}</div>
-          <ng-template #elseBlock1>
-            <input type='text' value="{{semestre.numeroSemestre}}" [(ngModel)]="semestre.numeroSemestre"/>
-          </ng-template>
-        </td>
-        <td>
-          <div *ngIf="!semestre.edit; else elseBlock2">{{semestre.ano}}</div>
-          <ng-template #elseBlock2>
-            <input type='text' value="{{semestre.ano}}" [(ngModel)]="semestre.ano"/>
-          </ng-template>
-        </td>
-        <td>
-          <div (click)="editar(semestre)" class="btn-group" role="group">
-            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="">
-              <i class="material-icons">edit</i>
-            </button>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><input type="text" [(ngModel)]="nuevoNumeroSemestre"/></td>
-        <td><input type="text" [(ngModel)]="nuevoAno"/></td>
-        <td>
-          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-link btn-sm" data-original-title="Edit Task" data-_extension-text-contrast="" (click)="agregarSemestre()">
-            <i class="material-icons">add</i>
-          </button>
-        </td>
-      </tr>
-    </tbody>
-
-  </table>
 </div>

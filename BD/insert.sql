@@ -9,12 +9,14 @@ select * from catalagoEvento;
 insert into persona(cedula,nombre,apellido,segundoapellido,sexo,tipopersona)
 values (116710731,'Alvaro', 'Castro', 'Venegas', 'masculino',2),
 		(111900849,'Adriana', 'Alvarez', 'Figueroa', 'femenino',1),
-        (204800084,'Marcia', 'Venegas', 'Gamboa', 'femenino',4)
-;
+        (204800084,'Marcia', 'Venegas', 'Gamboa', 'femenino',4),
+                (116710732, 'Carlos', 'Rodriguez', 'Barrientos', 'masculino', 3)
+
 
 select * from persona;
 
-insert into Usuario(nombreusuario,contraseña,cedula)
+insert into
+; Usuario(nombreusuario,contraseña,cedula)
 values ('acastrov','sha1$967c350c$1$77c4f72890f4d95a73da51118d4f5e5a4e609364', 116710731),
 		('aalvarezf','sha1$967c350c$1$77c4f72890f4d95a73da51118d4f5e5a4e609364', 111900849),
         ('mvenegasg','sha1$967c350c$1$77c4f72890f4d95a73da51118d4f5e5a4e609364', 204800084);

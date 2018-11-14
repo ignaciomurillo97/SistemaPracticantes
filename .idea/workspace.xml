@@ -2,11 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df1fb313-1cad-4eb8-8643-f2b366720ebe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD/insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BD/insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrador.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/administradores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/administradores.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/editar-administradores/editar-administradores.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/editar-administradores/editar-administradores.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/editar-administradores/editar-administradores.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/editar-administradores/editar-administradores.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrar-coordinadores/administrar-coordinadores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrar-coordinadores/administrar-coordinadores.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-coordinadores/editar-coordinadores.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-coordinadores/editar-coordinadores.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-coordinadores/editar-coordinadores.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-coordinadores/editar-coordinadores.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-universidad/editar-universidad.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-universidad/editar-universidad.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-universidad/editar-universidad.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/editar-universidad/editar-universidad.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/semestres.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/semestres.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/universidades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/universidades.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/model/coordinador.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/model/coordinador.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/coordinador.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/coordinador.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/datos-personales/datos-personales.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/datos-personales/datos-personales.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/datos-personales/datos-personales.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/datos-personales/datos-personales.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluacion-coordinador/evaluacion-coordinador.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,14 +57,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="sql" value="1" />
-          <entry key="ts" value="3" />
+          <entry key="html" value="34" />
+          <entry key="js" value="4" />
+          <entry key="sql" value="3" />
+          <entry key="ts" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="SQL" value="1" />
-          <entry key="TypeScript" value="3" />
+          <entry key="HTML" value="34" />
+          <entry key="JavaScript" value="4" />
+          <entry key="SQL" value="3" />
+          <entry key="TypeScript" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -45,33 +76,55 @@
           <entry key="Angular2LanguageService" value="3" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="510" />
+          <entry key="js" value="38" />
+          <entry key="sql" value="4" />
+          <entry key="ts" value="1195" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="510" />
+          <entry key="JavaScript" value="38" />
+          <entry key="SQL" value="4" />
+          <entry key="TypeScript" value="1195" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="-313">
+              <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+              <folding>
+                <element signature="e#1521#1600#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BD/bd.sql">
+        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/crear-semestre/crear-semestre.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="347">
+              <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/node_modules/@angular/router/src/config.d.ts">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/crear-semestre/crear-semestre.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7348">
-              <caret line="336" column="4" selection-start-line="336" selection-start-column="4" selection-end-line="336" selection-end-column="4" />
+            <state relative-caret-position="223">
+              <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -88,8 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>foto</find>
-      <find>upd</find>
       <find>crea</find>
       <find>estudianteA</find>
       <find>form-group</find>
@@ -118,6 +169,8 @@
       <find>documento</find>
       <find>profesor</find>
       <find>profe</find>
+      <find>siteName</find>
+      <find>site</find>
     </findStrings>
     <replaceStrings>
       <replace>./assets</replace>
@@ -132,6 +185,7 @@
       <replace>empresasAc</replace>
       <replace>carreraAsociada</replace>
       <replace>estudiante</replace>
+      <replace>universidad</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -140,27 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/empresas/aprobar-empresas/aprobar-empresas.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.ts" />
-        <option value="$PROJECT_DIR$/backend/package.json" />
-        <option value="$PROJECT_DIR$/backend/mandarCorreos.js" />
-        <option value="$PROJECT_DIR$/BD/bd.sql" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/package.json" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-empresa/crear-empresa.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-empresa/crear-empresa.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-empresa/registro-empresa.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-empresa/registro-empresa.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/empresa.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/empresa.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/eventos-empresa/eventos-empresa.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/eventos-empresa/eventos-empresa.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/eventos.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/eventos.component.html" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/general/ver-evento/ver-evento.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/general/ver-evento/ver-evento.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/carreras-empresa/carreras-empresa.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/carreras-empresa/carreras-empresa.component.html" />
@@ -175,7 +208,6 @@
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/documentos-empresa/documentos-empresa.component.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/documentos-empresa/documentos-empresa.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.ts" />
-        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html" />
         <option value="$PROJECT_DIR$/backend/model/estudiante.js" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.ts" />
@@ -190,7 +222,29 @@
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/asignar-profesor-practica/asignar-profesor-practica.component.ts" />
         <option value="$PROJECT_DIR$/backend/routes/coordinador.js" />
         <option value="$PROJECT_DIR$/backend/routes/estudiante.js" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/evaluaciones.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/profesor-practica/profesor-practica.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/evaluaciones.component.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/practica/practica.component.html" />
+        <option value="$PROJECT_DIR$/BD/insert.sql" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/administradores.component.html" />
+        <option value="$PROJECT_DIR$/backend/routes/administrador.js" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/agregar-administrador/agregar-administrador.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/agregar-administrador/agregar-administrador.component.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrar-coordinadores/administrar-coordinadores.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrador.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrar-coordinadores/crear-coordinador/crear-coordinador.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/universidades.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/crear-universidad/crear-universidad.component.html" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/crear-universidad/crear-universidad.component.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/semestres.component.html" />
         <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/crear-semestre/crear-semestre.component.ts" />
+        <option value="$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/crear-semestre/crear-semestre.component.html" />
       </list>
     </option>
   </component>
@@ -244,11 +298,6 @@
             <path>
               <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
               <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
-              <item name="BD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
               <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -263,6 +312,105 @@
               <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="administradores" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="administradores" type="462c0819:PsiDirectoryNode" />
+              <item name="agregar-administrador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="semestres" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="semestres" type="462c0819:PsiDirectoryNode" />
+              <item name="crear-semestre" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="universidades" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="universidades" type="462c0819:PsiDirectoryNode" />
+              <item name="crear-universidad" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="general" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="general" type="462c0819:PsiDirectoryNode" />
+              <item name="crear-estudiante" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SistemaPracticantes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="SistemaPracticantes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="registro-estudiante" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,12 +490,12 @@
       <workItem from="1537308097104" duration="1576000" />
       <workItem from="1537373142679" duration="4000" />
       <workItem from="1537418280564" duration="26000" />
-      <workItem from="1542169095549" duration="1122000" />
+      <workItem from="1542169095549" duration="13673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="320584000" />
+    <option name="totallyTimeSpent" value="333135000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -362,7 +510,7 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18770654" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23529412" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -393,269 +541,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/carreras-empresa/carreras-empresa.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/carreras-empresa/enviar-solicitud/enviar-solicitud.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/carreras-empresa/enviar-solicitud/enviar-solicitud.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/carreras-empresa/carreras-empresa.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/agregar-documento/agregar-documento.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="30" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/documentos/documentos.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-431">
-          <caret selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/documentos-empresa/documentos-empresa.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/empresa/documentos-empresa/documentos-empresa.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="73" column="109" selection-start-line="73" selection-start-column="109" selection-end-line="73" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="193" column="76" selection-start-line="193" selection-start-column="60" selection-end-line="193" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/eventos/agregar-evento/agregar-evento.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="30" column="22" selection-start-line="22" selection-start-column="16" selection-end-line="30" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="82" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="29" column="10" selection-start-line="8" selection-start-column="49" selection-end-line="29" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/seleccionar-profesor/seleccionar-profesor.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/model/coordinador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="213" column="71" lean-forward="true" selection-start-line="213" selection-start-column="71" selection-end-line="213" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/aprobar-estudiantes/aprobar-estudiantes.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="42" column="75" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/ver-estudiante/ver-estudiante.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/ver-evento/ver-evento.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/estudiantes.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/estudiantes.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="29" column="76" selection-start-line="29" selection-start-column="76" selection-end-line="29" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/ver-estudiante/ver-estudiante.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/ver-evento/ver-evento.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/estudiante-practica/estudiante-practica.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="94" selection-start-column="94" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/estudiante-practica/estudiante-practica.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-usuario/crear-usuario.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/profesores.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="48" lean-forward="true" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/profesores/agregar-profesor/agregar-profesor.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -706,20 +595,6 @@
         <state relative-caret-position="-863" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/semestres.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/routes/estudiante.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="160" column="25" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/model/db_conection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -727,24 +602,321 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/BD/bd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3234">
+          <caret line="264" lean-forward="true" selection-start-line="264" selection-end-line="264" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/node_modules/@angular/router/src/config.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7348">
+        <state relative-caret-position="457">
           <caret line="336" column="4" selection-start-line="336" selection-start-column="4" selection-end-line="336" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BD/bd.sql">
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/eventos-estudiantes/eventos-estudiantes.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/estudiantes/estudiantes.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret lean-forward="true" />
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="54" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="57" column="3" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/evaluaciones.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/modulo-estudiantes.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/evaluaciones.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BD/insert.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/practica/practica.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/modulo-estudiantes/evaluaciones/profesor-practica/profesor-practica.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/ver-estudiante/ver-estudiante.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/informacion-personal/informacion-personal.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/coordinadores/coordinadores.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="73" column="12" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="77" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/sedes/sedes.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/administradores.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="3" column="79" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/routes/general.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/routes/administrador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/model/administrador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/routes/estudiante.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/agregar-administrador/agregar-administrador.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/sedes/sedes.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1361">
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrar-coordinadores/administrar-coordinadores.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="79" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrar-coordinadores/crear-coordinador/crear-coordinador.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286">
+          <caret line="5" column="84" selection-start-line="5" selection-start-column="84" selection-end-line="5" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrador.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-401">
+          <caret line="90" column="18" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administrar-coordinadores/administrar-coordinadores.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/universidad/universidad.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/universidad/universidad.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/universidades.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="79" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/administradores.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" column="92" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="92" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/administradores/agregar-administrador/agregar-administrador.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="45" column="64" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/general/crear-estudiante/crear-estudiante.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="38" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/login/registro-estudiante/registro-estudiante.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="51" column="92" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/semestres.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="3" column="79" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/app-rutas.servive.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="-313">
+          <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+          <folding>
+            <element signature="e#1521#1600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/crear-universidad/crear-universidad.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="18" column="130" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/universidades/crear-universidad/crear-universidad.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="15" column="62" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/crear-semestre/crear-semestre.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SistemaPracticantes/src/app/administrador/semestres/crear-semestre/crear-semestre.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
         </state>
       </provider>
     </entry>

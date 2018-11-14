@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card">
+      <div class="card-header card-header-primary" data-background-color="purple" >
+        <h4 class="card-title">Crear semestre</h4>
+      </div>
+      <div class="card-content">
+        <form [formGroup] = "formSemester">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group label-floating is-empty">
+                <label class="bmd-label-floating">Año</label>
+                <input type="year"
+                       class="form-control"
+                       id="nombreDeUsuario"
+                       formControlName="year"
+                >
+                <span *ngIf="!formSemester.get('year').valid && formSemester.get('year').touched">
+
+                  <div *ngIf="formSemester.get('year').errors['required']" class="text-danger"> Este campo es necesario</div>
+                  <div *ngIf="formSemester.get('year').errors['min']" class="text-danger"> El año tiene que ser minimo el 2017</div>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Semestre</label>
+                <select class="form-control"
+                        id="universidades"
+                        formControlName="semesterNumber">
+                  <option value="1">I semestre</option>
+                  <option value="2"> II semestre</option>
+                  <!--<option *ngFor="let universidad of universidades | async" [value]="universidad.IdUniversidad" >-->
+                  <!--{{ universidad.NombreUniversidad }}-->
+                  <!--</option>-->
+                </select>
+                <span *ngIf="!formSemester.get('semesterNumber').valid && formSemester.get('semesterNumber').touched">
+
+                  <div *ngIf="formSemester.get('semesterNumber').errors['required']" class="text-danger"> Este campo es necesario</div>
+                </span>
+              </div>
+
+            </div>
+
+            <div class="col-md-12">
+              <button class="btn btn-primary" (click)="agregarSemestre()">Crear semestre</button>
+              <button routerLink=".." class="btn btn-danger">Cancelar</button>
+            </div>
+
+
+
+          </div>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
